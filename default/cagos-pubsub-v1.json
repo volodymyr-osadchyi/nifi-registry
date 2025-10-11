@@ -260,69 +260,6 @@
     "controllerServices" : [ {
       "bulletinLevel" : "WARN",
       "bundle" : {
-        "artifact" : "nifi-mongodb-services-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.5.0"
-      },
-      "comments" : "",
-      "componentType" : "CONTROLLER_SERVICE",
-      "controllerServiceApis" : [ {
-        "bundle" : {
-          "artifact" : "nifi-mongodb-client-service-api-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.5.0"
-        },
-        "type" : "org.apache.nifi.mongodb.MongoDBClientService"
-      } ],
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "647184b8-c8d6-3a72-bd17-1212d7235db6",
-      "name" : "MongoDBControllerService",
-      "properties" : {
-        "Mongo URI" : "mongodb://10.1.131.206:27017/?directConnection=true",
-        "Write Concern" : "ACKNOWLEDGED"
-      },
-      "propertyDescriptors" : {
-        "SSL Context Service" : {
-          "displayName" : "SSL Context Service",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "SSL Context Service",
-          "sensitive" : false
-        },
-        "Mongo URI" : {
-          "displayName" : "Mongo URI",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Mongo URI",
-          "sensitive" : false
-        },
-        "Database User" : {
-          "displayName" : "Database User",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Database User",
-          "sensitive" : false
-        },
-        "Write Concern" : {
-          "displayName" : "Write Concern",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Write Concern",
-          "sensitive" : false
-        },
-        "Password" : {
-          "displayName" : "Password",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Password",
-          "sensitive" : true
-        }
-      },
-      "scheduledState" : "DISABLED",
-      "type" : "org.apache.nifi.mongodb.MongoDBControllerService"
-    }, {
-      "bulletinLevel" : "WARN",
-      "bundle" : {
         "artifact" : "nifi-gcp-nar",
         "group" : "org.apache.nifi",
         "version" : "2.5.0"
@@ -338,90 +275,8 @@
         "type" : "org.apache.nifi.gcp.credentials.service.GCPCredentialsService"
       } ],
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "e4b80c48-f767-3a3d-9c03-c901ece8abb6",
-      "name" : "GCPCredentialsControllerService-crm-dev",
-      "properties" : {
-        "compute-engine-credentials" : "false",
-        "Delegation Strategy" : "Service Account",
-        "application-default-credentials" : "false"
-      },
-      "propertyDescriptors" : {
-        "proxy-configuration-service" : {
-          "displayName" : "Proxy Configuration Service",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "proxy-configuration-service",
-          "sensitive" : false
-        },
-        "compute-engine-credentials" : {
-          "displayName" : "Use Compute Engine Credentials",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "compute-engine-credentials",
-          "sensitive" : false
-        },
-        "Delegation Strategy" : {
-          "displayName" : "Delegation Strategy",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Delegation Strategy",
-          "sensitive" : false
-        },
-        "application-default-credentials" : {
-          "displayName" : "Use Application Default Credentials",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "application-default-credentials",
-          "sensitive" : false
-        },
-        "service-account-json-file" : {
-          "displayName" : "Service Account JSON File",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "service-account-json-file",
-          "resourceDefinition" : {
-            "cardinality" : "SINGLE",
-            "resourceTypes" : [ "FILE" ]
-          },
-          "sensitive" : false
-        },
-        "Delegation User" : {
-          "displayName" : "Delegation User",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Delegation User",
-          "sensitive" : false
-        },
-        "service-account-json" : {
-          "displayName" : "Service Account JSON",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "service-account-json",
-          "sensitive" : true
-        }
-      },
-      "scheduledState" : "DISABLED",
-      "type" : "org.apache.nifi.processors.gcp.credentials.service.GCPCredentialsControllerService"
-    }, {
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-gcp-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.5.0"
-      },
-      "comments" : "",
-      "componentType" : "CONTROLLER_SERVICE",
-      "controllerServiceApis" : [ {
-        "bundle" : {
-          "artifact" : "nifi-gcp-services-api-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.5.0"
-        },
-        "type" : "org.apache.nifi.gcp.credentials.service.GCPCredentialsService"
-      } ],
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "f5fca0e2-491d-37f7-8e24-356cce486027",
-      "name" : "GCPCredentialsControllerService-stage",
+      "identifier" : "a79951d3-1cc0-3634-b9c2-b58aa5961b4e",
+      "name" : "GCPCredentialsControllerService",
       "properties" : {
         "compute-engine-credentials" : "false",
         "Delegation Strategy" : "Service Account",
@@ -510,71 +365,6 @@
     },
     "processGroups" : [ ],
     "processors" : [ {
-      "autoTerminatedRelationships" : [ "success" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-update-attribute-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.5.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "467d06ff-4b57-35e4-805a-a58f36172778",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "UpdateAttribute",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -128.0,
-        "y" : -496.0
-      },
-      "properties" : {
-        "Store State" : "Do not store state",
-        "canonical-value-lookup-cache-size" : "100"
-      },
-      "propertyDescriptors" : {
-        "Delete Attributes Expression" : {
-          "displayName" : "Delete Attributes Expression",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Delete Attributes Expression",
-          "sensitive" : false
-        },
-        "Store State" : {
-          "displayName" : "Store State",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Store State",
-          "sensitive" : false
-        },
-        "canonical-value-lookup-cache-size" : {
-          "displayName" : "Cache Value Lookup Cache Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "canonical-value-lookup-cache-size",
-          "sensitive" : false
-        },
-        "Stateful Variables Initial Value" : {
-          "displayName" : "Stateful Variables Initial Value",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Stateful Variables Initial Value",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
-      "yieldDuration" : "1 sec"
-    }, {
       "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -602,10 +392,10 @@
         "Input Batch Size" : "100",
         "gcp-pubsub-publish-batch-delay" : "100 millis",
         "gcp-project-id" : "nova-poshta-europe-357108",
-        "GCP Credentials Provider Service" : "f5fca0e2-491d-37f7-8e24-356cce486027",
+        "GCP Credentials Provider Service" : "a79951d3-1cc0-3634-b9c2-b58aa5961b4e",
         "Message Derivation Strategy" : "FLOWFILE_ORIENTED",
         "gcp-pubsub-publish-batch-size" : "15",
-        "gcp-pubsub-topic" : "projects/nova-poshta-europe-357108/topics/npg-cargos-stage",
+        "gcp-pubsub-topic" : "projects/nova-poshta-europe-357108/topics/npg-cargos-prod",
         "gcp-batch-bytes" : "3 MB"
       },
       "propertyDescriptors" : {
@@ -709,71 +499,6 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.gcp.pubsub.PublishGCPubSub",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ "success" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-update-attribute-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.5.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "85feb7f9-0199-1000-e211-5025c30dea65",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "UpdateAttribute",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -128.0,
-        "y" : -296.0
-      },
-      "properties" : {
-        "Store State" : "Do not store state",
-        "canonical-value-lookup-cache-size" : "100"
-      },
-      "propertyDescriptors" : {
-        "Delete Attributes Expression" : {
-          "displayName" : "Delete Attributes Expression",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Delete Attributes Expression",
-          "sensitive" : false
-        },
-        "Store State" : {
-          "displayName" : "Store State",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Store State",
-          "sensitive" : false
-        },
-        "canonical-value-lookup-cache-size" : {
-          "displayName" : "Cache Value Lookup Cache Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "canonical-value-lookup-cache-size",
-          "sensitive" : false
-        },
-        "Stateful Variables Initial Value" : {
-          "displayName" : "Stateful Variables Initial Value",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Stateful Variables Initial Value",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
       "yieldDuration" : "1 sec"
     }, {
       "autoTerminatedRelationships" : [ "success" ],
@@ -1503,6 +1228,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "cagos-pubsub-v1",
-    "timestamp" : 1760175781667
+    "timestamp" : 1760176394391
   }
 }
