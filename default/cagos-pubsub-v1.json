@@ -395,7 +395,7 @@
         "GCP Credentials Provider Service" : "a79951d3-1cc0-3634-b9c2-b58aa5961b4e",
         "Message Derivation Strategy" : "FLOWFILE_ORIENTED",
         "gcp-pubsub-publish-batch-size" : "15",
-        "gcp-pubsub-topic" : "projects/nova-poshta-europe-357108/topics/npg-cargos-prod",
+        "gcp-pubsub-topic" : "projects/nova-poshta-europe-357108/topics/npg-cargos-stage",
         "gcp-batch-bytes" : "3 MB"
       },
       "propertyDescriptors" : {
@@ -658,7 +658,7 @@
         "Max String Length" : "20 MB",
         "Transform Cache Size" : "1",
         "Pretty Print" : "false",
-        "Jolt Specification" : "[\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"status_date\": \"${createdAt:escapeJson()}\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"waybill_number\": \"messages[0].data.number\",\n      \"partner_event_code\": \"messages[0].data.status\",\n      \"status_date\": [\"messages[0].data.createdAt\", \"messages[0].ordering_key\"],\n      \"status_country\": \"messages[0].data.countryCode\",\n      \"location\": {\n        \"name\": \"messages[0].data.divisionAddress\",\n        \"longitude\": \"messages[0].data.divisionLongitude\",\n        \"latitude\": \"messages[0].data.divisionLatitude\"\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"messages\": {\n        \"*\": {\n          \"attributes\": {\n            \"objectType\": \"movementFact\",\n            \"countryUA\": \"\"\n          }\n        }\n      }\n    }\n  }\n]"
+        "Jolt Specification" : "[\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"status_date\": \"${createdAt:escapeJson()}\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"waybill_number\": \"number\",\n      \"partner_event_code\": \"status\",\n      \"status_date\": \"createdAt\",\n      \"status_country\": \"countryCode\",\n      \"location\": {\n        \"name\": \"divisionAddress\",\n        \"longitude\": \"divisionLongitude\",\n        \"latitude\": \"divisionLatitude\"\n      }\n    }\n  }\n]\n"
       },
       "propertyDescriptors" : {
         "JSON Source" : {
@@ -1228,6 +1228,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "cagos-pubsub-v1",
-    "timestamp" : 1760176394391
+    "timestamp" : 1760177641578
   }
 }
