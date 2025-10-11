@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1760175780881,
+    "description" : "Integration For Scaning From NPG to NPU",
+    "identifier" : "cagos-pubsub-v1",
+    "lastModifiedTimestamp" : 1760175780881,
+    "name" : "cagos-pubsub-v1",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
