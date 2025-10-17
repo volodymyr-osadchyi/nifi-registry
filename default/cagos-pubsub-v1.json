@@ -395,7 +395,7 @@
         "GCP Credentials Provider Service" : "a79951d3-1cc0-3634-b9c2-b58aa5961b4e",
         "Message Derivation Strategy" : "FLOWFILE_ORIENTED",
         "gcp-pubsub-publish-batch-size" : "15",
-        "gcp-pubsub-topic" : "projects/nova-poshta-europe-357108/topics/npg-cargos-stage",
+        "gcp-pubsub-topic" : "projects/nova-poshta-europe-357108/topics/npg-cargos-prod",
         "gcp-batch-bytes" : "3 MB"
       },
       "propertyDescriptors" : {
@@ -1228,6 +1228,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "cagos-pubsub-v1",
-    "timestamp" : 1760177641578
+    "timestamp" : 1760699302996
   }
 }
