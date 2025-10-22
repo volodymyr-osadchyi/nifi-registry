@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1761130084617,
+    "description" : "",
+    "identifier" : "ms-customs-grossweightrecount",
+    "lastModifiedTimestamp" : 1761130084617,
+    "name" : "ms-customs-grossweightrecount",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
