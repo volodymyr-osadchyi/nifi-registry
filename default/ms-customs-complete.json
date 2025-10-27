@@ -1,5 +1,10 @@
 {
-  "externalControllerServices" : { },
+  "externalControllerServices" : {
+    "a2db5c0e-afe3-38c2-a517-4c8cf4e06797" : {
+      "identifier" : "a2db5c0e-afe3-38c2-a517-4c8cf4e06797",
+      "name" : "Kafka3ConnectionService"
+    }
+  },
   "flow" : {
     "createdTimestamp" : 1761129515112,
     "description" : "",
@@ -17,7 +22,12 @@
     "defaultBackPressureObjectThreshold" : 10000,
     "defaultFlowFileExpiration" : "0 sec",
     "executionEngine" : "INHERITED",
-    "externalControllerServiceReferences" : { },
+    "externalControllerServiceReferences" : {
+      "a2db5c0e-afe3-38c2-a517-4c8cf4e06797" : {
+        "identifier" : "a2db5c0e-afe3-38c2-a517-4c8cf4e06797",
+        "name" : "Kafka3ConnectionService"
+      }
+    },
     "flowFileConcurrency" : "UNBOUNDED",
     "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
     "funnels" : [ ],
@@ -32,6 +42,3080 @@
       "y" : 0.0
     },
     "processGroups" : [ {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "10b2585c-019a-1000-545a-07439158ce07",
+          "name" : "JoltTransformJSON-weight-count",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "010a6786-9572-3339-9d61-bfe6505773cd",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "56bf3e41-ed18-3bcf-88c5-5e11234cec48",
+          "name" : "GenerateFlowFile",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 1
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "a6692ead-6011-39b3-8868-ddf95432ee78",
+          "name" : "InvokeHTTP",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "2780c515-f88f-3ae5-9241-4ac0665ee238",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "matched" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "1f514f9a-21ac-38fe-b5a8-9466be84fe65",
+          "name" : "EvaluateJsonPath",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 11
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "bc220a09-9fc4-35b6-89da-f5d3ca9b3902",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "3348cb18-f036-39f7-83d0-4bfae697fac0",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "10b2585c-019a-1000-545a-07439158ce07",
+          "name" : "JoltTransformJSON-weight-count",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 3
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "1312b191-019a-1000-6b1f-eeae94b507b3",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "5df76570-3fa2-35e8-940a-6ec66492851d",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "Response" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "a6692ead-6011-39b3-8868-ddf95432ee78",
+          "name" : "InvokeHTTP",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 13
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "1301db7a-019a-1000-0eb0-42a55eeb1719",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "64cebeae-56a5-330c-aaa1-d3013e387890",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure", "unmatched" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "1f514f9a-21ac-38fe-b5a8-9466be84fe65",
+          "name" : "EvaluateJsonPath",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 10
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "121704b3-019a-1000-1010-8396b33c436a",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "666ea7dd-c468-35cf-b47f-805f5b032ccd",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "1215d078-019a-1000-75ef-332a381e8c0a",
+          "name" : "JoltTransformJSON-crop-convert",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 4
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "12ffa456-019a-1000-6d09-f9c9fc341048",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "6b773f4c-94a8-39f4-9442-2eb4c867d832",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "Failure", "No Retry", "Retry" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "3f25b38f-34cb-3c77-8e41-e6190779739d",
+          "name" : "InvokeHTTP",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 8
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "1217e7d9-019a-1000-a4b4-7f65548a6985",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "795ddc1a-438f-3a1a-b35d-08e02094061e",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "1217a550-019a-1000-01ef-5b9d2cc58b0d",
+          "name" : "JoltTransformJSON-group",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 5
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "1215d078-019a-1000-75ef-332a381e8c0a",
+          "name" : "JoltTransformJSON-crop-convert",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "7a7e2029-878e-3707-8f4f-ea029a6b797b",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "10b2585c-019a-1000-545a-07439158ce07",
+          "name" : "JoltTransformJSON-weight-count",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 2
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "1310f4cc-019a-1000-8799-0c43b5a6fb9a",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "8a89a95e-895d-3e71-9a47-f65ff196c3b9",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "Failure", "No Retry", "Retry" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "a6692ead-6011-39b3-8868-ddf95432ee78",
+          "name" : "InvokeHTTP",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 12
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "3f25b38f-34cb-3c77-8e41-e6190779739d",
+          "name" : "InvokeHTTP",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "91d623de-6d3c-35f2-b09b-33fdc9ea629e",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "1217a550-019a-1000-01ef-5b9d2cc58b0d",
+          "name" : "JoltTransformJSON-group",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 7
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "1f514f9a-21ac-38fe-b5a8-9466be84fe65",
+          "name" : "EvaluateJsonPath",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "a033cba9-e797-3cef-9de3-2713f778cf87",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "Response" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "3f25b38f-34cb-3c77-8e41-e6190779739d",
+          "name" : "InvokeHTTP",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 9
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "10b2585c-019a-1000-545a-07439158ce07",
+          "name" : "JoltTransformJSON-weight-count",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "db845853-83cc-344a-9754-e9f55cbf2c41",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "67b9d140-a8ef-3592-ac14-7f117b8212bd",
+          "name" : "ConsumeKafka",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 14
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "1217a550-019a-1000-01ef-5b9d2cc58b0d",
+          "name" : "JoltTransformJSON-group",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "e989ac6a-9bca-3e4d-aa38-7401c98572f2",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+          "id" : "1215d078-019a-1000-75ef-332a381e8c0a",
+          "name" : "JoltTransformJSON-crop-convert",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 6
+      } ],
+      "controllerServices" : [ ],
+      "defaultBackPressureDataSizeThreshold" : "1 GB",
+      "defaultBackPressureObjectThreshold" : 10000,
+      "defaultFlowFileExpiration" : "0 sec",
+      "executionEngine" : "INHERITED",
+      "flowFileConcurrency" : "UNBOUNDED",
+      "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+      "funnels" : [ ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+      "inputPorts" : [ ],
+      "labels" : [ ],
+      "maxConcurrentTasks" : 1,
+      "name" : "customs-in-rocket-express",
+      "outputPorts" : [ ],
+      "position" : {
+        "x" : 944.0,
+        "y" : 616.0
+      },
+      "processGroups" : [ {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "51bdb880-efe4-3fc5-896e-841bfce3d50f",
+            "name" : "JoltTransformJSON",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "25472259-afe2-371e-911f-52a5420b7152",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "61219e74-e5e7-3961-950b-ffe8165724b9",
+            "name" : "in",
+            "type" : "INPUT_PORT"
+          },
+          "zIndex" : 1
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "ef8c6bf2-9c9d-32e4-a56e-f6da28b2d9e5",
+            "name" : "PutFile",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "286af9c2-f9a3-3738-b105-8e4b461fda44",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "61d087e2-cc55-355d-ba3c-715f9dae81e9",
+            "name" : "UpdateAttribute",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "335f48a0-9acf-339f-a361-e35b41fd8494",
+            "name" : "JoltTransformJSON",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "6ef1d942-c66e-3e71-98b2-19abe9d0c49c",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "345fe7e3-de82-301f-b982-f4fa0e0d63d3",
+            "name" : "ReplaceText",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "345fe7e3-de82-301f-b982-f4fa0e0d63d3",
+            "name" : "ReplaceText",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "70d17a62-5b62-3443-9816-e95f76184f66",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "ef8c6bf2-9c9d-32e4-a56e-f6da28b2d9e5",
+            "name" : "PutFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "61d087e2-cc55-355d-ba3c-715f9dae81e9",
+            "name" : "UpdateAttribute",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "ca48521b-fc12-3f46-a307-e0f3d357fc9e",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "51bdb880-efe4-3fc5-896e-841bfce3d50f",
+            "name" : "JoltTransformJSON",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 2
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "8456c31f-65ca-3c75-8039-86430a7c4185",
+            "name" : "out",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "d43145f6-84a1-3cee-951b-2ab182e8aed3",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "335f48a0-9acf-339f-a361-e35b41fd8494",
+            "name" : "JoltTransformJSON",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "b1bd0944-08ff-3bc0-8c4a-2c975becc4a9",
+            "name" : "UpdateAttribute",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "da3223e1-8986-3cc9-838c-ec82b82a8e4b",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "51bdb880-efe4-3fc5-896e-841bfce3d50f",
+            "name" : "JoltTransformJSON",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 3
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "b1bd0944-08ff-3bc0-8c4a-2c975becc4a9",
+            "name" : "UpdateAttribute",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "ed981e8e-c142-3681-9a79-54565c9ad6c6",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "335f48a0-9acf-339f-a361-e35b41fd8494",
+            "name" : "JoltTransformJSON",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "b1bd0944-08ff-3bc0-8c4a-2c975becc4a9",
+            "name" : "UpdateAttribute",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "f7978180-c65d-3376-9ccf-7ee39f49bfa3",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "345fe7e3-de82-301f-b982-f4fa0e0d63d3",
+            "name" : "ReplaceText",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "b1bd0944-08ff-3bc0-8c4a-2c975becc4a9",
+            "name" : "UpdateAttribute",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "fded9c6d-1409-369e-b80c-bfcd17e79c6e",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+            "id" : "ef8c6bf2-9c9d-32e4-a56e-f6da28b2d9e5",
+            "name" : "PutFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "executionEngine" : "INHERITED",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+        "inputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "comments" : "",
+          "componentType" : "INPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "61219e74-e5e7-3961-950b-ffe8165724b9",
+          "name" : "in",
+          "portFunction" : "STANDARD",
+          "position" : {
+            "x" : 1368.0,
+            "y" : 512.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "INPUT_PORT"
+        } ],
+        "labels" : [ ],
+        "maxConcurrentTasks" : 1,
+        "name" : "ms-customs-utils-grossweightrecount",
+        "outputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "comments" : "",
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "8456c31f-65ca-3c75-8039-86430a7c4185",
+          "name" : "out",
+          "portFunction" : "STANDARD",
+          "position" : {
+            "x" : 1368.0,
+            "y" : 1696.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "OUTPUT_PORT"
+        } ],
+        "position" : {
+          "x" : -1160.0,
+          "y" : -216.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "335f48a0-9acf-339f-a361-e35b41fd8494",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "JoltTransformJSON",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1312.0,
+            "y" : 1472.0
+          },
+          "properties" : { },
+          "propertyDescriptors" : { },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.JoltTransformJSON",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "2.5.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "345fe7e3-de82-301f-b982-f4fa0e0d63d3",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "ReplaceText",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1312.0,
+            "y" : 1248.0
+          },
+          "properties" : {
+            "Regular Expression" : "(?s)(^.*$)",
+            "Replacement Value" : "{}",
+            "Evaluation Mode" : "Entire text",
+            "Line-by-Line Evaluation Mode" : "All",
+            "Character Set" : "UTF-8",
+            "Maximum Buffer Size" : "1024 MB",
+            "Replacement Strategy" : "Regex Replace"
+          },
+          "propertyDescriptors" : {
+            "Regular Expression" : {
+              "displayName" : "Search Value",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Regular Expression",
+              "sensitive" : false
+            },
+            "Replacement Value" : {
+              "displayName" : "Replacement Value",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Replacement Value",
+              "sensitive" : false
+            },
+            "Evaluation Mode" : {
+              "displayName" : "Evaluation Mode",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Evaluation Mode",
+              "sensitive" : false
+            },
+            "Text to Prepend" : {
+              "displayName" : "Text to Prepend",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Text to Prepend",
+              "sensitive" : false
+            },
+            "Line-by-Line Evaluation Mode" : {
+              "displayName" : "Line-by-Line Evaluation Mode",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Line-by-Line Evaluation Mode",
+              "sensitive" : false
+            },
+            "Character Set" : {
+              "displayName" : "Character Set",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Character Set",
+              "sensitive" : false
+            },
+            "Maximum Buffer Size" : {
+              "displayName" : "Maximum Buffer Size",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Maximum Buffer Size",
+              "sensitive" : false
+            },
+            "Replacement Strategy" : {
+              "displayName" : "Replacement Strategy",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Replacement Strategy",
+              "sensitive" : false
+            },
+            "Text to Append" : {
+              "displayName" : "Text to Append",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Text to Append",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.ReplaceText",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-jolt-nar",
+            "group" : "org.apache.nifi",
+            "version" : "2.5.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "51bdb880-efe4-3fc5-896e-841bfce3d50f",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "JoltTransformJSON",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1312.0,
+            "y" : 632.0
+          },
+          "properties" : {
+            "JSON Source" : "FLOW_FILE",
+            "Jolt Transform" : "jolt-transform-chain",
+            "Max String Length" : "20 MB",
+            "Transform Cache Size" : "1",
+            "Pretty Print" : "false"
+          },
+          "propertyDescriptors" : {
+            "JSON Source" : {
+              "displayName" : "JSON Source",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "JSON Source",
+              "sensitive" : false
+            },
+            "Jolt Transform" : {
+              "displayName" : "Jolt Transform",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Jolt Transform",
+              "sensitive" : false
+            },
+            "JSON Source Attribute" : {
+              "displayName" : "JSON Source Attribute",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "JSON Source Attribute",
+              "sensitive" : false
+            },
+            "Max String Length" : {
+              "displayName" : "Max String Length",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Max String Length",
+              "sensitive" : false
+            },
+            "Transform Cache Size" : {
+              "displayName" : "Transform Cache Size",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Transform Cache Size",
+              "sensitive" : false
+            },
+            "Custom Transformation Class Name" : {
+              "displayName" : "Custom Transformation Class Name",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Custom Transformation Class Name",
+              "sensitive" : false
+            },
+            "Custom Module Directory" : {
+              "displayName" : "Custom Module Directory",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Custom Module Directory",
+              "resourceDefinition" : {
+                "cardinality" : "MULTIPLE",
+                "resourceTypes" : [ "DIRECTORY", "FILE" ]
+              },
+              "sensitive" : false
+            },
+            "Pretty Print" : {
+              "displayName" : "Pretty Print",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Pretty Print",
+              "sensitive" : false
+            },
+            "Jolt Specification" : {
+              "displayName" : "Jolt Specification",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Jolt Specification",
+              "resourceDefinition" : {
+                "cardinality" : "SINGLE",
+                "resourceTypes" : [ "FILE", "TEXT" ]
+              },
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "2.5.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "61d087e2-cc55-355d-ba3c-715f9dae81e9",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "UpdateAttribute",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1312.0,
+            "y" : 840.0
+          },
+          "properties" : {
+            "filename" : "${params:jsonPath('$.guid'):append('-'):append(${task:jsonPath('$.task_id')}):append('-'):append(${uuid}):append('.log')}",
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100"
+          },
+          "propertyDescriptors" : {
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "filename" : {
+              "displayName" : "filename",
+              "dynamic" : true,
+              "identifiesControllerService" : false,
+              "name" : "filename",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "2.5.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "b1bd0944-08ff-3bc0-8c4a-2c975becc4a9",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "UpdateAttribute",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1984.0,
+            "y" : 912.0
+          },
+          "properties" : {
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100"
+          },
+          "propertyDescriptors" : {
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "2.5.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "b62de879-c9e4-3b0a-adfb-26f49d42a2fb",
+          "identifier" : "ef8c6bf2-9c9d-32e4-a56e-f6da28b2d9e5",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "PutFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1312.0,
+            "y" : 1040.0
+          },
+          "properties" : {
+            "Create Missing Directories" : "true",
+            "Directory" : "./customs/log",
+            "Conflict Resolution Strategy" : "replace"
+          },
+          "propertyDescriptors" : {
+            "Group" : {
+              "displayName" : "Group",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Group",
+              "sensitive" : false
+            },
+            "Owner" : {
+              "displayName" : "Owner",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Owner",
+              "sensitive" : false
+            },
+            "Create Missing Directories" : {
+              "displayName" : "Create Missing Directories",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Create Missing Directories",
+              "sensitive" : false
+            },
+            "Permissions" : {
+              "displayName" : "Permissions",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Permissions",
+              "sensitive" : false
+            },
+            "Maximum File Count" : {
+              "displayName" : "Maximum File Count",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Maximum File Count",
+              "sensitive" : false
+            },
+            "Last Modified Time" : {
+              "displayName" : "Last Modified Time",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Last Modified Time",
+              "sensitive" : false
+            },
+            "Directory" : {
+              "displayName" : "Directory",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Directory",
+              "sensitive" : false
+            },
+            "Conflict Resolution Strategy" : {
+              "displayName" : "Conflict Resolution Strategy",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Conflict Resolution Strategy",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.PutFile",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "scheduledState" : "ENABLED",
+        "statelessFlowTimeout" : "1 min"
+      } ],
+      "processors" : [ {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-jolt-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "10b2585c-019a-1000-545a-07439158ce07",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "JoltTransformJSON-weight-count",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -176.0,
+          "y" : -208.0
+        },
+        "properties" : {
+          "JSON Source" : "FLOW_FILE",
+          "Jolt Transform" : "jolt-transform-chain",
+          "Max String Length" : "20 MB",
+          "Transform Cache Size" : "1",
+          "Pretty Print" : "false",
+          "Jolt Specification" : "[\n  {\n    \"operation\": \"cardinality\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"manifests\": \"MANY\",\n          \"*\": {\n            \"iews\": \"MANY\"\n          }\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"manifests\": {\n            \"*\": {\n              \"iews\": {\n                \"*\": {\n                  \"shipment_info\": {\n                    \"sum_actual_weight\": \"=toDouble\"\n                  }\n                }\n              },\n              \"weight_gross\": \"=toDouble\"\n            }\n          },\n          \"total_weight\": \"=toDouble\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"manifests\": {\n            \"*\": {\n              \"iews\": {\n                \"*\": {\n                  \"shipment_info\": {\n                    \"sum_actual_weight\": [\"data[&6].wAccumulator[]\", \"data[&6].manifests[&4].iews[&2].shipment_info.&\"],\n                    \"*\": {\n                      \"@\": \"data[&7].manifests[&5].iews[&3].shipment_info.&\"\n                    }\n                  },\n                  \"*\": {\n                    \"@\": \"data[&6].manifests[&4].iews[&2].&\"\n                  }\n                }\n              },\n              \"*\": {\n                \"@\": \"data[&4].manifests[&2].&\"\n              }\n            }\n          },\n          \"*\": {\n            \"@\": \"data[&2].&\"\n          }\n        }\n      },\n      \"*\": {\n        \"@\": \"&\"\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"wSum\": \"=doubleSum(@(1,wAccumulator))\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"wCor\": \"=divide(@(1,wSum),@(1,total_weight))\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"manifests\": {\n            \"*\": {\n              \"iews\": {\n                \"*\": {\n                  \"shipment_info\": {\n                    \"sum_gross_weight\": \"=divideAndRound(2,@(1,sum_actual_weight),@(6,wCor))\"\n                  },\n                  \"invoices\": {\n                    \"*\": {\n                      \"positions_count\": \"=size(@(1,invoice_details))\"\n                    }\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"manifests\": {\n            \"*\": {\n              \"iews\": {\n                \"*\": {\n                  \"invoices\": {\n                    \"*\": {\n                      \"invoice_details\": {\n                        \"*\": {\n                          \"weight_count\": \"=divideAndRound(2,@(5,shipment_info.sum_actual_weight),@(3,positions_count))\",\n                          \"gross_weight\": \"=divideAndRound(2,@(5,shipment_info.sum_gross_weight),@(3,positions_count))\"\n                        }\n                      }\n                    }\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n\n\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"manifests\": {\n            \"*\": {\n              \"iews\": {\n                \"*\": {\n                  \"invoices\": {\n                    \"*\": {\n                      \"invoice_details\": {\n                        \"*\": {\n                          \"weight\": \"=toDouble\"\n                        }\n                      }\n                    }\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"manifests\": {\n            \"*\": {\n              \"iews\": {\n                \"*\": {\n                  \"invoices\": {\n                    \"*\": {\n                      \"invoice_details\": {\n                        \"*\": {\n                          \"weight\": [\"@(1,weight)\", \"@(1,weight_count)\"]\n                        }\n                      }\n                    }\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n]\n"
+        },
+        "propertyDescriptors" : {
+          "JSON Source" : {
+            "displayName" : "JSON Source",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "JSON Source",
+            "sensitive" : false
+          },
+          "Jolt Transform" : {
+            "displayName" : "Jolt Transform",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Jolt Transform",
+            "sensitive" : false
+          },
+          "JSON Source Attribute" : {
+            "displayName" : "JSON Source Attribute",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "JSON Source Attribute",
+            "sensitive" : false
+          },
+          "Max String Length" : {
+            "displayName" : "Max String Length",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Max String Length",
+            "sensitive" : false
+          },
+          "Transform Cache Size" : {
+            "displayName" : "Transform Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Transform Cache Size",
+            "sensitive" : false
+          },
+          "Custom Transformation Class Name" : {
+            "displayName" : "Custom Transformation Class Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Custom Transformation Class Name",
+            "sensitive" : false
+          },
+          "Custom Module Directory" : {
+            "displayName" : "Custom Module Directory",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Custom Module Directory",
+            "resourceDefinition" : {
+              "cardinality" : "MULTIPLE",
+              "resourceTypes" : [ "DIRECTORY", "FILE" ]
+            },
+            "sensitive" : false
+          },
+          "Pretty Print" : {
+            "displayName" : "Pretty Print",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Pretty Print",
+            "sensitive" : false
+          },
+          "Jolt Specification" : {
+            "displayName" : "Jolt Specification",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Jolt Specification",
+            "resourceDefinition" : {
+              "cardinality" : "SINGLE",
+              "resourceTypes" : [ "FILE", "TEXT" ]
+            },
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-jolt-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "1215d078-019a-1000-75ef-332a381e8c0a",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "JoltTransformJSON-crop-convert",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -176.0,
+          "y" : -8.0
+        },
+        "properties" : {
+          "JSON Source" : "FLOW_FILE",
+          "Jolt Transform" : "jolt-transform-chain",
+          "Max String Length" : "20 MB",
+          "Transform Cache Size" : "1",
+          "Pretty Print" : "false",
+          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"manifests\": {\n            \"*\": {\n              \"iews\": {\n                \"*\": {\n                  \"invoices\": {\n                    \"*\": {\n                      \"invoice_details\": {\n                        \"*\": {\n                          \"customs_code\": \"data[&9].manifests[&7].iews[&5].invoices[&3].invoice_details[&1].code\",\n                          \"description\": \"data[&9].manifests[&7].iews[&5].invoices[&3].invoice_details[&1].title\",\n                          \"quantity\": \"data[&9].manifests[&7].iews[&5].invoices[&3].invoice_details[&1].quantity\",\n                          \"cost_per_unit\": \"data[&9].manifests[&7].iews[&5].invoices[&3].invoice_details[&1].price\",\n                          \"weight\": \"data[&9].manifests[&7].iews[&5].invoices[&3].invoice_details[&1].netto\",\n                          \"gross_weight\": \"data[&9].manifests[&7].iews[&5].invoices[&3].invoice_details[&1].brutto\"\n                        }\n                      }\n                    }\n                  }\n                }\n              }\n            }\n          },\n          \"ws_utd_routes\": {\n            \"*\": {\n              \"dest_city\": \"data[&3].location\"\n            }\n          }\n        }\n      }\n    }\n  }\n]"
+        },
+        "propertyDescriptors" : {
+          "JSON Source" : {
+            "displayName" : "JSON Source",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "JSON Source",
+            "sensitive" : false
+          },
+          "Jolt Transform" : {
+            "displayName" : "Jolt Transform",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Jolt Transform",
+            "sensitive" : false
+          },
+          "JSON Source Attribute" : {
+            "displayName" : "JSON Source Attribute",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "JSON Source Attribute",
+            "sensitive" : false
+          },
+          "Max String Length" : {
+            "displayName" : "Max String Length",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Max String Length",
+            "sensitive" : false
+          },
+          "Transform Cache Size" : {
+            "displayName" : "Transform Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Transform Cache Size",
+            "sensitive" : false
+          },
+          "Custom Transformation Class Name" : {
+            "displayName" : "Custom Transformation Class Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Custom Transformation Class Name",
+            "sensitive" : false
+          },
+          "Custom Module Directory" : {
+            "displayName" : "Custom Module Directory",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Custom Module Directory",
+            "resourceDefinition" : {
+              "cardinality" : "MULTIPLE",
+              "resourceTypes" : [ "DIRECTORY", "FILE" ]
+            },
+            "sensitive" : false
+          },
+          "Pretty Print" : {
+            "displayName" : "Pretty Print",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Pretty Print",
+            "sensitive" : false
+          },
+          "Jolt Specification" : {
+            "displayName" : "Jolt Specification",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Jolt Specification",
+            "resourceDefinition" : {
+              "cardinality" : "SINGLE",
+              "resourceTypes" : [ "FILE", "TEXT" ]
+            },
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "121704b3-019a-1000-1010-8396b33c436a",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "UpdateAttribute",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 440.0,
+          "y" : -8.0
+        },
+        "properties" : {
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-jolt-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "1217a550-019a-1000-01ef-5b9d2cc58b0d",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "JoltTransformJSON-group",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -176.0,
+          "y" : 192.0
+        },
+        "properties" : {
+          "JSON Source" : "FLOW_FILE",
+          "Jolt Transform" : "jolt-transform-chain",
+          "Max String Length" : "20 MB",
+          "Transform Cache Size" : "1",
+          "Pretty Print" : "false",
+          "Jolt Specification" : "[\n  {\n    \"operation\": \"cardinality\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"manifests\": \"MANY\",\n          \"*\": {\n            \"iews\": \"MANY\",\n            \"*\": {\n              \"invoices\": \"MANY\",\n              \"*\": {\n                \"invoice_details\": \"MANY\"\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"manifests\": {\n            \"*\": {\n              \"iews\": {\n                \"*\": {\n                  \"invoices\": {\n                    \"*\": {\n                      \"invoice_details\": {\n                        \"*\": {\n                          \"quantity\": \"=toInteger\",\n                          \"price\": \"=toDouble\",\n                          \"netto\": \"=toDouble\",\n                          \"brutto\": \"=toDouble\",\n                          \"setQuantity\": 1,\n                          \"totalQuantity\": \"=toInteger(@(1,quantity))\"\n                        }\n                      }\n                    }\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"location\": \"location\",\n          \"manifests\": {\n            \"*\": {\n              \"iews\": {\n                \"*\": {\n                  \"invoices\": {\n                    \"*\": {\n                      \"invoice_details\": {\n                        \"*\": {\n                          // кладемо всі поля одного елемента у items[&1]{...}\n                          \"title\": \"centralizing.@(1,code).items[&7][&5][&3][&1].title\",\n                          \"quantity\": \"centralizing.@(1,code).items[&7][&5][&3][&1].quantity\",\n                          \"setQuantity\": \"centralizing.@(1,code).items[&7][&5][&3][&1].setQuantity\",\n                          \"totalQuantity\": \"centralizing.@(1,code).items[&7][&5][&3][&1].totalQuantity\",\n                          \"price\": \"centralizing.@(1,code).items[&7][&5][&3][&1].price\",\n                          \"brutto\": \"centralizing.@(1,code).items[&7][&5][&3][&1].brutto\",\n                          \"netto\": \"centralizing.@(1,code).items[&7][&5][&3][&1].netto\",\n                          // code на рівні групи (повториться — стиснемо нижче до ONE)\n                          \"code\": \"centralizing.@(1,code).code\"\n                        }\n                      }\n                    }\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"cardinality\",\n    \"spec\": {\n      // зробити code одиничним значенням (не масивом)\n      \"centralizing\": {\n        \"*\": {\n          \"code\": \"ONE\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      // перетворюємо мапу centralizing{code->{...}} на масив\n      \"centralizing\": {\n        \"*\": {\n          \"@\": \"centralizing[]\"\n        }\n      },\n      \"location\": \"location\"\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      // заповни за потреби константами\n      \"termsKey\": \"CPT\",\n      \"currency\": \"EUR\",\n      \"collectDate\": \"${now():format(\"dd.MM.yyyy\")}\",\n      \"atomCollectDate\": \"${now():format(\"yyyy-MM-dd'T'HH:mm:ss\")}\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"centralizing\": {\n        \"*\": {\n          \"items\": {\n            \"*\": {\n              \"*\": {\n                \"*\": {\n                  \"*\": \"centralizing[&5].items[]\"\n                }\n              }\n            }\n          },\n          \"code\": \"centralizing[&1].code\"\n        }\n      },\n      \"*\": {\n        \"@\": \"&\"\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"centralizing\": \"=recursivelySquashNulls\"\n    }\n  }\n]\n"
+        },
+        "propertyDescriptors" : {
+          "JSON Source" : {
+            "displayName" : "JSON Source",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "JSON Source",
+            "sensitive" : false
+          },
+          "Jolt Transform" : {
+            "displayName" : "Jolt Transform",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Jolt Transform",
+            "sensitive" : false
+          },
+          "JSON Source Attribute" : {
+            "displayName" : "JSON Source Attribute",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "JSON Source Attribute",
+            "sensitive" : false
+          },
+          "Max String Length" : {
+            "displayName" : "Max String Length",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Max String Length",
+            "sensitive" : false
+          },
+          "Transform Cache Size" : {
+            "displayName" : "Transform Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Transform Cache Size",
+            "sensitive" : false
+          },
+          "Custom Transformation Class Name" : {
+            "displayName" : "Custom Transformation Class Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Custom Transformation Class Name",
+            "sensitive" : false
+          },
+          "Custom Module Directory" : {
+            "displayName" : "Custom Module Directory",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Custom Module Directory",
+            "resourceDefinition" : {
+              "cardinality" : "MULTIPLE",
+              "resourceTypes" : [ "DIRECTORY", "FILE" ]
+            },
+            "sensitive" : false
+          },
+          "Pretty Print" : {
+            "displayName" : "Pretty Print",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Pretty Print",
+            "sensitive" : false
+          },
+          "Jolt Specification" : {
+            "displayName" : "Jolt Specification",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Jolt Specification",
+            "resourceDefinition" : {
+              "cardinality" : "SINGLE",
+              "resourceTypes" : [ "FILE", "TEXT" ]
+            },
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "1217e7d9-019a-1000-a4b4-7f65548a6985",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "UpdateAttribute",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 440.0,
+          "y" : 192.0
+        },
+        "properties" : {
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "12ffa456-019a-1000-6d09-f9c9fc341048",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "UpdateAttribute",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 440.0,
+          "y" : 392.0
+        },
+        "properties" : {
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "1301db7a-019a-1000-0eb0-42a55eeb1719",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "UpdateAttribute",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 440.0,
+          "y" : 592.0
+        },
+        "properties" : {
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "1310f4cc-019a-1000-8799-0c43b5a6fb9a",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "UpdateAttribute",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 440.0,
+          "y" : 800.0
+        },
+        "properties" : {
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "1312b191-019a-1000-6b1f-eeae94b507b3",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "UpdateAttribute",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -176.0,
+          "y" : 1008.0
+        },
+        "properties" : {
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "1f514f9a-21ac-38fe-b5a8-9466be84fe65",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "EvaluateJsonPath",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -176.0,
+          "y" : 592.0
+        },
+        "properties" : {
+          "Destination" : "flowfile-attribute",
+          "Max String Length" : "20 MB",
+          "Return Type" : "json",
+          "Null Value Representation" : "empty string",
+          "url" : "$.data.url",
+          "Path Not Found Behavior" : "ignore"
+        },
+        "propertyDescriptors" : {
+          "Destination" : {
+            "displayName" : "Destination",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Destination",
+            "sensitive" : false
+          },
+          "Max String Length" : {
+            "displayName" : "Max String Length",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Max String Length",
+            "sensitive" : false
+          },
+          "Return Type" : {
+            "displayName" : "Return Type",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Return Type",
+            "sensitive" : false
+          },
+          "Null Value Representation" : {
+            "displayName" : "Null Value Representation",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Null Value Representation",
+            "sensitive" : false
+          },
+          "url" : {
+            "displayName" : "url",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "url",
+            "sensitive" : false
+          },
+          "Path Not Found Behavior" : {
+            "displayName" : "Path Not Found Behavior",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Path Not Found Behavior",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ "Original" ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "3f25b38f-34cb-3c77-8e41-e6190779739d",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "InvokeHTTP",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -176.0,
+          "y" : 392.0
+        },
+        "properties" : {
+          "Request Content-Encoding" : "DISABLED",
+          "Request Multipart Form-Data Filename Enabled" : "true",
+          "Request Chunked Transfer-Encoding Enabled" : "false",
+          "HTTP/2 Disabled" : "False",
+          "Connection Timeout" : "5 secs",
+          "Response Cookie Strategy" : "DISABLED",
+          "Socket Read Timeout" : "15 secs",
+          "Socket Idle Connections" : "5",
+          "Request Body Enabled" : "true",
+          "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
+          "HTTP URL" : "https://bayshop.com/api/export-manifest/ro/",
+          "Socket Idle Timeout" : "5 mins",
+          "Response Redirects Enabled" : "True",
+          "Bearer" : "234e36386138373561316130383835849",
+          "Accept" : "application/vnd.MF+json; version=2",
+          "Socket Write Timeout" : "15 secs",
+          "Response FlowFile Naming Strategy" : "RANDOM",
+          "Response Cache Enabled" : "false",
+          "Request Date Header Enabled" : "True",
+          "Request Failure Penalization Enabled" : "false",
+          "Response Body Attribute Size" : "256",
+          "Response Generation Required" : "false",
+          "Response Header Request Attributes Enabled" : "false",
+          "HTTP Method" : "POST",
+          "Request Content-Type" : "${mime.type}",
+          "Request Digest Authentication Enabled" : "false",
+          "Response Cache Size" : "10MB",
+          "Response Body Ignored" : "false"
+        },
+        "propertyDescriptors" : {
+          "Request Content-Encoding" : {
+            "displayName" : "Request Content-Encoding",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Content-Encoding",
+            "sensitive" : false
+          },
+          "proxy-configuration-service" : {
+            "displayName" : "Proxy Configuration Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "proxy-configuration-service",
+            "sensitive" : false
+          },
+          "Request Multipart Form-Data Filename Enabled" : {
+            "displayName" : "Request Multipart Form-Data Filename Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Multipart Form-Data Filename Enabled",
+            "sensitive" : false
+          },
+          "Request Chunked Transfer-Encoding Enabled" : {
+            "displayName" : "Request Chunked Transfer-Encoding Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Chunked Transfer-Encoding Enabled",
+            "sensitive" : false
+          },
+          "Response Header Request Attributes Prefix" : {
+            "displayName" : "Response Header Request Attributes Prefix",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Header Request Attributes Prefix",
+            "sensitive" : false
+          },
+          "HTTP/2 Disabled" : {
+            "displayName" : "HTTP/2 Disabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "HTTP/2 Disabled",
+            "sensitive" : false
+          },
+          "Connection Timeout" : {
+            "displayName" : "Connection Timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Connection Timeout",
+            "sensitive" : false
+          },
+          "Response Cookie Strategy" : {
+            "displayName" : "Response Cookie Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Cookie Strategy",
+            "sensitive" : false
+          },
+          "Request Password" : {
+            "displayName" : "Request Password",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Password",
+            "sensitive" : true
+          },
+          "Socket Read Timeout" : {
+            "displayName" : "Socket Read Timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Socket Read Timeout",
+            "sensitive" : false
+          },
+          "Socket Idle Connections" : {
+            "displayName" : "Socket Idle Connections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Socket Idle Connections",
+            "sensitive" : false
+          },
+          "Request Body Enabled" : {
+            "displayName" : "Request Body Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Body Enabled",
+            "sensitive" : false
+          },
+          "OAuth2 Access Token Refresh Strategy" : {
+            "displayName" : "OAuth2 Access Token Refresh Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "OAuth2 Access Token Refresh Strategy",
+            "sensitive" : false
+          },
+          "HTTP URL" : {
+            "displayName" : "HTTP URL",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "HTTP URL",
+            "sensitive" : false
+          },
+          "Request OAuth2 Access Token Provider" : {
+            "displayName" : "Request OAuth2 Access Token Provider",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Request OAuth2 Access Token Provider",
+            "sensitive" : false
+          },
+          "Socket Idle Timeout" : {
+            "displayName" : "Socket Idle Timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Socket Idle Timeout",
+            "sensitive" : false
+          },
+          "Response Redirects Enabled" : {
+            "displayName" : "Response Redirects Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Redirects Enabled",
+            "sensitive" : false
+          },
+          "Bearer" : {
+            "displayName" : "Bearer",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "Bearer",
+            "sensitive" : false
+          },
+          "Accept" : {
+            "displayName" : "Accept",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "Accept",
+            "sensitive" : false
+          },
+          "Socket Write Timeout" : {
+            "displayName" : "Socket Write Timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Socket Write Timeout",
+            "sensitive" : false
+          },
+          "Request Header Attributes Pattern" : {
+            "displayName" : "Request Header Attributes Pattern",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Header Attributes Pattern",
+            "sensitive" : false
+          },
+          "Response FlowFile Naming Strategy" : {
+            "displayName" : "Response FlowFile Naming Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response FlowFile Naming Strategy",
+            "sensitive" : false
+          },
+          "Response Cache Enabled" : {
+            "displayName" : "Response Cache Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Cache Enabled",
+            "sensitive" : false
+          },
+          "Request Date Header Enabled" : {
+            "displayName" : "Request Date Header Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Date Header Enabled",
+            "sensitive" : false
+          },
+          "Request Failure Penalization Enabled" : {
+            "displayName" : "Request Failure Penalization Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Failure Penalization Enabled",
+            "sensitive" : false
+          },
+          "Response Body Attribute Size" : {
+            "displayName" : "Response Body Attribute Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Body Attribute Size",
+            "sensitive" : false
+          },
+          "SSL Context Service" : {
+            "displayName" : "SSL Context Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "SSL Context Service",
+            "sensitive" : false
+          },
+          "Response Generation Required" : {
+            "displayName" : "Response Generation Required",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Generation Required",
+            "sensitive" : false
+          },
+          "Request User-Agent" : {
+            "displayName" : "Request User-Agent",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request User-Agent",
+            "sensitive" : false
+          },
+          "Response Header Request Attributes Enabled" : {
+            "displayName" : "Response Header Request Attributes Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Header Request Attributes Enabled",
+            "sensitive" : false
+          },
+          "HTTP Method" : {
+            "displayName" : "HTTP Method",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "HTTP Method",
+            "sensitive" : false
+          },
+          "Request Username" : {
+            "displayName" : "Request Username",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Username",
+            "sensitive" : false
+          },
+          "Request Content-Type" : {
+            "displayName" : "Request Content-Type",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Content-Type",
+            "sensitive" : false
+          },
+          "Response Body Attribute Name" : {
+            "displayName" : "Response Body Attribute Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Body Attribute Name",
+            "sensitive" : false
+          },
+          "Request Digest Authentication Enabled" : {
+            "displayName" : "Request Digest Authentication Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Digest Authentication Enabled",
+            "sensitive" : false
+          },
+          "Request Multipart Form-Data Name" : {
+            "displayName" : "Request Multipart Form-Data Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Multipart Form-Data Name",
+            "sensitive" : false
+          },
+          "Response Cache Size" : {
+            "displayName" : "Response Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Cache Size",
+            "sensitive" : false
+          },
+          "Response Body Ignored" : {
+            "displayName" : "Response Body Ignored",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Body Ignored",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "56bf3e41-ed18-3bcf-88c5-5e11234cec48",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "GenerateFlowFile",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -664.0,
+          "y" : -456.0
+        },
+        "properties" : {
+          "character-set" : "UTF-8",
+          "File Size" : "0B",
+          "generate-ff-custom-text" : "{\n  \"return_tags\": {\n    \"X-API-KEY\": \"eyJ1c2VyX2lkIjo3OTksImV4cGlyeSI6MTc2MTA1MzgzOSwiaXBfYWRkcmVzcyI6IiJ9.c3b896988f338b613937cf4de33612d8c792a6b0a11293a268461dfa0019a53d\"\n  },\n  \"task\": {\n    \"task_id\": \"initregister\",\n    \"task_type\": \"hook\",\n    \"runlevel\": \"file\",\n    \"next\": {\n      \"any\": true\n    },\n    \"flow\": \"gb-ccl\",\n    \"params\": {\n      \"hook\": \"initregister\",\n      \"index\": \"customs-reg\"\n    }\n  },\n  \"params\": {\n    \"direction\": \"inbound\"\n  },\n  \"data\": [\n    {\n      \"utd_id\": \"106230\",\n      \"utd_code\": \"0741\",\n      \"utd_type\": \"2\",\n      \"closed_by\": \"0\",\n      \"utd_state\": \"6\",\n      \"amount_ews\": \"0\",\n      \"consing_id\": \"0\",\n      \"shipper_id\": \"0\",\n      \"utd_number\": \"020-14102025\",\n      \"closed_date\": \"0\",\n      \"sys_changed\": \"2025-10-14 07:44:31\",\n      \"sys_created\": \"2025-10-14 07:39:06\",\n      \"weight_paid\": \"0.000\",\n      \"nature_cargo\": \"\",\n      \"total_amount\": \"1\",\n      \"total_weight\": \"2.900\",\n      \"ws_utd_costs\": [],\n      \"service_owner\": \"12\",\n      \"total_collect\": \"0.000\",\n      \"total_prepaid\": \"0.000\",\n      \"volume_weight\": \"0.000\",\n      \"ws_utd_routes\": [\n        {\n          \"utd_id\": \"106230\",\n          \"dept_city\": \"Newark\",\n          \"dept_date\": \"0\",\n          \"dest_city\": \"London\",\n          \"dest_date\": \"0\",\n          \"airline_id\": \"0\",\n          \"dept_country\": \"United States\",\n          \"dest_country\": \"United Kingdom\",\n          \"utd_route_id\": \"110666\",\n          \"dept_date_act\": \"0\",\n          \"dest_date_act\": \"0\",\n          \"utd_route_seq\": \"1\",\n          \"airline_flight\": \"\",\n          \"dept_airport_id\": \"2238\",\n          \"dept_seaport_id\": \"0\",\n          \"dest_airport_id\": \"4310\",\n          \"dest_seaport_id\": \"0\",\n          \"shipping_flight\": \"\",\n          \"shippingline_id\": \"0\",\n          \"dept_airport_iata\": \"EWR\",\n          \"dest_airport_iata\": \"LHR\",\n          \"dept_country_alpha_2\": \"US\",\n          \"dest_country_alpha_2\": \"GB\"\n        }\n      ],\n      \"amount_ews_pcs\": \"0\",\n      \"sys_changed_by\": \"799\",\n      \"sys_created_by\": \"799\",\n      \"calc_amount_ews\": \"2\",\n      \"closed_location\": null,\n      \"executed_by_act\": \"vadym.hil\",\n      \"volume_entities\": \"0.000\",\n      \"ws_utd_comments\": [],\n      \"ws_utd_contents\": [\n        {\n          \"number\": \"NPI223388\",\n          \"utd_id\": \"106230\",\n          \"amount_ews\": \"2\",\n          \"content_id\": \"223388\",\n          \"content_type\": \"1\",\n          \"partner_code\": \"\",\n          \"service_owner\": \"12\",\n          \"amount_ews_pcs\": \"2\",\n          \"utd_content_id\": \"389116\",\n          \"amount_packages\": \"0\",\n          \"total_gross_weight\": \"2.90\",\n          \"total_shipment_weight\": \"2.40\"\n        }\n      ],\n      \"ws_utd_packages\": [],\n      \"ws_utd_statuses\": [],\n      \"calc_weight_paid\": \"0.000\",\n      \"calc_total_weight\": \"2.900\",\n      \"executed_date_act\": \"1760431260\",\n      \"executed_location\": \"Не реализован сервис\",\n      \"total_amount_pack\": \"0\",\n      \"ws_utd_attributes\": [\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"service_owner\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"NP GLOBAL LLC\",\n          \"utd_attr_id\": \"4200451\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"mawb_charges\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"1\",\n          \"utd_attr_id\": \"4200452\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"mawb_charges_other\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"1\",\n          \"utd_attr_id\": \"4200453\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"mawb_as_agreed\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"0\",\n          \"utd_attr_id\": \"4200454\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"mawb_declared_carriage\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"NVD\",\n          \"utd_attr_id\": \"4200455\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"mawb_declared_customs\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"NCV\",\n          \"utd_attr_id\": \"4200456\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"mawb_amount_insurance\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"NIL\",\n          \"utd_attr_id\": \"4200457\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"mawb_airline_code\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"020\",\n          \"utd_attr_id\": \"4200507\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"mawb_airline_id\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"181\",\n          \"utd_attr_id\": \"4200508\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"mawb_airline_name\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"Lufthansa\",\n          \"utd_attr_id\": \"4200509\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"mawb_airline_iata\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"LH\",\n          \"utd_attr_id\": \"4200510\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"shipper_name\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"VELOX INT'L SHIPPING, INC.\",\n          \"utd_attr_id\": \"4200511\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"shipper_id\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"9\",\n          \"utd_attr_id\": \"4200512\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"shipper_country\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"UNITED STATES\",\n          \"utd_attr_id\": \"4200513\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"shipper_city\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"EAST HANOVER\",\n          \"utd_attr_id\": \"4200514\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"shipper_hub_ref\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"98c3a5b96165\",\n          \"utd_attr_id\": \"4200515\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"shipper_add_info\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200516\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"shipper_eori\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200517\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"shipper_address\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"28-31 MERRY LANE\",\n          \"utd_attr_id\": \"4200518\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"shipper_postcode\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"NJ 07936\",\n          \"utd_attr_id\": \"4200519\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"shipper_contact_1\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200520\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"shipper_phone_1\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"973-463-0088\",\n          \"utd_attr_id\": \"4200521\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"shipper_contact_2\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200522\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"shipper_phone_2\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200523\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"consignee_name\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"Customs Clearance Limited\",\n          \"utd_attr_id\": \"4200524\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"consignee_id\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"232\",\n          \"utd_attr_id\": \"4200525\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"consignee_country\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"GB\",\n          \"utd_attr_id\": \"4200526\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"consignee_city\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"Feltham\",\n          \"utd_attr_id\": \"4200527\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"consignee_hub_ref\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200528\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"consignee_add_info\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200529\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"consignee_eori\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200530\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"consignee_address\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"Unit 4, Radius Park, Faggs Rd\",\n          \"utd_attr_id\": \"4200531\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"consignee_postcode\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"TW14 0NG\",\n          \"utd_attr_id\": \"4200532\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"consignee_contact_1\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200533\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"consignee_phone_1\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200534\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"consignee_contact_2\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200535\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"consignee_phone_2\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200536\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"agent_name\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200537\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"agent_id\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200538\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"agent_country\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200539\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"agent_city\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200540\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"agent_postcode\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200541\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"agent_address\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200542\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"agent_contact_1\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200543\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"agent_phone_1\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200544\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"agent_contact_2\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200545\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"agent_phone_2\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200546\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"mawb_hand_info\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200547\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"mawb_account_info\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200548\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"mawb_rate_class\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"0\",\n          \"utd_attr_id\": \"4200549\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"mawb_rate\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"\",\n          \"utd_attr_id\": \"4200550\"\n        },\n        {\n          \"utd_id\": \"106230\",\n          \"attr_name\": \"mawb_currency\",\n          \"attr_type\": \"1\",\n          \"attr_value\": \"0\",\n          \"utd_attr_id\": \"4200551\"\n        }\n      ],\n      \"calc_volume_weight\": \"0.000\",\n      \"total_prepaid_curr\": null,\n      \"calc_amount_ews_pcs\": \"2\",\n      \"general_description\": \"\",\n      \"volume_entities_pack\": \"0.000\",\n      \"ws_utd_contents_cost\": [\n        {\n          \"utd_id\": \"106230\",\n          \"cargo_cost\": \"7.00\",\n          \"cargo_cost_curr\": \"USD\",\n          \"utd_content_cost_id\": \"804728\"\n        }\n      ],\n      \"executed_location_act\": \"\",\n      \"total_shipment_weight\": \"0.00\",\n      \"calc_total_amount_pack\": \"0\",\n      \"calc_volume_entities_pack\": \"0.000\",\n      \"calc_total_shipment_weight\": \"2.40\",\n      \"manifests\": [\n        {\n          \"status\": \"3\",\n          \"creator\": \"vadym.hil\",\n          \"manifest_id\": \"223388\",\n          \"node_marker\": null,\n          \"sys_changed\": \"2025-10-14 07:44:31\",\n          \"sys_created\": \"2025-10-14 07:37:07\",\n          \"weight_paid\": \"0.000\",\n          \"manifest_ews\": \"0\",\n          \"total_pieces\": \"2\",\n          \"weight_gross\": \"2.900\",\n          \"weight_total\": \"2.400\",\n          \"manifest_attr\": {\n            \"ref_type\": \"\",\n            \"owner_name\": \"\",\n            \"ref_partner_code\": \"\",\n            \"ref_partner_name\": \"\"\n          },\n          \"service_owner\": \"12\",\n          \"volume_weight\": \"0.000\",\n          \"sys_changed_by\": \"799\",\n          \"sys_created_by\": \"799\",\n          \"manifest_number\": \"NPI223388\",\n          \"calc_weight_paid\": \"0.000\",\n          \"total_amount_pack\": \"0\",\n          \"total_cons_pieces\": \"0\",\n          \"calc_volume_weight\": \"0.000\",\n          \"manifest_ews_current\": \"2\",\n          \"volume_entities_pack\": \"0.000\",\n          \"calc_total_amount_pack\": \"0\",\n          \"calc_volume_entities_pack\": \"0.000\",\n          \"iews\": [\n            {\n              \"gtid\": \"1060000000028780568\",\n              \"state\": \"Active\",\n              \"labels\": [\n                \"Test\"\n              ],\n              \"status\": {\n                \"code\": \"1-0\",\n                \"date\": \"1760426068\",\n                \"group\": \"P\",\n                \"calculated\": \"false\",\n                \"description\": \"Order is processed for delivery to the country of destination\",\n                \"partner_name\": \"NP GLOBAL LLC\",\n                \"source_entity_num\": \"0000000145560270\"\n              },\n              \"creator\": \"NP GLOBAL LLC\",\n              \"customs\": {\n                \"customs_clearance\": {\n                  \"declaration_value\": \"5\",\n                  \"declaration_currency\": \"USD\"\n                }\n              },\n              \"iew_num\": \"0000000145560270\",\n              \"payment\": {\n                \"service\": {\n                  \"key\": \"13\",\n                  \"name\": \"PROMO\",\n                  \"payer_type\": \"Third party\",\n                  \"partner_code\": \"12\",\n                  \"partner_name\": \"NP GLOBAL LLC\",\n                  \"payment_type\": \"Cashless\",\n                  \"delivery_type\": \"DoorDoor\",\n                  \"payer_counterparty\": {\n                    \"code\": \"2812\",\n                    \"name\": \"PLATNIK NE V UKRAYNI\",\n                    \"type\": \"Legal entity\",\n                    \"residency\": \"UA\",\n                    \"account_no\": \"7770000200\",\n                    \"service_data\": {\n                      \"master_id\": \"000003489\",\n                      \"master_system_id\": \"utp_npg\"\n                    }\n                  }\n                }\n              },\n              \"product\": {\n                \"partner_code\": \"12\"\n              },\n              \"shipper\": {\n                \"code\": \"12482\",\n                \"name\": \"VELOX INTERNATIONAL SHIPPING,INC\",\n                \"type\": \"Legal entity\",\n                \"email\": \"velox@veloxshipping.com\",\n                \"address\": {\n                  \"lang\": \"en\",\n                  \"address\": \"28-31 MERRY LANE EAST HANOVER, NJ 07936, USA\",\n                  \"country\": \"US\",\n                  \"country_data\": {\n                    \"name\": {\n                      \"default\": {\n                        \"value\": \"United States of America\",\n                        \"language\": \"en\"\n                      },\n                      \"i18n_array\": [\n                        {\n                          \"value\": \"United States of America\",\n                          \"language\": \"en\",\n                          \"is_default\": \"true\"\n                        },\n                        {\n                          \"value\": \"США\",\n                          \"language\": \"uk\",\n                          \"is_default\": \"false\"\n                        },\n                        {\n                          \"value\": \"США\",\n                          \"language\": \"ru\",\n                          \"is_default\": \"false\"\n                        }\n                      ],\n                      \"i18n_object\": {\n                        \"en\": \"United States of America\",\n                        \"ru\": \"США\",\n                        \"uk\": \"США\"\n                      }\n                    },\n                    \"state\": \"Active\",\n                    \"currency\": \"USD\",\n                    \"code_alpha2\": \"US\",\n                    \"code_alpha3\": \"USA\",\n                    \"code_numeric\": \"840\",\n                    \"territory_alpha2\": \"US\"\n                  },\n                  \"country_name\": \"United States of America\"\n                },\n                \"residency\": \"US\",\n                \"account_no\": \"9990000020\",\n                \"service_data\": {\n                  \"master_id\": \"000000418\",\n                  \"master_system_id\": \"utp_npg\"\n                },\n                \"phone_num_main\": \"111100011100\",\n                \"pickup_address\": {\n                  \"city\": \"East Hanover\",\n                  \"lang\": \"en\",\n                  \"region\": \"NJ\",\n                  \"address\": \"28-31 MERRY LANE\",\n                  \"country\": \"US\",\n                  \"zipcode\": \"07936\",\n                  \"address_type\": \"Door\",\n                  \"country_data\": {\n                    \"name\": {\n                      \"default\": {\n                        \"value\": \"United States of America\",\n                        \"language\": \"en\"\n                      },\n                      \"i18n_array\": [\n                        {\n                          \"value\": \"United States of America\",\n                          \"language\": \"en\",\n                          \"is_default\": \"true\"\n                        },\n                        {\n                          \"value\": \"США\",\n                          \"language\": \"uk\",\n                          \"is_default\": \"false\"\n                        },\n                        {\n                          \"value\": \"США\",\n                          \"language\": \"ru\",\n                          \"is_default\": \"false\"\n                        }\n                      ],\n                      \"i18n_object\": {\n                        \"en\": \"United States of America\",\n                        \"ru\": \"США\",\n                        \"uk\": \"США\"\n                      }\n                    },\n                    \"state\": \"Active\",\n                    \"currency\": \"USD\",\n                    \"code_alpha2\": \"US\",\n                    \"code_alpha3\": \"USA\",\n                    \"code_numeric\": \"840\",\n                    \"territory_alpha2\": \"US\"\n                  },\n                  \"country_name\": \"United States of America\",\n                  \"warehouse_owner\": \"12\",\n                  \"warehouse_owner_name\": \"NP GLOBAL LLC\"\n                },\n                \"initial_phone_num\": \"111100011100\",\n                \"contact_person_name\": \"Alexa\",\n                \"contact_person_surname\": \"Mikhaylishin\",\n                \"public_legal_registry_code\": \"0100940764\"\n              },\n              \"user_id\": \"799\",\n              \"version\": \"c6936574-db46-4a34-9d21-540bbe2003cc\",\n              \"invoices\": [\n                {\n                  \"id\": \"1\",\n                  \"num\": \"NPG0000000145560270\",\n                  \"cost\": \"5\",\n                  \"date\": \"1683125459\",\n                  \"currency\": \"USD\",\n                  \"incoterms\": \"DDU\",\n                  \"export_reason\": \"For personal use\",\n                  \"invoice_details\": [\n                    {\n                      \"id\": \"1\",\n                      \"units\": \"pieces\",\n                      \"origin\": \"US\",\n                      \"weight\": \"1.5\",\n                      \"quantity\": \"1\",\n                      \"description\": \"Book\",\n                      \"customs_code\": \"4901990000\",\n                      \"cost_per_unit\": \"5\",\n                      \"description_local\": [\n                        {\n                          \"default\": {\n                            \"value\": \"Book\",\n                            \"language\": \"en\"\n                          },\n                          \"i18n_array\": {\n                            \"value\": \"Book\",\n                            \"language\": \"en\",\n                            \"is_default\": \"true\"\n                          },\n                          \"i18n_object\": {\n                            \"en\": \"Book\"\n                          }\n                        }\n                      ],\n                      \"origin_country_name\": \"United States of America\",\n                      \"subtotal_cost_per_good\": \"5\",\n                      \"customs_declaration_value\": \"5\",\n                      \"origin_country_code_numeric\": \"840\"\n                    },\n                    {\n                      \"id\": \"2\",\n                      \"units\": \"pieces\",\n                      \"origin\": \"US\",\n                      \"_weight\": \"1.5\",\n                      \"quantity\": \"1\",\n                      \"description\": \"Book\",\n                      \"customs_code\": \"9901990000\",\n                      \"cost_per_unit\": \"5\",\n                      \"description_local\": [\n                        {\n                          \"default\": {\n                            \"value\": \"Book\",\n                            \"language\": \"en\"\n                          },\n                          \"i18n_array\": {\n                            \"value\": \"Book\",\n                            \"language\": \"en\",\n                            \"is_default\": \"true\"\n                          },\n                          \"i18n_object\": {\n                            \"en\": \"Book\"\n                          }\n                        }\n                      ],\n                      \"origin_country_name\": \"United States of America\",\n                      \"subtotal_cost_per_good\": \"5\",\n                      \"customs_declaration_value\": \"5\",\n                      \"origin_country_code_numeric\": \"840\"\n                    }\n                  ],\n                  \"hotec_statements\": [\n                    \"Compiled on the basis of on the Terms and Conditions and Public agreement/Contract of Nova Poshta International LTD located on the web novaposhta. According to the Terms and Conditions and Public agreement/Contract hereof, the Forwarder shall confirm that this delivery does not contain dangerous and illegal goods.\",\n                    \"All items are not intended for commercial use\",\n                    \"NO COMMERCIAL\",\n                    \"The exporter of the products covered by this document declares that, except where otherwise clearly indicated, these products are of UA preferential origin\"\n                  ],\n                  \"customs_declaration_cost\": \"5\",\n                  \"customs_declaration_currency\": \"USD\"\n                }\n              ],\n              \"api_order\": \"0000000145560270\",\n              \"consignee\": {\n                \"name\": \"Roman Khokhotva\",\n                \"type\": \"Private person\",\n                \"email\": \"rhohotva@ukr.net\",\n                \"address\": {\n                  \"lang\": \"en\",\n                  \"county\": \"Ukraine\",\n                  \"country\": \"UA\",\n                  \"country_data\": {\n                    \"name\": {\n                      \"default\": {\n                        \"value\": \"Ukraine\",\n                        \"language\": \"en\"\n                      },\n                      \"i18n_array\": [\n                        {\n                          \"value\": \"Ukraine\",\n                          \"language\": \"en\",\n                          \"is_default\": \"true\"\n                        },\n                        {\n                          \"value\": \"Україна\",\n                          \"language\": \"uk\",\n                          \"is_default\": \"false\"\n                        },\n                        {\n                          \"value\": \"Украина\",\n                          \"language\": \"ru\",\n                          \"is_default\": \"false\"\n                        }\n                      ],\n                      \"i18n_object\": {\n                        \"en\": \"Ukraine\",\n                        \"ru\": \"Украина\",\n                        \"uk\": \"Україна\"\n                      }\n                    },\n                    \"state\": \"Active\",\n                    \"currency\": \"UAH\",\n                    \"code_alpha2\": \"UA\",\n                    \"code_alpha3\": \"UKR\",\n                    \"code_numeric\": \"804\",\n                    \"territory_alpha2\": \"UA\"\n                  },\n                  \"country_name\": \"Ukraine\"\n                },\n                \"account_no\": \"7770001180\",\n                \"phone_num_main\": \"380674178417\",\n                \"delivery_address\": {\n                  \"city\": \"Abingdon\",\n                  \"lang\": \"en\",\n                  \"region\": \"England\",\n                  \"street\": \"St Helen`s Court\",\n                  \"address\": \"19 St Helen`s Court\",\n                  \"channel\": \"CargOS\",\n                  \"country\": \"GB\",\n                  \"zipcode\": \"OX14 5BS\",\n                  \"building\": \"19\",\n                  \"address_type\": \"Door\",\n                  \"country_data\": {\n                    \"name\": {\n                      \"default\": {\n                        \"value\": \"United Kingdom of Great Britain and Northern Ireland\",\n                        \"language\": \"en\"\n                      },\n                      \"i18n_array\": [\n                        {\n                          \"value\": \"United Kingdom of Great Britain and Northern Ireland\",\n                          \"language\": \"en\",\n                          \"is_default\": \"true\"\n                        },\n                        {\n                          \"value\": \"Велика Британія\",\n                          \"language\": \"uk\",\n                          \"is_default\": \"false\"\n                        },\n                        {\n                          \"value\": \"Великобритания\",\n                          \"language\": \"ru\",\n                          \"is_default\": \"false\"\n                        }\n                      ],\n                      \"i18n_object\": {\n                        \"en\": \"United Kingdom of Great Britain and Northern Ireland\",\n                        \"ru\": \"Великобритания\",\n                        \"uk\": \"Велика Британія\"\n                      }\n                    },\n                    \"state\": \"Active\",\n                    \"currency\": \"GBP\",\n                    \"code_alpha2\": \"GB\",\n                    \"code_alpha3\": \"GBR\",\n                    \"code_numeric\": \"826\",\n                    \"territory_alpha2\": \"GB\"\n                  },\n                  \"country_name\": \"United Kingdom of Great Britain and Northern Ireland\",\n                  \"warehouse_owner\": \"12\",\n                  \"warehouse_owner_name\": \"NP GLOBAL LLC\"\n                },\n                \"initial_phone_num\": \"380674178417\",\n                \"contact_person_name\": \"Roman\",\n                \"contact_person_surname\": \"Khokhotva\"\n              },\n              \"company_id\": \"npi\",\n              \"created_at\": \"1760426068\",\n              \"references\": [\n                {\n                  \"id\": \"1\",\n                  \"num\": \"0000000145560270\",\n                  \"type\": \"api_order\",\n                  \"state\": \"Active\",\n                  \"carrier\": \"NP GLOBAL LLC\",\n                  \"account_no\": \"7777777777\",\n                  \"initial_date\": \"1760426068\",\n                  \"partner_code\": \"12\",\n                  \"partner_alias\": {\n                    \"default\": {\n                      \"value\": \"NP GLOBAL LLC\",\n                      \"language\": \"en\"\n                    },\n                    \"i18n_array\": {\n                      \"value\": \"NP GLOBAL LLC\",\n                      \"language\": \"en\",\n                      \"is_default\": \"true\"\n                    },\n                    \"i18n_object\": {\n                      \"en\": \"NP GLOBAL LLC\"\n                    }\n                  },\n                  \"enable_tracking\": \"true\"\n                },\n                {\n                  \"id\": \"2\",\n                  \"num\": \"NPG0000000145560270\",\n                  \"type\": \"Waybill number\",\n                  \"state\": \"Active\",\n                  \"carrier\": \"NP GLOBAL LLC\",\n                  \"account_no\": \"7777777777\",\n                  \"initial_date\": \"1760426068\",\n                  \"partner_code\": \"12\",\n                  \"partner_alias\": {\n                    \"default\": {\n                      \"value\": \"NP GLOBAL LLC\",\n                      \"language\": \"en\"\n                    },\n                    \"i18n_array\": {\n                      \"value\": \"NP GLOBAL LLC\",\n                      \"language\": \"en\",\n                      \"is_default\": \"true\"\n                    },\n                    \"i18n_object\": {\n                      \"en\": \"NP GLOBAL LLC\"\n                    }\n                  },\n                  \"enable_tracking\": \"true\"\n                }\n              ],\n              \"updated_at\": \"1760428028\",\n              \"contractors\": [\n                {\n                  \"id\": \"1\",\n                  \"role\": \"Creator\",\n                  \"type\": \"All miles\",\n                  \"partner_code\": \"12\",\n                  \"partner_name\": \"NP GLOBAL LLC\"\n                },\n                {\n                  \"id\": \"2\",\n                  \"role\": \"Service owner\",\n                  \"type\": \"All miles\",\n                  \"partner_code\": \"12\",\n                  \"partner_name\": \"NP GLOBAL LLC\"\n                }\n              ],\n              \"api_creation\": \"true\",\n              \"partner_code\": \"12\",\n              \"partner_data\": [\n                {\n                  \"partner_code\": \"12\",\n                  \"partner_name\": \"NP GLOBAL LLC\"\n                }\n              ],\n              \"pick_up_date\": \"1760427871\",\n              \"shipment_info\": {\n                \"pcs_qty\": \"1\",\n                \"total_volume\": \"0.00288\",\n                \"shipment_type\": \"Cargo\",\n                \"pcs_description\": [\n                  {\n                    \"id\": \"1\",\n                    \"index\": \"1\",\n                    \"width\": \"24\",\n                    \"height\": \"4\",\n                    \"length\": \"30\",\n                    \"volume\": \"0.00288\",\n                    \"barcode\": \"NPG0000000145560270\",\n                    \"pack_num\": \"NPG0000000145560270\",\n                    \"description\": \"Book\",\n                    \"actual_weight\": \"1.5\",\n                    \"volume_weight\": \"0.576\",\n                    \"control_volume\": \"0\",\n                    \"control_volume_weight\": \"0\"\n                  }\n                ],\n                \"sum_actual_weight\": \"1.5\",\n                \"sum_volume_weight\": \"0.576\",\n                \"control_total_volume\": \"0\",\n                \"general_description_lat\": \"Book\",\n                \"sum_control_actual_weight\": \"0\",\n                \"sum_control_volume_weight\": \"0\"\n              },\n              \"is_consignment\": \"false\",\n              \"waybill_number\": \"NPG0000000145560270\",\n              \"shipment_format\": \"Express shipment\",\n              \"trans_company_id\": \"20700687508250\",\n              \"general_cost_info\": {\n                \"declared_cost\": \"5\",\n                \"declared_currency\": \"USD\"\n              },\n              \"transition_history\": [\n                {\n                  \"date\": \"1760426068\",\n                  \"index\": \"1\",\n                  \"user_id\": \"799\",\n                  \"finish_state\": \"Draft\"\n                },\n                {\n                  \"date\": \"1760428028\",\n                  \"index\": \"2\",\n                  \"partner\": \"12\",\n                  \"user_id\": \"api_npi\",\n                  \"init_state\": \"Created\",\n                  \"finish_state\": \"Active\"\n                }\n              ],\n              \"updated_by_user_id\": \"api_npi\",\n              \"reported_by_user_id\": \"799\",\n              \"updated_by_partner_code\": \"12\",\n              \"updated_by_partner_name\": \"NP GLOBAL LLC\",\n              \"reported_by_partner_code\": \"12\",\n              \"reported_by_partner_name\": \"NP GLOBAL LLC\",\n              \"external_tracking_enabled\": \"true\"\n            },\n            {\n              \"gtid\": \"1060000000028780570\",\n              \"state\": \"Active\",\n              \"labels\": [\n                \"Test\"\n              ],\n              \"creator\": \"NP GLOBAL LLC\",\n              \"customs\": {\n                \"customs_clearance\": {\n                  \"declaration_value\": \"2\",\n                  \"declaration_currency\": \"USD\"\n                }\n              },\n              \"iew_num\": \"0000000145560288\",\n              \"payment\": {\n                \"service\": {\n                  \"key\": \"13\",\n                  \"name\": \"PROMO\",\n                  \"payer_type\": \"Third party\",\n                  \"partner_code\": \"12\",\n                  \"partner_name\": \"NP GLOBAL LLC\",\n                  \"payment_type\": \"Cashless\",\n                  \"delivery_type\": \"DoorWarehouse\",\n                  \"payer_counterparty\": {\n                    \"code\": \"2812\",\n                    \"name\": \"PLATNIK NE V UKRAYNI\",\n                    \"type\": \"Legal entity\",\n                    \"residency\": \"UA\",\n                    \"account_no\": \"7770000200\",\n                    \"service_data\": {\n                      \"master_id\": \"000003489\",\n                      \"master_system_id\": \"utp_npg\"\n                    }\n                  }\n                }\n              },\n              \"product\": {\n                \"partner_code\": \"12\"\n              },\n              \"shipper\": {\n                \"code\": \"12482\",\n                \"name\": \"VELOX INTERNATIONAL SHIPPING,INC\",\n                \"type\": \"Legal entity\",\n                \"email\": \"velox@veloxshipping.com\",\n                \"address\": {\n                  \"lang\": \"en\",\n                  \"address\": \"28-31 MERRY LANE EAST HANOVER, NJ 07936, USA\",\n                  \"country\": \"US\",\n                  \"country_data\": {\n                    \"name\": {\n                      \"default\": {\n                        \"value\": \"United States of America\",\n                        \"language\": \"en\"\n                      },\n                      \"i18n_array\": [\n                        {\n                          \"value\": \"United States of America\",\n                          \"language\": \"en\",\n                          \"is_default\": \"true\"\n                        },\n                        {\n                          \"value\": \"США\",\n                          \"language\": \"uk\",\n                          \"is_default\": \"false\"\n                        },\n                        {\n                          \"value\": \"США\",\n                          \"language\": \"ru\",\n                          \"is_default\": \"false\"\n                        }\n                      ],\n                      \"i18n_object\": {\n                        \"en\": \"United States of America\",\n                        \"ru\": \"США\",\n                        \"uk\": \"США\"\n                      }\n                    },\n                    \"state\": \"Active\",\n                    \"currency\": \"USD\",\n                    \"code_alpha2\": \"US\",\n                    \"code_alpha3\": \"USA\",\n                    \"code_numeric\": \"840\",\n                    \"territory_alpha2\": \"US\"\n                  },\n                  \"country_name\": \"United States of America\"\n                },\n                \"residency\": \"US\",\n                \"account_no\": \"9990000020\",\n                \"service_data\": {\n                  \"master_id\": \"000000418\",\n                  \"master_system_id\": \"utp_npg\"\n                },\n                \"phone_num_main\": \"111100011100\",\n                \"pickup_address\": {\n                  \"city\": \"East Hanover\",\n                  \"lang\": \"en\",\n                  \"region\": \"NJ\",\n                  \"street\": \"MERRY LANE\",\n                  \"address\": \"28-31  MERRY LANE\",\n                  \"country\": \"US\",\n                  \"zipcode\": \"07936\",\n                  \"building\": \"28-31\",\n                  \"address_type\": \"Door\",\n                  \"country_data\": {\n                    \"name\": {\n                      \"default\": {\n                        \"value\": \"United States of America\",\n                        \"language\": \"en\"\n                      },\n                      \"i18n_array\": [\n                        {\n                          \"value\": \"United States of America\",\n                          \"language\": \"en\",\n                          \"is_default\": \"true\"\n                        },\n                        {\n                          \"value\": \"США\",\n                          \"language\": \"uk\",\n                          \"is_default\": \"false\"\n                        },\n                        {\n                          \"value\": \"США\",\n                          \"language\": \"ru\",\n                          \"is_default\": \"false\"\n                        }\n                      ],\n                      \"i18n_object\": {\n                        \"en\": \"United States of America\",\n                        \"ru\": \"США\",\n                        \"uk\": \"США\"\n                      }\n                    },\n                    \"state\": \"Active\",\n                    \"currency\": \"USD\",\n                    \"code_alpha2\": \"US\",\n                    \"code_alpha3\": \"USA\",\n                    \"code_numeric\": \"840\",\n                    \"territory_alpha2\": \"US\"\n                  },\n                  \"country_name\": \"United States of America\",\n                  \"warehouse_owner\": \"12\",\n                  \"warehouse_owner_name\": \"NP GLOBAL LLC\"\n                },\n                \"initial_phone_num\": \"111100011100\",\n                \"contact_person_name\": \"Alexa\",\n                \"contact_person_surname\": \"Mikhaylishin\",\n                \"public_legal_registry_code\": \"0100940764\"\n              },\n              \"user_id\": \"799\",\n              \"version\": \"fcb5220a-e46d-4831-8d98-cee34eeda713\",\n              \"invoices\": [\n                {\n                  \"id\": \"1\",\n                  \"num\": \"NPG0000000145560288\",\n                  \"cost\": \"2\",\n                  \"date\": \"1683125459\",\n                  \"currency\": \"USD\",\n                  \"incoterms\": \"DDU\",\n                  \"export_reason\": \"For personal use\",\n                  \"invoice_details\": [\n                    {\n                      \"id\": \"1\",\n                      \"units\": \"pieces\",\n                      \"origin\": \"US\",\n                      \"weight\": \"0.9\",\n                      \"quantity\": \"1\",\n                      \"description\": \"Book\",\n                      \"customs_code\": \"4901990000\",\n                      \"cost_per_unit\": \"2\",\n                      \"description_local\": [\n                        {\n                          \"default\": {\n                            \"value\": \"Book\",\n                            \"language\": \"en\"\n                          },\n                          \"i18n_array\": {\n                            \"value\": \"Book\",\n                            \"language\": \"en\",\n                            \"is_default\": \"true\"\n                          },\n                          \"i18n_object\": {\n                            \"en\": \"Book\"\n                          }\n                        }\n                      ],\n                      \"origin_country_name\": \"United States of America\",\n                      \"subtotal_cost_per_good\": \"2\",\n                      \"customs_declaration_value\": \"2\",\n                      \"origin_country_code_numeric\": \"840\"\n                    }\n                  ],\n                  \"hotec_statements\": [\n                    \"Compiled on the basis of on the Terms and Conditions and Public agreement/Contract of Nova Poshta International LTD located on the web novaposhta. According to the Terms and Conditions and Public agreement/Contract hereof, the Forwarder shall confirm that this delivery does not contain dangerous and illegal goods.\",\n                    \"All items are not intended for commercial use\",\n                    \"NO COMMERCIAL\",\n                    \"The exporter of the products covered by this document declares that, except where otherwise clearly indicated, these products are of UA preferential origin\"\n                  ],\n                  \"customs_declaration_cost\": \"2\",\n                  \"customs_declaration_currency\": \"USD\"\n                }\n              ],\n              \"api_order\": \"0000000145560288\",\n              \"consignee\": {\n                \"name\": \"Roman Khokhotva\",\n                \"type\": \"Private person\",\n                \"email\": \"rhohotva@ukr.net\",\n                \"address\": {\n                  \"lang\": \"en\",\n                  \"county\": \"Ukraine\",\n                  \"country\": \"UA\",\n                  \"country_data\": {\n                    \"name\": {\n                      \"default\": {\n                        \"value\": \"Ukraine\",\n                        \"language\": \"en\"\n                      },\n                      \"i18n_array\": [\n                        {\n                          \"value\": \"Ukraine\",\n                          \"language\": \"en\",\n                          \"is_default\": \"true\"\n                        },\n                        {\n                          \"value\": \"Україна\",\n                          \"language\": \"uk\",\n                          \"is_default\": \"false\"\n                        },\n                        {\n                          \"value\": \"Украина\",\n                          \"language\": \"ru\",\n                          \"is_default\": \"false\"\n                        }\n                      ],\n                      \"i18n_object\": {\n                        \"en\": \"Ukraine\",\n                        \"ru\": \"Украина\",\n                        \"uk\": \"Україна\"\n                      }\n                    },\n                    \"state\": \"Active\",\n                    \"currency\": \"UAH\",\n                    \"code_alpha2\": \"UA\",\n                    \"code_alpha3\": \"UKR\",\n                    \"code_numeric\": \"804\",\n                    \"territory_alpha2\": \"UA\"\n                  },\n                  \"country_name\": \"Ukraine\"\n                },\n                \"account_no\": \"7770001180\",\n                \"phone_num_main\": \"380674178417\",\n                \"delivery_address\": {\n                  \"city\": \"Abingdon\",\n                  \"lang\": \"en\",\n                  \"street\": \"11-15 East St Helen Street\",\n                  \"address\": \"Abingdon, 11-15 East St Helen Street\",\n                  \"country\": \"GB\",\n                  \"zipcode\": \"OX14 5EE\",\n                  \"comments\": \"Galaxy Techno Ltd\",\n                  \"latitude\": \"51.6695408\",\n                  \"longitude\": \"-1.2820567\",\n                  \"address_type\": \"Warehouse\",\n                  \"country_data\": {\n                    \"name\": {\n                      \"default\": {\n                        \"value\": \"United Kingdom of Great Britain and Northern Ireland\",\n                        \"language\": \"en\"\n                      },\n                      \"i18n_array\": [\n                        {\n                          \"value\": \"United Kingdom of Great Britain and Northern Ireland\",\n                          \"language\": \"en\",\n                          \"is_default\": \"true\"\n                        },\n                        {\n                          \"value\": \"Велика Британія\",\n                          \"language\": \"uk\",\n                          \"is_default\": \"false\"\n                        },\n                        {\n                          \"value\": \"Великобритания\",\n                          \"language\": \"ru\",\n                          \"is_default\": \"false\"\n                        }\n                      ],\n                      \"i18n_object\": {\n                        \"en\": \"United Kingdom of Great Britain and Northern Ireland\",\n                        \"ru\": \"Великобритания\",\n                        \"uk\": \"Велика Британія\"\n                      }\n                    },\n                    \"state\": \"Active\",\n                    \"currency\": \"GBP\",\n                    \"code_alpha2\": \"GB\",\n                    \"code_alpha3\": \"GBR\",\n                    \"code_numeric\": \"826\",\n                    \"territory_alpha2\": \"GB\"\n                  },\n                  \"country_name\": \"Great Britain\",\n                  \"ref_warehouse\": \"S05745, 11-15 East St Helen Street\",\n                  \"warehouse_data\": {\n                    \"name\": {\n                      \"default\": {\n                        \"value\": \"Galaxy Techno Ltd\",\n                        \"language\": \"en\"\n                      },\n                      \"i18n_array\": [\n                        {\n                          \"value\": \"Galaxy Techno Ltd\",\n                          \"language\": \"en\",\n                          \"is_default\": \"true\"\n                        }\n                      ],\n                      \"i18n_object\": {\n                        \"en\": \"Galaxy Techno Ltd\"\n                      }\n                    },\n                    \"type\": {\n                      \"name\": \"Parcel depot\",\n                      \"reference\": \"SHOP\"\n                    },\n                    \"state\": \"Active\",\n                    \"number\": \"S05745, 11-15 East St Helen Street\",\n                    \"address\": {\n                      \"city\": {\n                        \"default\": {\n                          \"value\": \"Abingdon\",\n                          \"language\": \"en\"\n                        },\n                        \"i18n_array\": [\n                          {\n                            \"value\": \"Abingdon\",\n                            \"language\": \"en\",\n                            \"is_default\": \"true\"\n                          }\n                        ],\n                        \"i18n_object\": {\n                          \"en\": \"Abingdon\"\n                        }\n                      },\n                      \"street\": {\n                        \"default\": {\n                          \"value\": \"11-15 East St Helen Street\",\n                          \"language\": \"en\"\n                        },\n                        \"i18n_array\": [\n                          {\n                            \"value\": \"11-15 East St Helen Street\",\n                            \"language\": \"en\",\n                            \"is_default\": \"true\"\n                          }\n                        ],\n                        \"i18n_object\": {\n                          \"en\": \"11-15 East St Helen Street\"\n                        }\n                      },\n                      \"address\": {\n                        \"default\": {\n                          \"value\": \"Abingdon, 11-15 East St Helen Street\",\n                          \"language\": \"en\"\n                        },\n                        \"i18n_array\": [\n                          {\n                            \"value\": \"Abingdon, 11-15 East St Helen Street\",\n                            \"language\": \"en\",\n                            \"is_default\": \"true\"\n                          }\n                        ],\n                        \"i18n_object\": {\n                          \"en\": \"Abingdon, 11-15 East St Helen Street\"\n                        }\n                      },\n                      \"comment\": {\n                        \"default\": {\n                          \"value\": \"Galaxy Techno Ltd\",\n                          \"language\": \"en\"\n                        },\n                        \"i18n_array\": [\n                          {\n                            \"value\": \"Galaxy Techno Ltd\",\n                            \"language\": \"en\",\n                            \"is_default\": \"true\"\n                          }\n                        ],\n                        \"i18n_object\": {\n                          \"en\": \"Galaxy Techno Ltd\"\n                        }\n                      },\n                      \"country\": \"GB\",\n                      \"postal_code\": \"OX14 5EE\",\n                      \"country_name\": {\n                        \"default\": {\n                          \"value\": \"Great Britain\",\n                          \"language\": \"en\"\n                        },\n                        \"i18n_array\": [\n                          {\n                            \"value\": \"Great Britain\",\n                            \"language\": \"en\",\n                            \"is_default\": \"true\"\n                          }\n                        ],\n                        \"i18n_object\": {\n                          \"en\": \"Great Britain\"\n                        }\n                      }\n                    },\n                    \"contacts\": [\n                      {\n                        \"name\": \"Contact\",\n                        \"type\": \"Phone\",\n                        \"identifier\": \"N/A\"\n                      }\n                    ],\n                    \"location\": {\n                      \"latitude\": \"51.6695408\",\n                      \"longitude\": \"-1.2820567\"\n                    },\n                    \"schedule\": [\n                      {\n                        \"open_time\": \"10:00\",\n                        \"close_time\": \"17:00\",\n                        \"day_of_week\": \"mon\"\n                      },\n                      {\n                        \"open_time\": \"10:00\",\n                        \"close_time\": \"17:00\",\n                        \"day_of_week\": \"tue\"\n                      },\n                      {\n                        \"open_time\": \"10:00\",\n                        \"close_time\": \"17:00\",\n                        \"day_of_week\": \"wed\"\n                      },\n                      {\n                        \"open_time\": \"10:00\",\n                        \"close_time\": \"17:00\",\n                        \"day_of_week\": \"thu\"\n                      },\n                      {\n                        \"open_time\": \"10:00\",\n                        \"close_time\": \"17:00\",\n                        \"day_of_week\": \"fri\"\n                      },\n                      {\n                        \"open_time\": \"10:00\",\n                        \"close_time\": \"17:00\",\n                        \"day_of_week\": \"sat\"\n                      },\n                      {\n                        \"open_time\": \"10:00\",\n                        \"close_time\": \"16:00\",\n                        \"day_of_week\": \"sun\"\n                      }\n                    ],\n                    \"services\": [\n                      {\n                        \"reference\": \"PACKAGELESS_RETURNS\"\n                      },\n                      {\n                        \"reference\": \"NEXT_DAY_DROP_OFF\"\n                      },\n                      {\n                        \"type\": \"delivery\",\n                        \"reference\": \"ACCEPT_DELIVERY\"\n                      },\n                      {\n                        \"type\": \"dropoff\",\n                        \"reference\": \"ACCEPT_DROPOFF\"\n                      },\n                      {\n                        \"reference\": \"PRINT_IN_STORE\"\n                      }\n                    ],\n                    \"autoclose\": \"true\",\n                    \"reference\": \"S05745, 11-15 East St Helen Street\",\n                    \"_session_id\": \"e3e2d3ad-964b-4e1b-9bff-87fcb582b6d6\",\n                    \"limitations\": {\n                      \"max_weight_kg\": \"30\",\n                      \"max_parcel_weight_kg\": \"30\",\n                      \"max_sending_dimensions_cm\": {\n                        \"width\": \"180\",\n                        \"height\": \"180\",\n                        \"length\": \"180\"\n                      },\n                      \"max_receiving_dimensions_cm\": {\n                        \"width\": \"180\",\n                        \"height\": \"180\",\n                        \"length\": \"180\"\n                      }\n                    },\n                    \"partner_code\": \"201\",\n                    \"partner_data\": {\n                      \"functions\": [\n                        \"PACKAGELESS_RETURNS\",\n                        \"NEXT_DAY_DROP_OFF\",\n                        \"ACCEPT_DELIVERY\",\n                        \"ACCEPT_DROPOFF\",\n                        \"PRINT_IN_STORE\"\n                      ]\n                    },\n                    \"partner_name\": \"Evri\",\n                    \"external_source\": \"Evri\",\n                    \"default_language\": \"en\",\n                    \"external_reference\": \"S05745, 11-15 East St Helen Street\"\n                  },\n                  \"warehouse_owner\": \"201\",\n                  \"warehouse_owner_name\": \"Evri\"\n                },\n                \"initial_phone_num\": \"380674178417\",\n                \"contact_person_name\": \"Roman\",\n                \"contact_person_surname\": \"Khokhotva\"\n              },\n              \"company_id\": \"npi\",\n              \"created_at\": \"1760426200\",\n              \"references\": [\n                {\n                  \"id\": \"1\",\n                  \"num\": \"0000000145560288\",\n                  \"type\": \"api_order\",\n                  \"state\": \"Active\",\n                  \"carrier\": \"NP GLOBAL LLC\",\n                  \"account_no\": \"7777777777\",\n                  \"initial_date\": \"1760426200\",\n                  \"partner_code\": \"12\",\n                  \"partner_alias\": {\n                    \"default\": {\n                      \"value\": \"NP GLOBAL LLC\",\n                      \"language\": \"en\"\n                    },\n                    \"i18n_array\": {\n                      \"value\": \"NP GLOBAL LLC\",\n                      \"language\": \"en\",\n                      \"is_default\": \"true\"\n                    },\n                    \"i18n_object\": {\n                      \"en\": \"NP GLOBAL LLC\"\n                    }\n                  },\n                  \"enable_tracking\": \"true\"\n                },\n                {\n                  \"id\": \"2\",\n                  \"num\": \"NPG0000000145560288\",\n                  \"type\": \"Waybill number\",\n                  \"state\": \"Active\",\n                  \"carrier\": \"NP GLOBAL LLC\",\n                  \"account_no\": \"7777777777\",\n                  \"initial_date\": \"1760426200\",\n                  \"partner_code\": \"12\",\n                  \"partner_alias\": {\n                    \"default\": {\n                      \"value\": \"NP GLOBAL LLC\",\n                      \"language\": \"en\"\n                    },\n                    \"i18n_array\": {\n                      \"value\": \"NP GLOBAL LLC\",\n                      \"language\": \"en\",\n                      \"is_default\": \"true\"\n                    },\n                    \"i18n_object\": {\n                      \"en\": \"NP GLOBAL LLC\"\n                    }\n                  },\n                  \"enable_tracking\": \"true\"\n                }\n              ],\n              \"updated_at\": \"1760428028\",\n              \"contractors\": [\n                {\n                  \"id\": \"1\",\n                  \"role\": \"Creator\",\n                  \"type\": \"All miles\",\n                  \"partner_code\": \"12\",\n                  \"partner_name\": \"NP GLOBAL LLC\"\n                },\n                {\n                  \"id\": \"2\",\n                  \"role\": \"Service owner\",\n                  \"type\": \"All miles\",\n                  \"partner_code\": \"12\",\n                  \"partner_name\": \"NP GLOBAL LLC\"\n                }\n              ],\n              \"api_creation\": \"true\",\n              \"partner_code\": \"12\",\n              \"partner_data\": [\n                {\n                  \"partner_code\": \"12\",\n                  \"partner_name\": \"NP GLOBAL LLC\"\n                }\n              ],\n              \"pick_up_date\": \"1760427871\",\n              \"shipment_info\": {\n                \"pcs_qty\": \"1\",\n                \"total_volume\": \"0.003696\",\n                \"shipment_type\": \"Cargo\",\n                \"pcs_description\": [\n                  {\n                    \"id\": \"1\",\n                    \"index\": \"1\",\n                    \"width\": \"22\",\n                    \"height\": \"6\",\n                    \"length\": \"28\",\n                    \"volume\": \"0.003696\",\n                    \"barcode\": \"NPG0000000145560288\",\n                    \"pack_num\": \"NPG0000000145560288\",\n                    \"description\": \"Book\",\n                    \"actual_weight\": \"0.9\",\n                    \"volume_weight\": \"0.739\",\n                    \"control_volume\": \"0\",\n                    \"control_volume_weight\": \"0\"\n                  }\n                ],\n                \"sum_actual_weight\": \"0.9\",\n                \"sum_volume_weight\": \"0.739\",\n                \"control_total_volume\": \"0\",\n                \"general_description_lat\": \"Book\",\n                \"sum_control_actual_weight\": \"0\",\n                \"sum_control_volume_weight\": \"0\"\n              },\n              \"is_consignment\": \"false\",\n              \"waybill_number\": \"NPG0000000145560288\",\n              \"shipment_format\": \"Express shipment\",\n              \"trans_company_id\": \"20700687508274\",\n              \"general_cost_info\": {\n                \"declared_cost\": \"2\",\n                \"declared_currency\": \"USD\"\n              },\n              \"transition_history\": [\n                {\n                  \"date\": \"1760426200\",\n                  \"index\": \"1\",\n                  \"user_id\": \"799\",\n                  \"finish_state\": \"Draft\"\n                },\n                {\n                  \"date\": \"1760428028\",\n                  \"index\": \"2\",\n                  \"partner\": \"12\",\n                  \"user_id\": \"api_npi\",\n                  \"init_state\": \"Created\",\n                  \"finish_state\": \"Active\"\n                }\n              ],\n              \"updated_by_user_id\": \"api_npi\",\n              \"reported_by_user_id\": \"799\",\n              \"updated_by_partner_code\": \"12\",\n              \"updated_by_partner_name\": \"NP GLOBAL LLC\",\n              \"reported_by_partner_code\": \"12\",\n              \"reported_by_partner_name\": \"NP GLOBAL LLC\",\n              \"external_tracking_enabled\": \"true\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+          "Batch Size" : "1",
+          "Unique FlowFiles" : "false",
+          "Data Format" : "Text"
+        },
+        "propertyDescriptors" : {
+          "character-set" : {
+            "displayName" : "Character Set",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "character-set",
+            "sensitive" : false
+          },
+          "File Size" : {
+            "displayName" : "File Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "File Size",
+            "sensitive" : false
+          },
+          "mime-type" : {
+            "displayName" : "Mime Type",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "mime-type",
+            "sensitive" : false
+          },
+          "generate-ff-custom-text" : {
+            "displayName" : "Custom Text",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "generate-ff-custom-text",
+            "sensitive" : false
+          },
+          "Batch Size" : {
+            "displayName" : "Batch Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Batch Size",
+            "sensitive" : false
+          },
+          "Unique FlowFiles" : {
+            "displayName" : "Unique FlowFiles",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Unique FlowFiles",
+            "sensitive" : false
+          },
+          "Data Format" : {
+            "displayName" : "Data Format",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Data Format",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "100 min",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-kafka-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "67b9d140-a8ef-3592-ac14-7f117b8212bd",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "ConsumeKafka",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -176.99997846095948,
+          "y" : -456.7998595602985
+        },
+        "properties" : {
+          "Topics" : "ms-custom-task-ro-re",
+          "Commit Offsets" : "true",
+          "Key Format" : "byte-array",
+          "Key Attribute Encoding" : "utf-8",
+          "Topic Format" : "names",
+          "Header Encoding" : "UTF-8",
+          "Max Uncommitted Time" : "100 millis",
+          "Kafka Connection Service" : "a2db5c0e-afe3-38c2-a517-4c8cf4e06797",
+          "Separate By Key" : "false",
+          "Processing Strategy" : "FLOW_FILE",
+          "Group ID" : "customs-rocketexpress",
+          "auto.offset.reset" : "latest",
+          "Output Strategy" : "USE_VALUE"
+        },
+        "propertyDescriptors" : {
+          "Topics" : {
+            "displayName" : "Topics",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Topics",
+            "sensitive" : false
+          },
+          "Commit Offsets" : {
+            "displayName" : "Commit Offsets",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Commit Offsets",
+            "sensitive" : false
+          },
+          "Header Name Pattern" : {
+            "displayName" : "Header Name Pattern",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Header Name Pattern",
+            "sensitive" : false
+          },
+          "Key Format" : {
+            "displayName" : "Key Format",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Key Format",
+            "sensitive" : false
+          },
+          "Key Record Reader" : {
+            "displayName" : "Key Record Reader",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Key Record Reader",
+            "sensitive" : false
+          },
+          "Message Demarcator" : {
+            "displayName" : "Message Demarcator",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Message Demarcator",
+            "sensitive" : false
+          },
+          "Record Reader" : {
+            "displayName" : "Record Reader",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Record Reader",
+            "sensitive" : false
+          },
+          "Key Attribute Encoding" : {
+            "displayName" : "Key Attribute Encoding",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Key Attribute Encoding",
+            "sensitive" : false
+          },
+          "Max Uncommitted Size" : {
+            "displayName" : "Max Uncommitted Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Max Uncommitted Size",
+            "sensitive" : false
+          },
+          "Topic Format" : {
+            "displayName" : "Topic Format",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Topic Format",
+            "sensitive" : false
+          },
+          "Header Encoding" : {
+            "displayName" : "Header Encoding",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Header Encoding",
+            "sensitive" : false
+          },
+          "Max Uncommitted Time" : {
+            "displayName" : "Max Uncommitted Time",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Max Uncommitted Time",
+            "sensitive" : false
+          },
+          "Kafka Connection Service" : {
+            "displayName" : "Kafka Connection Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Kafka Connection Service",
+            "sensitive" : false
+          },
+          "Separate By Key" : {
+            "displayName" : "Separate By Key",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Separate By Key",
+            "sensitive" : false
+          },
+          "Processing Strategy" : {
+            "displayName" : "Processing Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Processing Strategy",
+            "sensitive" : false
+          },
+          "Record Writer" : {
+            "displayName" : "Record Writer",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Record Writer",
+            "sensitive" : false
+          },
+          "Group ID" : {
+            "displayName" : "Group ID",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Group ID",
+            "sensitive" : false
+          },
+          "auto.offset.reset" : {
+            "displayName" : "Auto Offset Reset",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "auto.offset.reset",
+            "sensitive" : false
+          },
+          "Output Strategy" : {
+            "displayName" : "Output Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Output Strategy",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.kafka.processors.ConsumeKafka",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ "Original" ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "a6692ead-6011-39b3-8868-ddf95432ee78",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "InvokeHTTP",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -176.0,
+          "y" : 800.0
+        },
+        "properties" : {
+          "Request Content-Encoding" : "DISABLED",
+          "Request Multipart Form-Data Filename Enabled" : "true",
+          "Request Chunked Transfer-Encoding Enabled" : "false",
+          "HTTP/2 Disabled" : "False",
+          "Connection Timeout" : "5 secs",
+          "Response Cookie Strategy" : "DISABLED",
+          "Socket Read Timeout" : "15 secs",
+          "Socket Idle Connections" : "5",
+          "Request Body Enabled" : "true",
+          "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
+          "HTTP URL" : "${url}",
+          "Socket Idle Timeout" : "5 mins",
+          "Response Redirects Enabled" : "True",
+          "Socket Write Timeout" : "15 secs",
+          "Response FlowFile Naming Strategy" : "RANDOM",
+          "Response Cache Enabled" : "false",
+          "Request Date Header Enabled" : "True",
+          "Request Failure Penalization Enabled" : "false",
+          "Response Body Attribute Size" : "256",
+          "Response Generation Required" : "false",
+          "Response Header Request Attributes Enabled" : "false",
+          "HTTP Method" : "GET",
+          "Request Content-Type" : "${mime.type}",
+          "Request Digest Authentication Enabled" : "false",
+          "Response Cache Size" : "10MB",
+          "Response Body Ignored" : "false"
+        },
+        "propertyDescriptors" : {
+          "Request Content-Encoding" : {
+            "displayName" : "Request Content-Encoding",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Content-Encoding",
+            "sensitive" : false
+          },
+          "proxy-configuration-service" : {
+            "displayName" : "Proxy Configuration Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "proxy-configuration-service",
+            "sensitive" : false
+          },
+          "Request Multipart Form-Data Filename Enabled" : {
+            "displayName" : "Request Multipart Form-Data Filename Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Multipart Form-Data Filename Enabled",
+            "sensitive" : false
+          },
+          "Request Chunked Transfer-Encoding Enabled" : {
+            "displayName" : "Request Chunked Transfer-Encoding Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Chunked Transfer-Encoding Enabled",
+            "sensitive" : false
+          },
+          "Response Header Request Attributes Prefix" : {
+            "displayName" : "Response Header Request Attributes Prefix",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Header Request Attributes Prefix",
+            "sensitive" : false
+          },
+          "HTTP/2 Disabled" : {
+            "displayName" : "HTTP/2 Disabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "HTTP/2 Disabled",
+            "sensitive" : false
+          },
+          "Connection Timeout" : {
+            "displayName" : "Connection Timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Connection Timeout",
+            "sensitive" : false
+          },
+          "Response Cookie Strategy" : {
+            "displayName" : "Response Cookie Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Cookie Strategy",
+            "sensitive" : false
+          },
+          "Request Password" : {
+            "displayName" : "Request Password",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Password",
+            "sensitive" : true
+          },
+          "Socket Read Timeout" : {
+            "displayName" : "Socket Read Timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Socket Read Timeout",
+            "sensitive" : false
+          },
+          "Socket Idle Connections" : {
+            "displayName" : "Socket Idle Connections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Socket Idle Connections",
+            "sensitive" : false
+          },
+          "Request Body Enabled" : {
+            "displayName" : "Request Body Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Body Enabled",
+            "sensitive" : false
+          },
+          "OAuth2 Access Token Refresh Strategy" : {
+            "displayName" : "OAuth2 Access Token Refresh Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "OAuth2 Access Token Refresh Strategy",
+            "sensitive" : false
+          },
+          "HTTP URL" : {
+            "displayName" : "HTTP URL",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "HTTP URL",
+            "sensitive" : false
+          },
+          "Request OAuth2 Access Token Provider" : {
+            "displayName" : "Request OAuth2 Access Token Provider",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Request OAuth2 Access Token Provider",
+            "sensitive" : false
+          },
+          "Socket Idle Timeout" : {
+            "displayName" : "Socket Idle Timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Socket Idle Timeout",
+            "sensitive" : false
+          },
+          "Response Redirects Enabled" : {
+            "displayName" : "Response Redirects Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Redirects Enabled",
+            "sensitive" : false
+          },
+          "Socket Write Timeout" : {
+            "displayName" : "Socket Write Timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Socket Write Timeout",
+            "sensitive" : false
+          },
+          "Request Header Attributes Pattern" : {
+            "displayName" : "Request Header Attributes Pattern",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Header Attributes Pattern",
+            "sensitive" : false
+          },
+          "Response FlowFile Naming Strategy" : {
+            "displayName" : "Response FlowFile Naming Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response FlowFile Naming Strategy",
+            "sensitive" : false
+          },
+          "Response Cache Enabled" : {
+            "displayName" : "Response Cache Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Cache Enabled",
+            "sensitive" : false
+          },
+          "Request Date Header Enabled" : {
+            "displayName" : "Request Date Header Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Date Header Enabled",
+            "sensitive" : false
+          },
+          "Request Failure Penalization Enabled" : {
+            "displayName" : "Request Failure Penalization Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Failure Penalization Enabled",
+            "sensitive" : false
+          },
+          "Response Body Attribute Size" : {
+            "displayName" : "Response Body Attribute Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Body Attribute Size",
+            "sensitive" : false
+          },
+          "SSL Context Service" : {
+            "displayName" : "SSL Context Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "SSL Context Service",
+            "sensitive" : false
+          },
+          "Response Generation Required" : {
+            "displayName" : "Response Generation Required",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Generation Required",
+            "sensitive" : false
+          },
+          "Request User-Agent" : {
+            "displayName" : "Request User-Agent",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request User-Agent",
+            "sensitive" : false
+          },
+          "Response Header Request Attributes Enabled" : {
+            "displayName" : "Response Header Request Attributes Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Header Request Attributes Enabled",
+            "sensitive" : false
+          },
+          "HTTP Method" : {
+            "displayName" : "HTTP Method",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "HTTP Method",
+            "sensitive" : false
+          },
+          "Request Username" : {
+            "displayName" : "Request Username",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Username",
+            "sensitive" : false
+          },
+          "Request Content-Type" : {
+            "displayName" : "Request Content-Type",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Content-Type",
+            "sensitive" : false
+          },
+          "Response Body Attribute Name" : {
+            "displayName" : "Response Body Attribute Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Body Attribute Name",
+            "sensitive" : false
+          },
+          "Request Digest Authentication Enabled" : {
+            "displayName" : "Request Digest Authentication Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Digest Authentication Enabled",
+            "sensitive" : false
+          },
+          "Request Multipart Form-Data Name" : {
+            "displayName" : "Request Multipart Form-Data Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Multipart Form-Data Name",
+            "sensitive" : false
+          },
+          "Response Cache Size" : {
+            "displayName" : "Response Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Cache Size",
+            "sensitive" : false
+          },
+          "Response Body Ignored" : {
+            "displayName" : "Response Body Ignored",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Body Ignored",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "16919d36-0f34-3f5c-a769-f6ea549581ad",
+        "identifier" : "bc220a09-9fc4-35b6-89da-f5d3ca9b3902",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "UpdateAttribute",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 440.0,
+          "y" : -208.0
+        },
+        "properties" : {
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      } ],
+      "remoteProcessGroups" : [ ],
+      "scheduledState" : "ENABLED",
+      "statelessFlowTimeout" : "1 min"
+    }, {
       "comments" : "",
       "componentType" : "PROCESS_GROUP",
       "connections" : [ {
@@ -53475,6 +56559,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "ms-customs-complete",
-    "timestamp" : 1761134613399
+    "timestamp" : 1761578703304
   }
 }
