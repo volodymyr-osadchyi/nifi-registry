@@ -519,7 +519,7 @@
       "name" : "UpdateAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1656.0,
+        "x" : -1648.0,
         "y" : 1352.0
       },
       "properties" : {
@@ -584,7 +584,7 @@
       "name" : "UpdateAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -2120.0,
+        "x" : -2104.0,
         "y" : 1352.0
       },
       "properties" : {
@@ -658,7 +658,7 @@
         "Max String Length" : "20 MB",
         "Transform Cache Size" : "1",
         "Pretty Print" : "false",
-        "Jolt Specification" : "[\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"status_date\": \"${createdAt:escapeJson()}\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"waybill_number\": \"number\",\n      \"partner_event_code\": \"status\",\n      \"status_date\": \"createdAt\",\n      \"status_country\": \"countryCode\",\n      \"location\": {\n        \"name\": \"divisionAddress\",\n        \"longitude\": \"divisionLongitude\",\n        \"latitude\": \"divisionLatitude\"\n      }\n    }\n  }\n]\n"
+        "Jolt Specification" : "[\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"status_date\": \"${createdAt:escapeJson()}\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"partner_number\": \"number\",\n      \"partner_event\": \"status\",\n      \"status_date\": \"createdAt\",\n      \"statement_number\":\"docFixationNumber\",      \n      \"status_country\": \"countryCode\",\n      \"location\": {\n        \"address\": \"divisionAddress\",\n        \"reference\": \"divisionRef\",\n        \"longitude\": \"divisionLongitude\",\n        \"latitude\": \"divisionLatitude\"\n      }\n    }\n  }\n]\n"
       },
       "propertyDescriptors" : {
         "JSON Source" : {
@@ -990,8 +990,8 @@
       "name" : "UpdateAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1248.0,
-        "y" : 856.0
+        "x" : -1272.0,
+        "y" : 864.0
       },
       "properties" : {
         "Store State" : "Do not store state",
@@ -1228,6 +1228,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "ex-cagos-pubsub-scan",
-    "timestamp" : 1761125805425
+    "timestamp" : 1762247332648
   }
 }
