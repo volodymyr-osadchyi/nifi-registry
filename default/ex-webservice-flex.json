@@ -1014,7 +1014,7 @@
       } ],
       "position" : {
         "x" : 104.0,
-        "y" : -216.0
+        "y" : -416.0
       },
       "processGroups" : [ ],
       "processors" : [ {
@@ -1104,89 +1104,64 @@
       "remoteProcessGroups" : [ ],
       "scheduledState" : "ENABLED",
       "statelessFlowTimeout" : "1 min"
+    }, {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ ],
+      "controllerServices" : [ ],
+      "defaultBackPressureDataSizeThreshold" : "1 GB",
+      "defaultBackPressureObjectThreshold" : 10000,
+      "defaultFlowFileExpiration" : "0 sec",
+      "executionEngine" : "INHERITED",
+      "flowFileConcurrency" : "UNBOUNDED",
+      "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+      "funnels" : [ ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "8d52339d-9ef9-396a-876a-436d09b90941",
+      "inputPorts" : [ {
+        "allowRemoteAccess" : false,
+        "componentType" : "INPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "8d52339d-9ef9-396a-876a-436d09b90941",
+        "identifier" : "fb910ea6-397a-3e87-b546-d004a29b7e43",
+        "name" : "in",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : -484.5,
+          "y" : -494.6666717529297
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "INPUT_PORT"
+      } ],
+      "labels" : [ ],
+      "maxConcurrentTasks" : 1,
+      "name" : "proxy",
+      "outputPorts" : [ {
+        "allowRemoteAccess" : false,
+        "componentType" : "OUTPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "8d52339d-9ef9-396a-876a-436d09b90941",
+        "identifier" : "ed47f642-d579-35e5-bbfb-924e99a165a4",
+        "name" : "out",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : -346.5,
+          "y" : 508.3333282470703
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "OUTPUT_PORT"
+      } ],
+      "position" : {
+        "x" : -1136.0,
+        "y" : -232.0
+      },
+      "processGroups" : [ ],
+      "processors" : [ ],
+      "remoteProcessGroups" : [ ],
+      "scheduledState" : "ENABLED",
+      "statelessFlowTimeout" : "1 min"
     } ],
     "processors" : [ {
-      "autoTerminatedRelationships" : [ ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-update-attribute-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.3.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "928389f2-0bd9-389e-aac2-9ebaf4ca8570",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "UpdateAttribute",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 128.0,
-        "y" : 192.0
-      },
-      "properties" : {
-        "code" : "500",
-        "Store State" : "Do not store state",
-        "canonical-value-lookup-cache-size" : "100",
-        "success" : "false"
-      },
-      "propertyDescriptors" : {
-        "Delete Attributes Expression" : {
-          "displayName" : "Delete Attributes Expression",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Delete Attributes Expression",
-          "sensitive" : false
-        },
-        "code" : {
-          "displayName" : "code",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "code",
-          "sensitive" : false
-        },
-        "Store State" : {
-          "displayName" : "Store State",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Store State",
-          "sensitive" : false
-        },
-        "canonical-value-lookup-cache-size" : {
-          "displayName" : "Cache Value Lookup Cache Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "canonical-value-lookup-cache-size",
-          "sensitive" : false
-        },
-        "success" : {
-          "displayName" : "success",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "success",
-          "sensitive" : false
-        },
-        "Stateful Variables Initial Value" : {
-          "displayName" : "Stateful Variables Initial Value",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Stateful Variables Initial Value",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
-      "yieldDuration" : "1 sec"
-    }, {
       "autoTerminatedRelationships" : [ "success" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -1205,8 +1180,8 @@
       "name" : "UpdateAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1112.0,
-        "y" : -608.0
+        "x" : -1120.0,
+        "y" : -800.0
       },
       "properties" : {
         "Store State" : "Do not store state",
@@ -1446,123 +1421,6 @@
       "type" : "org.apache.nifi.kafka.processors.PublishKafka",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ "success", "failure" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.3.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "d20d190c-d19c-349d-a579-c9676f85a49d",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "HandleHttpResponse",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -512.0,
-        "y" : 616.0
-      },
-      "properties" : {
-        "HTTP Context Map" : "075ffc08-9ce4-3d9a-a174-778b312d0104",
-        "Content-type" : "application/json",
-        "HTTP Status Code" : "${code}"
-      },
-      "propertyDescriptors" : {
-        "HTTP Context Map" : {
-          "displayName" : "HTTP Context Map",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "HTTP Context Map",
-          "sensitive" : false
-        },
-        "Content-type" : {
-          "displayName" : "Content-type",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "Content-type",
-          "sensitive" : false
-        },
-        "Attributes to add to the HTTP Response (Regex)" : {
-          "displayName" : "Attributes to add to the HTTP Response (Regex)",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Attributes to add to the HTTP Response (Regex)",
-          "sensitive" : false
-        },
-        "HTTP Status Code" : {
-          "displayName" : "HTTP Status Code",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "HTTP Status Code",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.HandleHttpResponse",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.3.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "f5f73949-63a0-3d98-84b3-9318506e803d",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "RouteOnAttribute",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 128.0,
-        "y" : 384.0
-      },
-      "properties" : {
-        "Routing Strategy" : "Route to Property name",
-        "scheme" : "${http.query.param.scheme:length():gt(0)}"
-      },
-      "propertyDescriptors" : {
-        "Routing Strategy" : {
-          "displayName" : "Routing Strategy",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Routing Strategy",
-          "sensitive" : false
-        },
-        "scheme" : {
-          "displayName" : "scheme",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "scheme",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
-      "yieldDuration" : "1 sec"
-    }, {
       "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -1678,8 +1536,8 @@
       "name" : "UpdateAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1112.0,
-        "y" : -416.0
+        "x" : -1120.0,
+        "y" : -608.0
       },
       "properties" : {
         "code" : "403",
@@ -1728,170 +1586,6 @@
           "dynamic" : false,
           "identifiesControllerService" : false,
           "name" : "Stateful Variables Initial Value",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.3.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "fe926d4a-d8e0-39da-8da9-7b67956c9e40",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "RouteOnAttribute",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 120.0,
-        "y" : -416.0
-      },
-      "properties" : {
-        "Routing Strategy" : "Route to Property name",
-        "scheme" : "${http.query.param.scheme:length():gt(0)}"
-      },
-      "propertyDescriptors" : {
-        "Routing Strategy" : {
-          "displayName" : "Routing Strategy",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Routing Strategy",
-          "sensitive" : false
-        },
-        "scheme" : {
-          "displayName" : "scheme",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "scheme",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-update-attribute-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.3.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "2a45d391-f743-3bef-9c6d-d4345e45ea10",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "UpdateAttribute",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -512.0,
-        "y" : -200.0
-      },
-      "properties" : {
-        "transaction_id" : "${uuid}",
-        "code" : "200",
-        "system" : "${http.request.uri:substringAfter('/'):substringAfter('/'):substringBefore('/')}",
-        "Store State" : "Do not store state",
-        "canonical-value-lookup-cache-size" : "100",
-        "success" : "true",
-        "action" : "${http.request.uri:substringAfter('/'):substringAfter('/'):substringAfter('/'):substringAfter('/'):substringBefore('/')}",
-        "object" : "${http.request.uri:substringAfter('/'):substringAfter('/'):substringAfter('/'):substringBefore('/')}"
-      },
-      "propertyDescriptors" : {
-        "transaction_id" : {
-          "displayName" : "transaction_id",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "transaction_id",
-          "sensitive" : false
-        },
-        "Delete Attributes Expression" : {
-          "displayName" : "Delete Attributes Expression",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Delete Attributes Expression",
-          "sensitive" : false
-        },
-        "code" : {
-          "displayName" : "code",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "code",
-          "sensitive" : false
-        },
-        "system" : {
-          "displayName" : "system",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "system",
-          "sensitive" : false
-        },
-        "Store State" : {
-          "displayName" : "Store State",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Store State",
-          "sensitive" : false
-        },
-        "canonical-value-lookup-cache-size" : {
-          "displayName" : "Cache Value Lookup Cache Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "canonical-value-lookup-cache-size",
-          "sensitive" : false
-        },
-        "success" : {
-          "displayName" : "success",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "success",
-          "sensitive" : false
-        },
-        "action" : {
-          "displayName" : "action",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "action",
-          "sensitive" : false
-        },
-        "Stateful Variables Initial Value" : {
-          "displayName" : "Stateful Variables Initial Value",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Stateful Variables Initial Value",
-          "sensitive" : false
-        },
-        "object" : {
-          "displayName" : "object",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "object",
           "sensitive" : false
         }
       },
@@ -2021,7 +1715,7 @@
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -512.0,
-        "y" : -608.0
+        "y" : -800.0
       },
       "properties" : {
         "multipart-request-max-size" : "1 MB",
@@ -2204,6 +1898,368 @@
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
+        "artifact" : "nifi-update-attribute-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.3.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "928389f2-0bd9-389e-aac2-9ebaf4ca8570",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "UpdateAttribute",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 128.0,
+        "y" : 192.0
+      },
+      "properties" : {
+        "code" : "500",
+        "Store State" : "Do not store state",
+        "canonical-value-lookup-cache-size" : "100",
+        "success" : "false"
+      },
+      "propertyDescriptors" : {
+        "Delete Attributes Expression" : {
+          "displayName" : "Delete Attributes Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Delete Attributes Expression",
+          "sensitive" : false
+        },
+        "code" : {
+          "displayName" : "code",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "code",
+          "sensitive" : false
+        },
+        "Store State" : {
+          "displayName" : "Store State",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Store State",
+          "sensitive" : false
+        },
+        "canonical-value-lookup-cache-size" : {
+          "displayName" : "Cache Value Lookup Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "canonical-value-lookup-cache-size",
+          "sensitive" : false
+        },
+        "success" : {
+          "displayName" : "success",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "success",
+          "sensitive" : false
+        },
+        "Stateful Variables Initial Value" : {
+          "displayName" : "Stateful Variables Initial Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Stateful Variables Initial Value",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.3.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "d20d190c-d19c-349d-a579-c9676f85a49d",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "HandleHttpResponse",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -512.0,
+        "y" : 616.0
+      },
+      "properties" : {
+        "HTTP Context Map" : "075ffc08-9ce4-3d9a-a174-778b312d0104",
+        "Content-type" : "application/json",
+        "HTTP Status Code" : "${code}"
+      },
+      "propertyDescriptors" : {
+        "HTTP Context Map" : {
+          "displayName" : "HTTP Context Map",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "HTTP Context Map",
+          "sensitive" : false
+        },
+        "Content-type" : {
+          "displayName" : "Content-type",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "Content-type",
+          "sensitive" : false
+        },
+        "Attributes to add to the HTTP Response (Regex)" : {
+          "displayName" : "Attributes to add to the HTTP Response (Regex)",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attributes to add to the HTTP Response (Regex)",
+          "sensitive" : false
+        },
+        "HTTP Status Code" : {
+          "displayName" : "HTTP Status Code",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "HTTP Status Code",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.HandleHttpResponse",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.3.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f5f73949-63a0-3d98-84b3-9318506e803d",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "RouteOnAttribute",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 128.0,
+        "y" : 384.0
+      },
+      "properties" : {
+        "Routing Strategy" : "Route to Property name",
+        "scheme" : "${http.query.param.scheme:length():gt(0)}"
+      },
+      "propertyDescriptors" : {
+        "Routing Strategy" : {
+          "displayName" : "Routing Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Routing Strategy",
+          "sensitive" : false
+        },
+        "scheme" : {
+          "displayName" : "scheme",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "scheme",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.3.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "fe926d4a-d8e0-39da-8da9-7b67956c9e40",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "RouteOnAttribute",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 112.0,
+        "y" : -608.0
+      },
+      "properties" : {
+        "Routing Strategy" : "Route to Property name",
+        "scheme" : "${http.query.param.scheme:length():gt(0)}"
+      },
+      "propertyDescriptors" : {
+        "Routing Strategy" : {
+          "displayName" : "Routing Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Routing Strategy",
+          "sensitive" : false
+        },
+        "scheme" : {
+          "displayName" : "scheme",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "scheme",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-update-attribute-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.3.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2a45d391-f743-3bef-9c6d-d4345e45ea10",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "UpdateAttribute",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -512.0,
+        "y" : -400.0
+      },
+      "properties" : {
+        "transaction_id" : "${uuid}",
+        "code" : "200",
+        "system" : "${http.request.uri:substringAfter('/'):substringAfter('/'):substringBefore('/')}",
+        "Store State" : "Do not store state",
+        "canonical-value-lookup-cache-size" : "100",
+        "success" : "true",
+        "action" : "${http.request.uri:substringAfter('/'):substringAfter('/'):substringAfter('/'):substringAfter('/'):substringBefore('/')}",
+        "object" : "${http.request.uri:substringAfter('/'):substringAfter('/'):substringAfter('/'):substringBefore('/')}"
+      },
+      "propertyDescriptors" : {
+        "transaction_id" : {
+          "displayName" : "transaction_id",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "transaction_id",
+          "sensitive" : false
+        },
+        "Delete Attributes Expression" : {
+          "displayName" : "Delete Attributes Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Delete Attributes Expression",
+          "sensitive" : false
+        },
+        "code" : {
+          "displayName" : "code",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "code",
+          "sensitive" : false
+        },
+        "system" : {
+          "displayName" : "system",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "system",
+          "sensitive" : false
+        },
+        "Store State" : {
+          "displayName" : "Store State",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Store State",
+          "sensitive" : false
+        },
+        "canonical-value-lookup-cache-size" : {
+          "displayName" : "Cache Value Lookup Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "canonical-value-lookup-cache-size",
+          "sensitive" : false
+        },
+        "success" : {
+          "displayName" : "success",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "success",
+          "sensitive" : false
+        },
+        "action" : {
+          "displayName" : "action",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "action",
+          "sensitive" : false
+        },
+        "Stateful Variables Initial Value" : {
+          "displayName" : "Stateful Variables Initial Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Stateful Variables Initial Value",
+          "sensitive" : false
+        },
+        "object" : {
+          "displayName" : "object",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "object",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
         "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
         "version" : "2.3.0"
@@ -2219,7 +2275,7 @@
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -512.0,
-        "y" : -416.0
+        "y" : -608.0
       },
       "properties" : {
         "Routing Strategy" : "Route to Property name",
@@ -2238,6 +2294,57 @@
           "dynamic" : true,
           "identifiesControllerService" : false,
           "name" : "auth",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.3.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "1a537c70-3d59-3d6f-b6cb-9ac6c78cb4cd",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "RouteOnAttribute",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -120.0,
+        "y" : -200.0
+      },
+      "properties" : {
+        "proxy" : "${http.request.uri:contains('/proxy/')}",
+        "Routing Strategy" : "Route to Property name"
+      },
+      "propertyDescriptors" : {
+        "proxy" : {
+          "displayName" : "proxy",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "proxy",
+          "sensitive" : false
+        },
+        "Routing Strategy" : {
+          "displayName" : "Routing Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Routing Strategy",
           "sensitive" : false
         }
       },
