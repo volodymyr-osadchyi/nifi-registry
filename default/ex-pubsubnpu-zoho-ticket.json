@@ -738,6 +738,36 @@
         "destination" : {
           "comments" : "",
           "groupId" : "0895541f-f1fb-3577-8ff1-eada2ac1d906",
+          "id" : "3393657b-0199-1000-eb63-21aab5044901",
+          "name" : "InvokeHTTP",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "0895541f-f1fb-3577-8ff1-eada2ac1d906",
+        "identifier" : "8948494a-8197-3390-974d-584f5e88d247",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "0895541f-f1fb-3577-8ff1-eada2ac1d906",
+          "id" : "dd4f1e27-b704-3b6c-b7a7-a0d8d59f58b3",
+          "name" : "GenerateFlowFile",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 26
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "0895541f-f1fb-3577-8ff1-eada2ac1d906",
           "id" : "ba93edf8-0199-1000-71a2-6108f8366d49",
           "name" : "UpdateAttribute",
           "type" : "PROCESSOR"
@@ -2377,7 +2407,7 @@
           "destination" : {
             "comments" : "",
             "groupId" : "3398868c-0199-1000-513d-1bceee34519d",
-            "id" : "36a23323-019a-1000-cccd-6bda64644ada",
+            "id" : "72417245-019a-1000-da05-f6a2e9bba847",
             "name" : "EvaluateJsonPath",
             "type" : "PROCESSOR"
           },
@@ -2546,6 +2576,65 @@
             "type" : "PROCESSOR"
           },
           "zIndex" : 20
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "3398868c-0199-1000-513d-1bceee34519d",
+            "id" : "33988692-0199-1000-8297-144c36360a0f",
+            "name" : "out",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "3398868c-0199-1000-513d-1bceee34519d",
+          "identifier" : "d7321743-46a1-3c50-8fce-8d7596691dba",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "matched" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "3398868c-0199-1000-513d-1bceee34519d",
+            "id" : "72417245-019a-1000-da05-f6a2e9bba847",
+            "name" : "EvaluateJsonPath",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 23
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "3398868c-0199-1000-513d-1bceee34519d",
+            "id" : "7241d6c6-019a-1000-19f5-6b7a10a9c3b5",
+            "name" : "UpdateAttribute",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "3398868c-0199-1000-513d-1bceee34519d",
+          "identifier" : "d993dd59-fb05-3f6a-8a58-edfec926a89f",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure", "unmatched" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "3398868c-0199-1000-513d-1bceee34519d",
+            "id" : "72417245-019a-1000-da05-f6a2e9bba847",
+            "name" : "EvaluateJsonPath",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 24
         }, {
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
@@ -4874,6 +4963,154 @@
           "type" : "org.apache.nifi.processors.standard.ReplaceText",
           "yieldDuration" : "1 sec"
         }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "2.5.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "3398868c-0199-1000-513d-1bceee34519d",
+          "identifier" : "72417245-019a-1000-da05-f6a2e9bba847",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "EvaluateJsonPath",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -840.0,
+            "y" : -376.0
+          },
+          "properties" : {
+            "Destination" : "flowfile-attribute",
+            "zoho.contact.id" : "$.data[0].id",
+            "Max String Length" : "20 MB",
+            "Return Type" : "json",
+            "Null Value Representation" : "empty string",
+            "Path Not Found Behavior" : "ignore"
+          },
+          "propertyDescriptors" : {
+            "Destination" : {
+              "displayName" : "Destination",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Destination",
+              "sensitive" : false
+            },
+            "zoho.contact.id" : {
+              "displayName" : "zoho.contact.id",
+              "dynamic" : true,
+              "identifiesControllerService" : false,
+              "name" : "zoho.contact.id",
+              "sensitive" : false
+            },
+            "Max String Length" : {
+              "displayName" : "Max String Length",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Max String Length",
+              "sensitive" : false
+            },
+            "Return Type" : {
+              "displayName" : "Return Type",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Return Type",
+              "sensitive" : false
+            },
+            "Null Value Representation" : {
+              "displayName" : "Null Value Representation",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Null Value Representation",
+              "sensitive" : false
+            },
+            "Path Not Found Behavior" : {
+              "displayName" : "Path Not Found Behavior",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Path Not Found Behavior",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "success" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "2.5.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "3398868c-0199-1000-513d-1bceee34519d",
+          "identifier" : "7241d6c6-019a-1000-19f5-6b7a10a9c3b5",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "UpdateAttribute",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -848.0,
+            "y" : -128.0
+          },
+          "properties" : {
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100"
+          },
+          "propertyDescriptors" : {
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 25,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
           "autoTerminatedRelationships" : [ "failure", "unmatched" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
@@ -5976,7 +6213,7 @@
           },
           "properties" : {
             "Destination" : "flowfile-attribute",
-            "zoho.contact.id" : "$.id",
+            "zoho.ticket.id" : "$.id",
             "Max String Length" : "20 MB",
             "Return Type" : "json",
             "Null Value Representation" : "empty string",
@@ -5990,11 +6227,11 @@
               "name" : "Destination",
               "sensitive" : false
             },
-            "zoho.contact.id" : {
-              "displayName" : "zoho.contact.id",
+            "zoho.ticket.id" : {
+              "displayName" : "zoho.ticket.id",
               "dynamic" : true,
               "identifiesControllerService" : false,
-              "name" : "zoho.contact.id",
+              "name" : "zoho.ticket.id",
               "sensitive" : false
             },
             "Max String Length" : {
@@ -7678,7 +7915,6 @@
           },
           "properties" : {
             "Destination" : "flowfile-attribute",
-            "zoho.contact.id" : "$.id",
             "zoho.ticket.id" : "$.data[0].id",
             "Max String Length" : "20 MB",
             "Return Type" : "json",
@@ -7691,13 +7927,6 @@
               "dynamic" : false,
               "identifiesControllerService" : false,
               "name" : "Destination",
-              "sensitive" : false
-            },
-            "zoho.contact.id" : {
-              "displayName" : "zoho.contact.id",
-              "dynamic" : true,
-              "identifiesControllerService" : false,
-              "name" : "zoho.contact.id",
               "sensitive" : false
             },
             "zoho.ticket.id" : {
@@ -11842,6 +12071,96 @@
         "style" : { },
         "type" : "org.apache.nifi.processors.gcp.pubsub.ConsumeGCPubSub",
         "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "0895541f-f1fb-3577-8ff1-eada2ac1d906",
+        "identifier" : "dd4f1e27-b704-3b6c-b7a7-a0d8d59f58b3",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "GenerateFlowFile",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -976.0,
+          "y" : -472.0
+        },
+        "properties" : {
+          "character-set" : "UTF-8",
+          "File Size" : "0B",
+          "generate-ff-custom-text" : "{\"EwNumber\":\"20710278069039\",\"FeedbackPhone\":\"380673245782\",\"BankCardNumber\":null,\"EwCount\":null,\"Description\":null,\"EwComment\":null,\"IncomingMessage\":\"кл не згідний щодо ув, попередьно нічого сам не фіксував, каже що посилки повинні їхати за адресою яка вказана в тему.\",\"LastName\":\"Богдан\",\"FirstName\":\"Снігур\",\"MiddleName\":null,\"CustomerType\":1,\"WhoTurnCode\":\"121100001\",\"ClaimSize\":0.0,\"CompensationType\":\"121100000\",\"IndividualTaxNumber\":null,\"TelephoneForPayment\":null,\"OrganizationName\":null,\"RegistrationNumber\":null,\"Iban\":null,\"ClaimSum\":null,\"TotalClaimCost\":null,\"ClaimType\":\"121100007\",\"IDNPGlobal\":\"f8cd669f-cfbb-f011-bbd2-000d3a667646\",\"StatusNPGlobal\":null,\"ReviewGroupStatus\":null,\"ConclusionReviewGroup\":null,\"Currency\":\"UAH\",\"Counterparty\":null,\"ClaimStatus\":\"121100001\",\"CompensationPaymentStatus\":null,\"CargoCompensationCost\":null,\"ServiceCompensationCost\":null,\"MonetaryCompensationCost\":null,\"ReductionCost\":null,\"PassportSeries\":null,\"PassportNumber\":null,\"AnalysisStatus\":null,\"Documents\":[]}",
+          "Batch Size" : "1",
+          "Unique FlowFiles" : "false",
+          "Data Format" : "Text"
+        },
+        "propertyDescriptors" : {
+          "character-set" : {
+            "displayName" : "Character Set",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "character-set",
+            "sensitive" : false
+          },
+          "File Size" : {
+            "displayName" : "File Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "File Size",
+            "sensitive" : false
+          },
+          "mime-type" : {
+            "displayName" : "Mime Type",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "mime-type",
+            "sensitive" : false
+          },
+          "generate-ff-custom-text" : {
+            "displayName" : "Custom Text",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "generate-ff-custom-text",
+            "sensitive" : false
+          },
+          "Batch Size" : {
+            "displayName" : "Batch Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Batch Size",
+            "sensitive" : false
+          },
+          "Unique FlowFiles" : {
+            "displayName" : "Unique FlowFiles",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Unique FlowFiles",
+            "sensitive" : false
+          },
+          "Data Format" : {
+            "displayName" : "Data Format",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Data Format",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "DISABLED",
+        "schedulingPeriod" : "100000 min",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+        "yieldDuration" : "1 sec"
       } ],
       "remoteProcessGroups" : [ ],
       "scheduledState" : "ENABLED",
@@ -11858,6 +12177,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "ex-pubsubnpu-zoho-ticket",
-    "timestamp" : 1762534935050
+    "timestamp" : 1762885244789
   }
 }
