@@ -9176,6 +9176,36 @@
           "destination" : {
             "comments" : "",
             "groupId" : "cb7a0cb1-a82e-30c8-aa9a-64a0ce4b6880",
+            "id" : "b621c14d-7c87-3d3f-9de6-f154f51d8508",
+            "name" : "EvaluateJsonPath",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "cb7a0cb1-a82e-30c8-aa9a-64a0ce4b6880",
+          "identifier" : "62f89b99-5b73-38ca-9ae2-dadf31b7abd7",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "cb7a0cb1-a82e-30c8-aa9a-64a0ce4b6880",
+            "id" : "0b3aaa4e-8ac8-3def-b8dc-027f9dae6d3e",
+            "name" : "GenerateFlowFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 19
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "cb7a0cb1-a82e-30c8-aa9a-64a0ce4b6880",
             "id" : "790dce41-019a-1000-e89e-f232676a2c7f",
             "name" : "UpdateAttribute",
             "type" : "PROCESSOR"
@@ -9228,6 +9258,36 @@
             "type" : "PROCESSOR"
           },
           "zIndex" : 9
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "cb7a0cb1-a82e-30c8-aa9a-64a0ce4b6880",
+            "id" : "43763833-6c70-37c1-ac52-fe00577480b8",
+            "name" : "JoltTransformJSON",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "cb7a0cb1-a82e-30c8-aa9a-64a0ce4b6880",
+          "identifier" : "825ddd4f-9a92-3421-81d5-4fcd2c18e294",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "cb7a0cb1-a82e-30c8-aa9a-64a0ce4b6880",
+            "id" : "11e1d785-8810-32c0-85cb-173c0dd16777",
+            "name" : "UpdateAttribute",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 20
         }, {
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
@@ -9356,8 +9416,8 @@
           "destination" : {
             "comments" : "",
             "groupId" : "cb7a0cb1-a82e-30c8-aa9a-64a0ce4b6880",
-            "id" : "43763833-6c70-37c1-ac52-fe00577480b8",
-            "name" : "JoltTransformJSON",
+            "id" : "11e1d785-8810-32c0-85cb-173c0dd16777",
+            "name" : "UpdateAttribute",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
@@ -9732,6 +9792,79 @@
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "2.5.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "cb7a0cb1-a82e-30c8-aa9a-64a0ce4b6880",
+          "identifier" : "11e1d785-8810-32c0-85cb-173c0dd16777",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "UpdateAttribute",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -1136.0,
+            "y" : 648.0
+          },
+          "properties" : {
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100",
+            "ticket.modifiedTime" : "${ticket.modifiedTime:toDate(\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\"):toNumber():divide(1000)}"
+          },
+          "propertyDescriptors" : {
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            },
+            "ticket.modifiedTime" : {
+              "displayName" : "ticket.modifiedTime",
+              "dynamic" : true,
+              "identifiesControllerService" : false,
+              "name" : "ticket.modifiedTime",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 25,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
             "artifact" : "nifi-jolt-nar",
             "group" : "org.apache.nifi",
             "version" : "2.5.0"
@@ -9755,7 +9888,7 @@
             "Max String Length" : "20 MB",
             "Transform Cache Size" : "1",
             "Pretty Print" : "false",
-            "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"result\": {\n        \"*\": {\n          \"references\": {\n            \"*\": {\n              \"type\": {\n                \"Waybill number\": {\n                  \"@(2,num)\": \"request[&5].references[0].num\",\n                  \"@(2,type)\": \"request[&5].references[0].type\",\n                  \"#iew\": \"request[&5].entity\",\n                  \"#387\": \"request[&5].statuses[0].partner_code\",\n                  \"#71\": \"request[&5].statuses[0].code\",\n                  \"#${ticket.subject} | ZohoCRM | ${ticket.id}\": \"request[&5].statuses[0].comment\",\n                  \"#npi\":\"company_id\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n]"
+            "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"result\": {\n        \"*\": {\n          \"references\": {\n            \"*\": {\n              \"type\": {\n                \"Waybill number\": {\n                  \"@(2,num)\": \"request[&5].references[0].num\",\n                  \"@(2,type)\": \"request[&5].references[0].type\",\n                  \"#${ticket.modifiedTime}\": \"request[&5].statuses[0].date\",\n                  \"#iew\": \"request[&5].entity\",\n                  \"#387\": \"request[&5].statuses[0].partner_code\",\n                  \"#71\": \"request[&5].statuses[0].code\",\n                  \"#${ticket.subject} | ZohoCRM | ${ticket.id}\": \"request[&5].statuses[0].comment\",\n                  \"#npi\": \"company_id\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n]\n"
           },
           "propertyDescriptors" : {
             "JSON Source" : {
@@ -11089,6 +11222,7 @@
             "ticket.subject" : "$.ticket.subject",
             "Null Value Representation" : "empty string",
             "ticket.id" : "$.ticket.id",
+            "ticket.modifiedTime" : "$.ticket.modifiedTime",
             "Path Not Found Behavior" : "ignore"
           },
           "propertyDescriptors" : {
@@ -11132,6 +11266,13 @@
               "dynamic" : true,
               "identifiesControllerService" : false,
               "name" : "ticket.id",
+              "sensitive" : false
+            },
+            "ticket.modifiedTime" : {
+              "displayName" : "ticket.modifiedTime",
+              "dynamic" : true,
+              "identifiesControllerService" : false,
+              "name" : "ticket.modifiedTime",
               "sensitive" : false
             },
             "Path Not Found Behavior" : {
@@ -14655,6 +14796,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "ex-pubsubnpu-zoho-ticket",
-    "timestamp" : 1762972340975
+    "timestamp" : 1763389783698
   }
 }
