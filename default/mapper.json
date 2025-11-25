@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1764084887444,
+    "description" : "",
+    "identifier" : "mapper",
+    "lastModifiedTimestamp" : 1764084887444,
+    "name" : "mapper",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
