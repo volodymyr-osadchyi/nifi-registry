@@ -6156,7 +6156,7 @@
         "Max String Length" : "20 MB",
         "Transform Cache Size" : "1",
         "Pretty Print" : "false",
-        "Jolt Specification" : "[\n  {\n    \"operation\": \"remove\",\n    \"spec\": {\n      \"contact\": \"\"\n    }\n  },\n  {\n    \"operation\": \"default\",\n    \"spec\": {\n      \"contactId\":\"${zoho.contact.id}\"\n    }\n  }\n]\n"
+        "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"contact\": {\n        \"phone\": \"phone\",\n        \"email\": \"email\"\n      },\n      \"*\": {\n        \"@\": \"&\"\n      }\n    }\n  },\n\n\n  {\n    \"operation\": \"default\",\n    \"spec\": {\n      \"contactId\": \"${zoho.contact.id}\"\n    }\n  }\n]\n"
       },
       "propertyDescriptors" : {
         "JSON Source" : {
@@ -6495,7 +6495,7 @@
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -1472.0,
-        "y" : 1472.0
+        "y" : 1488.0
       },
       "properties" : {
         "Store State" : "Do not store state",
@@ -7676,6 +7676,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "ex-zoho-npsh-ticket",
-    "timestamp" : 1761125862750
+    "timestamp" : 1764246027820
   }
 }
