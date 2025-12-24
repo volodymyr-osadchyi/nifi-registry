@@ -1504,6 +1504,7 @@
           "Max String Length" : "20 MB",
           "income.own_account.id" : "$.Our_Account.id",
           "Return Type" : "json",
+          "income.stage_description" : "$.Stage_description",
           "Null Value Representation" : "empty string",
           "income.stage" : "$.Stage",
           "Path Not Found Behavior" : "ignore"
@@ -1549,6 +1550,13 @@
             "dynamic" : false,
             "identifiesControllerService" : false,
             "name" : "Return Type",
+            "sensitive" : false
+          },
+          "income.stage_description" : {
+            "displayName" : "income.stage_description",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "income.stage_description",
             "sensitive" : false
           },
           "Null Value Representation" : {
@@ -1796,7 +1804,7 @@
           "Socket Idle Connections" : "5",
           "Request Body Enabled" : "true",
           "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-          "HTTP URL" : "https://shopify-np-dev.novaposhtaglobal.ua/api/market/agreement/claim",
+          "HTTP URL" : "https://test-service-011.nova.global/api/market/agreement/claim",
           "Socket Idle Timeout" : "5 mins",
           "Response Redirects Enabled" : "True",
           "X-Service-01-Token" : "3cbbd532-bb6c-4f46-af08-10d2d64f73f1",
@@ -2085,7 +2093,7 @@
         "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
         "yieldDuration" : "1 sec"
       }, {
-        "autoTerminatedRelationships" : [ ],
+        "autoTerminatedRelationships" : [ "success" ],
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "WARN",
         "bundle" : {
@@ -2150,7 +2158,7 @@
         "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
         "yieldDuration" : "1 sec"
       }, {
-        "autoTerminatedRelationships" : [ ],
+        "autoTerminatedRelationships" : [ "success" ],
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "WARN",
         "bundle" : {
@@ -2242,7 +2250,7 @@
           "Max String Length" : "20 MB",
           "Transform Cache Size" : "1",
           "Pretty Print" : "false",
-          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Shopify_Customer_id\": \"shop_id\",\n          \"Account_Name\": \"contract.account_name\",\n          \"Account_Number\": \"contract.account_number\",\n          \"group_CID\": \"contract.cid\",\n          \"group_PID\": \"contract.pid\",\n          \"Tax_number\": \"contract.tax_number\",\n          \"Email\": \"contract.email\",\n          \"Phone\": \"contract.phone\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"status\": \"${income.stage:equals('Signed'):ifElse('8',${income.stage:equals('Canceled'):ifElse('2','')})}\",\n      \"status_details\": \"${income.stage}\",\n      \"transaction_id\": \"${income.transaction_id}\",\n      \"own_account\": \"805789000000736734\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"own_account\": {\n        \"805789000000736761\": {\n          \"#12\": \"contractor\"\n        },\n        \"805789000018182001\": {\n          \"#237\": \"contractor\"\n        },\n        \"805789000000736734\": {\n          \"#238\": \"contractor\"\n        },\n        \"805789000000736753\": {\n          \"#240\": \"contractor\"\n        }\n      },\n      \"*\": {\n        \"@\": \"&\"\n      }\n    }\n  }\n]\n"
+          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Shopify_Customer_id\": \"shop_id\",\n          \"Account_Name\": \"contract.account_name\",\n          \"Account_Number\": \"contract.account_number\",\n          \"group_CID\": \"contract.cid\",\n          \"group_PID\": \"contract.pid\",\n          \"Tax_number\": \"contract.tax_number\",\n          \"Email\": \"contract.email\",\n          \"Phone\": \"contract.phone\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"status\": \"${income.stage}\",\n      \"status_details\": \"${income.stage_description}\",\n      \"transaction_id\": \"${income.transaction_id}\",\n      \"own_account\": \"805789000000736734\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"status\": {\n        \"Draft\": { \"#0\": \"status\" },\n        \"Approval\": { \"#3\": \"status\" },\n        \"Approved\": { \"#4\": \"status\" },\n        \"Sent for signature\": { \"#5\": \"status\" },\n        \"Signed\": { \"#8\": \"status\" },\n        \"Canceled\": { \"#2\": \"status\" }\n      },\n      \"own_account\": {\n        \"805789000000736761\": {\n          \"#12\": \"contract.contractor\"\n        },\n        \"805789000018182001\": {\n          \"#237\": \"contract.contractor\"\n        },\n        \"805789000000736734\": {\n          \"#238\": \"contract.contractor\"\n        },\n        \"805789000000736753\": {\n          \"#240\": \"contract.contractor\"\n        }\n      },\n      \"*\": {\n        \"@\": \"&\"\n      }\n    }\n  }\n]\n"
         },
         "propertyDescriptors" : {
           "JSON Source" : {
@@ -9793,6 +9801,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "ex-zoho-shopify",
-    "timestamp" : 1762275400233
+    "timestamp" : 1766617167995
   }
 }
