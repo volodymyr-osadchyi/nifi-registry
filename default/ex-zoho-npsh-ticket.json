@@ -8200,7 +8200,7 @@
         "Max String Length" : "20 MB",
         "Transform Cache Size" : "1",
         "Pretty Print" : "false",
-        "Jolt Specification" : "[\n  {\n    \"operation\": \"remove\",\n    \"spec\": {\n      \"*\": \"\"\n    }\n  },\n  {\n    \"operation\": \"default\",\n    \"spec\": {\n      \"status\": \"${status}\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"status\": {\n        \"1-0\": {\n          \"#Замовлення зареєстровано\": \"resolution\"\n        },\n        \"2-0\": {\n          \"#Замовлення відправлено на утилізацію\": \"resolution\"\n        },\n        \"3-0\": {\n          \"#Замовлення видалено з системи\": \"resolution\"\n        },\n        \"4-0\": {\n          \"#Комунікація зупинена\": \"resolution\"\n        }\n      }\n    }\n  }\n]"
+        "Jolt Specification" : "[\n  {\n    \"operation\": \"remove\",\n    \"spec\": {\n      \"*\": \"\"\n    }\n  },\n  {\n    \"operation\": \"default\",\n    \"spec\": {\n      \"status\": \"${status}\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"status\": {\n        \"1-0\": {\n          \"#Замовлення зареєстровано\": \"resolution\",\n          \"#Зареєстровано\": \"cf.cf_operacijnij_status\",\n          \"#Closed\": \"statusType\"\n        },\n        \"2-0\": {\n          \"#На утилізації\": \"cf.cf_operacijnij_status\"\n        },\n        \"3-0\": {\n          \"#Замовлення видалено з системи\": \"resolution\",\n          \"#Утилізовано\": \"cf.cf_operacijnij_status\",\n          \"#Closed\": \"statusType\"\n        }\n      }\n    }\n  }\n]"
       },
       "propertyDescriptors" : {
         "JSON Source" : {
@@ -9225,6 +9225,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "ex-zoho-npsh-ticket",
-    "timestamp" : 1765326624022
+    "timestamp" : 1766617157864
   }
 }
