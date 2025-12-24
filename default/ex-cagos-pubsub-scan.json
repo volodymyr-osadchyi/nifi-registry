@@ -174,8 +174,8 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "c851670e-0199-1000-210e-801353090d16",
-        "name" : "UpdateAttribute",
+        "id" : "c82a053d-0199-1000-0241-d70c038c929f",
+        "name" : "JoltTransformJSON",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -196,36 +196,6 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 33
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "bad1d9cc-019a-1000-53af-7941e54a6fac",
-        "name" : "JoltTransformJSON",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "4a44e32a-7484-3ef2-abd3-98e9ba8d4d92",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "c82f7d00-0199-1000-3378-03e2f3be1330",
-        "name" : "UpdateAttribute",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 39
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10,
@@ -2896,6 +2866,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "ex-cagos-pubsub-scan",
-    "timestamp" : 1766086739675
+    "timestamp" : 1766617148193
   }
 }
