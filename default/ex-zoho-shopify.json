@@ -141,6 +141,36 @@
         "destination" : {
           "comments" : "",
           "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "9e1b8e38-7a73-3101-a58b-52b57da62d63",
+          "name" : "RouteOnAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+        "identifier" : "5da206e5-db79-3191-8c4f-58336a4fdaf6",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "matched" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "53355abe-3776-34c6-8680-f91542cc6b9b",
+          "name" : "EvaluateJsonPath",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 13
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
           "id" : "9fc703ce-0199-1000-8fe9-79eb7633a09e",
           "name" : "EvaluateJsonPath",
           "type" : "PROCESSOR"
@@ -177,6 +207,36 @@
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+        "identifier" : "7826ec7c-a691-3742-9fea-86b57e8f8fcc",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure", "unmatched" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "53355abe-3776-34c6-8680-f91542cc6b9b",
+          "name" : "EvaluateJsonPath",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 16
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "c5360c50-7ff3-3292-80ff-60f86ca91900",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
         "identifier" : "7b7899ef-e8ce-3857-8a32-7a9b94ca0e6e",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -193,6 +253,36 @@
           "type" : "PROCESSOR"
         },
         "zIndex" : 11
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "a010e167-0199-1000-7d11-d7e625e1159a",
+          "name" : "InvokeHTTP",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+        "identifier" : "82be17aa-b586-3a08-9d11-bb1ce57cbe18",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "has_status" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "9e1b8e38-7a73-3101-a58b-52b57da62d63",
+          "name" : "RouteOnAttribute",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 14
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
@@ -290,8 +380,8 @@
         "destination" : {
           "comments" : "",
           "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
-          "id" : "a010e167-0199-1000-7d11-d7e625e1159a",
-          "name" : "InvokeHTTP",
+          "id" : "53355abe-3776-34c6-8680-f91542cc6b9b",
+          "name" : "EvaluateJsonPath",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
@@ -312,6 +402,36 @@
           "type" : "PROCESSOR"
         },
         "zIndex" : 10
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "c5360c50-7ff3-3292-80ff-60f86ca91900",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+        "identifier" : "ee18934e-0f3b-35a8-abb8-3cebbe363d1f",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "unmatched" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "9e1b8e38-7a73-3101-a58b-52b57da62d63",
+          "name" : "RouteOnAttribute",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 15
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
@@ -1147,6 +1267,89 @@
         "statelessFlowTimeout" : "1 min"
       } ],
       "processors" : [ {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+        "identifier" : "53355abe-3776-34c6-8680-f91542cc6b9b",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "EvaluateJsonPath",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -168.0,
+          "y" : 928.0
+        },
+        "properties" : {
+          "Destination" : "flowfile-content",
+          "Max String Length" : "20 MB",
+          "Return Type" : "auto-detect",
+          "mapped.status" : "$.status",
+          "Null Value Representation" : "empty string",
+          "Path Not Found Behavior" : "ignore"
+        },
+        "propertyDescriptors" : {
+          "Destination" : {
+            "displayName" : "Destination",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Destination",
+            "sensitive" : false
+          },
+          "Max String Length" : {
+            "displayName" : "Max String Length",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Max String Length",
+            "sensitive" : false
+          },
+          "Return Type" : {
+            "displayName" : "Return Type",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Return Type",
+            "sensitive" : false
+          },
+          "mapped.status" : {
+            "displayName" : "mapped.status",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "mapped.status",
+            "sensitive" : false
+          },
+          "Null Value Representation" : {
+            "displayName" : "Null Value Representation",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Null Value Representation",
+            "sensitive" : false
+          },
+          "Path Not Found Behavior" : {
+            "displayName" : "Path Not Found Behavior",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Path Not Found Behavior",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
+        "yieldDuration" : "1 sec"
+      }, {
         "autoTerminatedRelationships" : [ "Original" ],
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "WARN",
@@ -1489,6 +1692,57 @@
         "concurrentlySchedulableTaskCount" : 1,
         "executionNode" : "ALL",
         "groupIdentifier" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+        "identifier" : "9e1b8e38-7a73-3101-a58b-52b57da62d63",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "RouteOnAttribute",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -168.0,
+          "y" : 1128.0
+        },
+        "properties" : {
+          "Routing Strategy" : "Route to Property name",
+          "has_status" : "${mapped.status:length():gt(0)}"
+        },
+        "propertyDescriptors" : {
+          "Routing Strategy" : {
+            "displayName" : "Routing Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Routing Strategy",
+            "sensitive" : false
+          },
+          "has_status" : {
+            "displayName" : "has_status",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "has_status",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
         "identifier" : "9fc703ce-0199-1000-8fe9-79eb7633a09e",
         "maxBackoffPeriod" : "10 mins",
         "name" : "EvaluateJsonPath",
@@ -1791,7 +2045,7 @@
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : -176.0,
-          "y" : 936.0
+          "y" : 1352.0
         },
         "properties" : {
           "Request Content-Encoding" : "DISABLED",
@@ -2112,7 +2366,7 @@
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : -176.0,
-          "y" : 1144.0
+          "y" : 1560.0
         },
         "properties" : {
           "Store State" : "Do not store state",
@@ -2250,7 +2504,7 @@
           "Max String Length" : "20 MB",
           "Transform Cache Size" : "1",
           "Pretty Print" : "false",
-          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Shopify_Customer_id\": \"shop_id\",\n          \"Account_Name\": \"contract.account_name\",\n          \"Account_Number\": \"contract.account_number\",\n          \"group_CID\": \"contract.cid\",\n          \"group_PID\": \"contract.pid\",\n          \"Tax_number\": \"contract.tax_number\",\n          \"Email\": \"contract.email\",\n          \"Phone\": \"contract.phone\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"status\": \"${income.stage}\",\n      \"status_details\": \"${income.stage_description}\",\n      \"transaction_id\": \"${income.transaction_id}\",\n      \"own_account\": \"805789000000736734\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"status\": {\n        \"Draft\": { \"#0\": \"status\" },\n        \"Approval\": { \"#3\": \"status\" },\n        \"Approved\": { \"#4\": \"status\" },\n        \"Sent for signature\": { \"#5\": \"status\" },\n        \"Signed\": { \"#8\": \"status\" },\n        \"Canceled\": { \"#2\": \"status\" }\n      },\n      \"own_account\": {\n        \"805789000000736761\": {\n          \"#12\": \"contract.contractor\"\n        },\n        \"805789000018182001\": {\n          \"#237\": \"contract.contractor\"\n        },\n        \"805789000000736734\": {\n          \"#238\": \"contract.contractor\"\n        },\n        \"805789000000736753\": {\n          \"#240\": \"contract.contractor\"\n        }\n      },\n      \"*\": {\n        \"@\": \"&\"\n      }\n    }\n  }\n]\n"
+          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Shopify_Customer_id\": \"shop_id\",\n          \"Account_Name\": \"contract.account_name\",\n          \"Account_Number\": \"contract.account_number\",\n          \"group_CID\": \"contract.cid\",\n          \"group_PID\": \"contract.pid\",\n          \"Tax_number\": \"contract.tax_number\",\n          \"Email\": \"contract.email\",\n          \"Phone\": \"contract.phone\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"status\": \"${income.stage}\",\n      \"status_details\": \"${income.stage_description}\",\n      \"transaction_id\": \"${income.transaction_id}\",\n      \"own_account\": \"805789000000736734\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"status\": {\n        \"Approval\": { \"#3\": \"status\" },\n        \"Approved\": { \"#4\": \"status\" },\n        \"Sent for signature\": { \"#5\": \"status\" },\n        \"Signed\": { \"#8\": \"status\" },\n        \"Canceled\": { \"#2\": \"status\" }\n      },\n      \"own_account\": {\n        \"805789000000736761\": {\n          \"#12\": \"contract.contractor\"\n        },\n        \"805789000018182001\": {\n          \"#237\": \"contract.contractor\"\n        },\n        \"805789000000736734\": {\n          \"#238\": \"contract.contractor\"\n        },\n        \"805789000000736753\": {\n          \"#240\": \"contract.contractor\"\n        }\n      },\n      \"*\": {\n        \"@\": \"&\"\n      }\n    }\n  }\n]\n"
         },
         "propertyDescriptors" : {
           "JSON Source" : {
@@ -2910,6 +3164,36 @@
         "destination" : {
           "comments" : "",
           "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+          "id" : "6ac33384-019b-1000-fda0-6d083111a69e",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+        "identifier" : "5e4f08cd-e5ee-3eb2-9ce3-5b5f795289c8",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+          "id" : "6ac3276f-019b-1000-d790-bc77afe38c14",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 35
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
           "id" : "9fb2a522-0199-1000-740d-f2b7032febfa",
           "name" : "UpdateAttribute",
           "type" : "PROCESSOR"
@@ -3065,6 +3349,36 @@
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+        "identifier" : "934b409f-b97c-3275-b098-3ef8532a600a",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+          "id" : "6ad83b02-019b-1000-bd39-f3e8efec498b",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 37
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+          "id" : "6ad83b02-019b-1000-bd39-f3e8efec498b",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
         "identifier" : "9713b120-0199-1000-a46a-e94318cceacc",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -3141,6 +3455,36 @@
           "type" : "PROCESSOR"
         },
         "zIndex" : 23
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+          "id" : "9713b112-0199-1000-ee8d-ab9b56616ef5",
+          "name" : "JoltTransformJSON",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+        "identifier" : "b03ea435-b2fe-3df9-ac06-77649ec1e8bc",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+          "id" : "6ac33384-019b-1000-fda0-6d083111a69e",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 36
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
@@ -7176,7 +7520,7 @@
         } ],
         "position" : {
           "x" : 64.0,
-          "y" : 1024.0
+          "y" : 1456.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -8796,6 +9140,257 @@
         "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
         "yieldDuration" : "1 sec"
       }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+        "identifier" : "6ac3276f-019b-1000-d790-bc77afe38c14",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "UpdateAttribute",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 944.0,
+          "y" : 528.0
+        },
+        "properties" : {
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100",
+          "mime.type" : "application/xml",
+          "config.mapper.host" : "https://api.novaposhta.international:8243"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "mime.type" : {
+            "displayName" : "mime.type",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "mime.type",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          },
+          "config.mapper.host" : {
+            "displayName" : "config.mapper.host",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "config.mapper.host",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+        "identifier" : "6ac33384-019b-1000-fda0-6d083111a69e",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "UpdateAttribute",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 944.0,
+          "y" : 752.0
+        },
+        "properties" : {
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100",
+          "mime.type" : "application/xml",
+          "config.mapper.host" : "https://api.novaposhta.international:8243"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "mime.type" : {
+            "displayName" : "mime.type",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "mime.type",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          },
+          "config.mapper.host" : {
+            "displayName" : "config.mapper.host",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "config.mapper.host",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+        "identifier" : "6ad83b02-019b-1000-bd39-f3e8efec498b",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "UpdateAttribute",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 80.0,
+          "y" : 1000.0
+        },
+        "properties" : {
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100",
+          "mime.type" : "application/xml",
+          "config.mapper.host" : "https://api.novaposhta.international:8243",
+          "delay_start" : "${now()}"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "mime.type" : {
+            "displayName" : "mime.type",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "mime.type",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          },
+          "config.mapper.host" : {
+            "displayName" : "config.mapper.host",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "config.mapper.host",
+            "sensitive" : false
+          },
+          "delay_start" : {
+            "displayName" : "delay_start",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "delay_start",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
         "autoTerminatedRelationships" : [ "Original" ],
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "WARN",
@@ -9136,7 +9731,7 @@
           "Max String Length" : "20 MB",
           "Transform Cache Size" : "1",
           "Pretty Print" : "false",
-          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Account_Name\": \"data[0].Deal_Name\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"Lead_Source\": \"Shopify\",\n          \"Stage\": \"New deal\",\n          \"Account_Name\": {\n            \"id\": \"${zoho.accounts.id}\"\n          }\n        }\n      }\n    }\n  }\n]\n"
+          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Account_Name\": \"data[0].Deal_Name\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"Lead_Source\": \"Shopify\",\n          \"Department\":\"E-com\",\n          \"Stage\": \"New deal\",\n          \"Account_Name\": {\n            \"id\": \"${zoho.accounts.id}\"\n          }\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"default\",\n    \"spec\": {\n       \"trigger\": [\n         \"workflow\",\n         \"blueprint\"\n    ]\n    }\n  }\n]\n"
         },
         "propertyDescriptors" : {
           "JSON Source" : {
@@ -9458,7 +10053,7 @@
           "Max String Length" : "20 MB",
           "Transform Cache Size" : "1",
           "Pretty Print" : "false",
-          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"#Agreement\": \"data[0].NameArr\",\n          \"Account_Name\": \"data[0].NameArr\",\n          \"Shopify_Customer_id\": \"data[0].NameArr\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"Name\": \"=join('_',@(1,NameArr))\",\n          \"Stage\": \"Draft\",\n          \"Agreemnt\": \"${income.transaction_id}\",\n          \"Account\": {\n            \"id\": \"${zoho.accounts.id}\"\n          },\n          \"Deal\": {\n            \"id\": \"${zoho.deals.id}\"\n          },\n          \"Receiving_original_documents\": {\n            \"id\": \"${zoho.contacts.receiving_original}\"\n          },\n          \"Signer\": {\n            \"id\": \"${zoho.contacts.signatory}\"\n          },\n          \"Agreement_Template\": {\n            \"id\": \"805789000009312775\"\n          }\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"remove\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"NameArr\": \"\"\n        }\n      }\n    }\n  }\n]"
+          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"#Agreement\": \"data[0].NameArr\",\n          \"Account_Name\": \"data[0].NameArr\",\n          \"Shopify_Customer_id\": \"data[0].NameArr\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"Name\": \"=join('_',@(1,NameArr))\",\n          \"Stage\": \"Draft\",\n         \n          \"Agreemnt\": \"${income.transaction_id}\",\n          \"Account\": {\n            \"id\": \"${zoho.accounts.id}\"\n          },\n          \"Deal\": {\n            \"id\": \"${zoho.deals.id}\"\n          },\n          \"Receiving_original_documents\": {\n            \"id\": \"${zoho.contacts.receiving_original}\"\n          },\n          \"Signer\": {\n            \"id\": \"${zoho.contacts.signatory}\"\n          },\n          \"Agreement_Template\": {\n            \"id\": \"805789000009312775\"\n          }\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"remove\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n    \t  \"NameArr\":\"\"\n    \t}\n      }\n    }\n  },\n  {\n    \"operation\": \"default\",\n    \"spec\": {\n       \"trigger\": [\n         \"workflow\",\n         \"blueprint\"\n    ]\n    }\n  }\n]"
         },
         "propertyDescriptors" : {
           "JSON Source" : {
@@ -9562,7 +10157,7 @@
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : 80.0,
-          "y" : 1280.0
+          "y" : 1712.0
         },
         "properties" : {
           "Store State" : "Do not store state",
@@ -9624,7 +10219,7 @@
         "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
         "yieldDuration" : "1 sec"
       }, {
-        "autoTerminatedRelationships" : [ ],
+        "autoTerminatedRelationships" : [ "success" ],
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "WARN",
         "bundle" : {
@@ -9801,6 +10396,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "ex-zoho-shopify",
-    "timestamp" : 1766617167995
+    "timestamp" : 1767371725077
   }
 }
