@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1767605202794,
+    "description" : "",
+    "identifier" : "dwh-s3",
+    "lastModifiedTimestamp" : 1767605202794,
+    "name" : "dwh-s3",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
