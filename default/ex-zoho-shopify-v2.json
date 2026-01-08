@@ -2631,6 +2631,35 @@
         "bends" : [ ],
         "componentType" : "CONNECTION",
         "destination" : {
+          "groupId" : "38e30641-0199-1000-f3e4-b09f847e9bad",
+          "id" : "38e30646-0199-1000-5506-27af14f3fa5e",
+          "name" : "in",
+          "type" : "INPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+        "identifier" : "138aadd6-7c6f-33c5-afd0-e2fe30f3770e",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+          "id" : "7f955a8e-019b-1000-cbe0-19d53abdb5c8",
+          "name" : "JoltTransformJSON",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 44
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
           "comments" : "",
           "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
           "id" : "97237926-0199-1000-f2d3-3c6e53f848a2",
@@ -2662,6 +2691,36 @@
         "destination" : {
           "comments" : "",
           "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+          "id" : "9fb636a1-0199-1000-760a-8b8cdf4c24aa",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+        "identifier" : "31a79443-d2ca-3fa4-869d-527b1339d514",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+          "id" : "38e30622-0199-1000-bf17-791d890f76b5",
+          "name" : "ReplaceText",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 46
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
           "id" : "38e30618-0199-1000-cabb-68d282faae8e",
           "name" : "UpdateAttribute",
           "type" : "PROCESSOR"
@@ -2684,35 +2743,6 @@
           "type" : "PROCESSOR"
         },
         "zIndex" : 17
-      }, {
-        "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "groupId" : "38e30634-0199-1000-a430-4b7a76295802",
-          "id" : "38e30639-0199-1000-405f-6178e865f3b8",
-          "name" : "in",
-          "type" : "INPUT_PORT"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
-        "identifier" : "38e30650-0199-1000-9966-6e8e0bab392a",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "success" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
-          "id" : "38e3061a-0199-1000-0790-1eb9a9ac744f",
-          "name" : "JoltTransformJSON",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 13
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
@@ -2831,35 +2861,6 @@
           "type" : "PROCESSOR"
         },
         "zIndex" : 19
-      }, {
-        "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "groupId" : "38e30641-0199-1000-f3e4-b09f847e9bad",
-          "id" : "38e30646-0199-1000-5506-27af14f3fa5e",
-          "name" : "in",
-          "type" : "INPUT_PORT"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
-        "identifier" : "38e30659-0199-1000-f67d-32f1551fc949",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "success" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
-          "id" : "38e30621-0199-1000-ebcf-567b37c03f1e",
-          "name" : "JoltTransformJSON",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 20
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
@@ -3194,6 +3195,36 @@
         "destination" : {
           "comments" : "",
           "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+          "id" : "9fb636a1-0199-1000-760a-8b8cdf4c24aa",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+        "identifier" : "669458c6-5656-3c30-b499-572c8e347952",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+          "id" : "38e3061a-0199-1000-0790-1eb9a9ac744f",
+          "name" : "JoltTransformJSON",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 47
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
           "id" : "38e3061b-0199-1000-1dff-7c7cd771f2c4",
           "name" : "JoltTransformJSON",
           "type" : "PROCESSOR"
@@ -3216,6 +3247,35 @@
           "type" : "PROCESSOR"
         },
         "zIndex" : 22
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "38e30634-0199-1000-a430-4b7a76295802",
+          "id" : "38e30639-0199-1000-405f-6178e865f3b8",
+          "name" : "in",
+          "type" : "INPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+        "identifier" : "72ce8727-6080-3f19-bfc0-05317fae87e0",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+          "id" : "38e30621-0199-1000-ebcf-567b37c03f1e",
+          "name" : "JoltTransformJSON",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 43
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
@@ -3490,6 +3550,35 @@
         "bends" : [ ],
         "componentType" : "CONNECTION",
         "destination" : {
+          "groupId" : "7f955a8f-019b-1000-5bd1-7f90121bfaf0",
+          "id" : "7f955a94-019b-1000-c622-36833d26d04c",
+          "name" : "in",
+          "type" : "INPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+        "identifier" : "ada10ba6-f3c1-398b-b4b9-847c2958a2b1",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+          "id" : "38e3061a-0199-1000-0790-1eb9a9ac744f",
+          "name" : "JoltTransformJSON",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 45
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
           "comments" : "",
           "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
           "id" : "9713b112-0199-1000-ee8d-ab9b56616ef5",
@@ -3573,35 +3662,6 @@
           "type" : "OUTPUT_PORT"
         },
         "zIndex" : 31
-      }, {
-        "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "groupId" : "7f955a8f-019b-1000-5bd1-7f90121bfaf0",
-          "id" : "7f955a94-019b-1000-c622-36833d26d04c",
-          "name" : "in",
-          "type" : "INPUT_PORT"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
-        "identifier" : "fc4ab266-8117-3467-a566-bac45904442a",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "success" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
-          "id" : "7f955a8e-019b-1000-cbe0-19d53abdb5c8",
-          "name" : "JoltTransformJSON",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 41
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
@@ -4661,8 +4721,8 @@
           "type" : "OUTPUT_PORT"
         } ],
         "position" : {
-          "x" : 264.0,
-          "y" : 32.0
+          "x" : -776.0,
+          "y" : 1136.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -5665,8 +5725,8 @@
           "type" : "OUTPUT_PORT"
         } ],
         "position" : {
-          "x" : -776.0,
-          "y" : 1160.0
+          "x" : 272.0,
+          "y" : 352.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -6784,7 +6844,7 @@
         } ],
         "position" : {
           "x" : 272.0,
-          "y" : 760.0
+          "y" : 1144.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -6999,7 +7059,7 @@
             "Socket Idle Connections" : "5",
             "Request Body Enabled" : "true",
             "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-            "HTTP URL" : "https://www.zohoapis.eu/crm/v8/Deals/upsert",
+            "HTTP URL" : "https://www.zohoapis.eu/crm/v8/Bank_details/upsert",
             "Socket Idle Timeout" : "5 mins",
             "Response Redirects Enabled" : "True",
             "Socket Write Timeout" : "15 secs",
@@ -7319,8 +7379,8 @@
           "properties" : {
             "Destination" : "flowfile-attribute",
             "Max String Length" : "20 MB",
+            "zoho.bank_details.id" : "$.data[0].details.id",
             "Return Type" : "json",
-            "zoho.deals.id" : "$.data[0].details.id",
             "Null Value Representation" : "empty string",
             "Path Not Found Behavior" : "ignore"
           },
@@ -7339,18 +7399,18 @@
               "name" : "Max String Length",
               "sensitive" : false
             },
+            "zoho.bank_details.id" : {
+              "displayName" : "zoho.bank_details.id",
+              "dynamic" : true,
+              "identifiesControllerService" : false,
+              "name" : "zoho.bank_details.id",
+              "sensitive" : false
+            },
             "Return Type" : {
               "displayName" : "Return Type",
               "dynamic" : false,
               "identifiesControllerService" : false,
               "name" : "Return Type",
-              "sensitive" : false
-            },
-            "zoho.deals.id" : {
-              "displayName" : "zoho.deals.id",
-              "dynamic" : true,
-              "identifiesControllerService" : false,
-              "name" : "zoho.deals.id",
               "sensitive" : false
             },
             "Null Value Representation" : {
@@ -9130,8 +9190,8 @@
         "name" : "JoltTransformJSON",
         "penaltyDuration" : "30 sec",
         "position" : {
-          "x" : 280.0,
-          "y" : -184.0
+          "x" : 288.0,
+          "y" : 888.0
         },
         "properties" : {
           "JSON Source" : "FLOW_FILE",
@@ -9139,7 +9199,7 @@
           "Max String Length" : "20 MB",
           "Transform Cache Size" : "1",
           "Pretty Print" : "false",
-          "Jolt Specification" : "[\n\n  {\n    \"operation\": \"remove\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Contacts\": \"\"\n        }\n      }\n    }\n  }\n]\n"
+          "Jolt Specification" : "[\n\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Bank_details\": \"data[]\"\n        }\n      }\n    }\n  }\n]\n"
         },
         "propertyDescriptors" : {
           "JSON Source" : {
@@ -9648,7 +9708,7 @@
           "Max String Length" : "20 MB",
           "Transform Cache Size" : "1",
           "Pretty Print" : "false",
-          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Contacts\": \"data\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"Account_Name\": {\n            \"id\": \"${zoho.accounts.id}\"\n          }\n        }\n      }\n    }\n  }\n]"
+          "Jolt Specification" : "[\n  {\n    \"operation\": \"remove\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Operation_details\": \"\",\n          \"Sanctions_applicable_to_company\": \"\",\n          \"Sanctions_applicable_to_founders_owners\": \"\",\n          \"Our_Accounts\": \"\",\n          \"Contacts\": \"\",\n          \"Signatory\": \"\",\n          \"Bank_details\": \"\"\n        }\n      }\n    }\n  }\n]\n"
         },
         "propertyDescriptors" : {
           "JSON Source" : {
@@ -9751,8 +9811,8 @@
         "name" : "ReplaceText",
         "penaltyDuration" : "30 sec",
         "position" : {
-          "x" : 280.0,
-          "y" : -400.0
+          "x" : 288.0,
+          "y" : 672.0
         },
         "properties" : {
           "Regular Expression" : "(?s)(^.*$)",
@@ -10635,7 +10695,7 @@
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : 288.0,
-          "y" : 352.0
+          "y" : -112.0
         },
         "properties" : {
           "Regular Expression" : "(?s)(^.*$)",
@@ -10740,7 +10800,7 @@
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : 288.0,
-          "y" : 544.0
+          "y" : 104.0
         },
         "properties" : {
           "JSON Source" : "FLOW_FILE",
@@ -10748,7 +10808,7 @@
           "Max String Length" : "20 MB",
           "Transform Cache Size" : "1",
           "Pretty Print" : "false",
-          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Account_Name\": \"data[0].Deal_Name\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"Lead_Source\": \"Shopify\",\n          \"Department\":\"E-com\",\n          \"Stage\": \"New deal\",\n          \"Account_Name\": {\n            \"id\": \"${zoho.accounts.id}\"\n          }\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"default\",\n    \"spec\": {\n       \"trigger\": [\n         \"workflow\",\n         \"blueprint\"\n    ]\n    }\n  }\n]\n"
+          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Contacts\": \"data\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"Account_Name\": {\n            \"id\": \"${zoho.accounts.id}\"\n          }\n        }\n      }\n    }\n  }\n]"
         },
         "propertyDescriptors" : {
           "JSON Source" : {
@@ -10851,8 +10911,8 @@
         "name" : "UpdateAttribute",
         "penaltyDuration" : "30 sec",
         "position" : {
-          "x" : 944.0,
-          "y" : 496.0
+          "x" : 904.0,
+          "y" : -24.0
         },
         "properties" : {
           "Store State" : "Do not store state",
@@ -10941,7 +11001,7 @@
           "Max String Length" : "20 MB",
           "Transform Cache Size" : "1",
           "Pretty Print" : "false",
-          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Account_Name\": \"data[0].Deal_Name\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"Lead_Source\": \"Shopify\",\n          \"Department\":\"E-com\",\n          \"Stage\": \"New deal\",\n          \"Account_Name\": {\n            \"id\": \"${zoho.accounts.id}\"\n          }\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"default\",\n    \"spec\": {\n       \"trigger\": [\n         \"workflow\",\n         \"blueprint\"\n    ]\n    }\n  }\n]\n"
+          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Account_Name\": \"data[0].Deal_Name\",\n          \"Operation_details\": \"data[0].Does_the_company_operate_in_sanctioned_countries\",\n          \"Sanctions_applicable_to_company\": \"data[0].Sanctions_applicable_to_company\",\n          \"Sanctions_applicable_to_founders_owners\": \"data[0].Sanctions_applicable_to_the_founders\",\n          \"Our_Accounts\": {\n            \"*\": {\n              \"Our_Accounts1\": \"data[0].Our_Accounts\"\n            }\n          },\n          \"Signatory\": {\n            \"*\": {\n              \"@\": \"data[0].&\"\n            }\n          },\n          \"Sanctions\": {\n            \"*\": {\n              \"@\": \"data[0].&\"\n            }\n          },\n          \"Contacts\": {\n            \"*\": {\n              \"Title\": {\n                \"signatory\": {\n                  \"@(2,Email)\": \"data[0].Email_address_for_Signing_App\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"Lead_Source\": \"Shopify\",\n          \"Department\": \"E-com\",\n          \"Stage\": \"Form Submitted/Screening\",\n          \"Account_Name\": {\n            \"id\": \"${zoho.accounts.id}\"\n          },\n          \"Contact_Name\": {\n            \"id\": \"${zoho.contacts.id}\"\n          },\n          \"Bank_Account\": {\n            \"id\": \"${zoho.bank_details.id}\"\n          },\n          \"Signatory\": {\n            \"id\": \"${zoho.contacts.signatory}\"\n          }\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"default\",\n    \"spec\": {\n      \"trigger\": [\n         \"workflow\",\n         \"blueprint\"\n    ]\n    }\n  }\n]"
         },
         "propertyDescriptors" : {
           "JSON Source" : {
@@ -11528,8 +11588,8 @@
         "name" : "UpdateAttribute",
         "penaltyDuration" : "30 sec",
         "position" : {
-          "x" : -1454.0,
-          "y" : 746.0
+          "x" : 936.0,
+          "y" : 776.0
         },
         "properties" : {
           "Store State" : "Do not store state",
@@ -11606,6 +11666,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "ex-zoho-shopify-v2",
-    "timestamp" : 1767776424726
+    "timestamp" : 1767911628017
   }
 }
