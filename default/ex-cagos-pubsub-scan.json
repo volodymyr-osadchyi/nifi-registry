@@ -60,36 +60,6 @@
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "2c1cba44-1cab-3686-b17a-6c41b4293246",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "ef15cccc-019a-1000-8a50-a3057c512b28",
-        "name" : "UpdateAttribute",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 43
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "c82f2bd5-0199-1000-58d8-cf452afbc784",
-        "name" : "EvaluateJsonPath",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
       "identifier" : "31429777-8425-3d42-b37c-87148a51d18b",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -144,13 +114,13 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "032c2e31-019b-1000-faed-f395d65712eb",
-        "name" : "UpdateAttribute",
+        "id" : "b59504f3-019a-1000-c1c9-718218ea65c3",
+        "name" : "PublishGCPubSub-stage",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "3f717d34-dc67-3592-8556-abf5dcde3bb3",
+      "identifier" : "3e9128a1-9d5f-3e58-a290-98e1a6a62ec4",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -161,11 +131,11 @@
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "2fe23633-1fd2-3e43-a8b3-4cef78c5efee",
-        "name" : "ConsumeGCPubSub",
+        "id" : "c82a053d-0199-1000-0241-d70c038c929f",
+        "name" : "JoltTransformJSON",
         "type" : "PROCESSOR"
       },
-      "zIndex" : 50
+      "zIndex" : 54
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -252,7 +222,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "b59504f3-019a-1000-c1c9-718218ea65c3",
-        "name" : "PublishGCPubSub",
+        "name" : "PublishGCPubSub-stage",
         "type" : "PROCESSOR"
       },
       "zIndex" : 37
@@ -294,8 +264,8 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "b59504f3-019a-1000-c1c9-718218ea65c3",
-        "name" : "PublishGCPubSub",
+        "id" : "79ee8da9-98b6-3749-a090-4b70ed941e75",
+        "name" : "PublishGCPubSub-prod",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -342,7 +312,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "79ee8da9-98b6-3749-a090-4b70ed941e75",
-        "name" : "PublishGCPubSub",
+        "name" : "PublishGCPubSub-prod",
         "type" : "PROCESSOR"
       },
       "zIndex" : 29
@@ -406,36 +376,6 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 34
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "bad34d94-019a-1000-7cee-6d6a8f40873f",
-        "name" : "UpdateAttribute",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "9b2de012-6d91-3762-8cb1-84d5b7c1f2db",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "failure" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "bad1d9cc-019a-1000-53af-7941e54a6fac",
-        "name" : "JoltTransformJSON",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 41
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -522,40 +462,10 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "b59504f3-019a-1000-c1c9-718218ea65c3",
-        "name" : "PublishGCPubSub",
+        "name" : "PublishGCPubSub-stage",
         "type" : "PROCESSOR"
       },
       "zIndex" : 38
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "b59504f3-019a-1000-c1c9-718218ea65c3",
-        "name" : "PublishGCPubSub",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "c3e6c9d3-b126-362b-8c05-a34e2f3670f9",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "bad1d9cc-019a-1000-53af-7941e54a6fac",
-        "name" : "JoltTransformJSON",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 40
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -582,7 +492,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "79ee8da9-98b6-3749-a090-4b70ed941e75",
-        "name" : "PublishGCPubSub",
+        "name" : "PublishGCPubSub-prod",
         "type" : "PROCESSOR"
       },
       "zIndex" : 28
@@ -889,190 +799,6 @@
     },
     "processGroups" : [ ],
     "processors" : [ {
-      "autoTerminatedRelationships" : [ "success" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-update-attribute-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.5.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "032c2e31-019b-1000-faed-f395d65712eb",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "UpdateAttribute",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -3808.0,
-        "y" : 1064.0
-      },
-      "properties" : {
-        "Store State" : "Do not store state",
-        "canonical-value-lookup-cache-size" : "100"
-      },
-      "propertyDescriptors" : {
-        "Delete Attributes Expression" : {
-          "displayName" : "Delete Attributes Expression",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Delete Attributes Expression",
-          "sensitive" : false
-        },
-        "Store State" : {
-          "displayName" : "Store State",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Store State",
-          "sensitive" : false
-        },
-        "canonical-value-lookup-cache-size" : {
-          "displayName" : "Cache Value Lookup Cache Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "canonical-value-lookup-cache-size",
-          "sensitive" : false
-        },
-        "Stateful Variables Initial Value" : {
-          "displayName" : "Stateful Variables Initial Value",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Stateful Variables Initial Value",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-gcp-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.5.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "2fe23633-1fd2-3e43-a8b3-4cef78c5efee",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "ConsumeGCPubSub",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -3852.5,
-        "y" : 753.7000274658203
-      },
-      "properties" : {
-        "GCP Credentials Provider Service" : "3dfb2429-defe-3dc8-86eb-668cef3dd039",
-        "gcp-pubsub-publish-batch-size" : "15",
-        "api-endpoint" : "pubsub.googleapis.com:443",
-        "gcp-pubsub-subscription" : "projects/api-project-303640486264/subscriptions/pubsub_npu_topic-sub",
-        "Processing Strategy" : "FLOW_FILE",
-        "Output Strategy" : "USE_VALUE",
-        "gcp-project-id" : "api-project-303640486264"
-      },
-      "propertyDescriptors" : {
-        "GCP Credentials Provider Service" : {
-          "displayName" : "GCP Credentials Provider Service",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "GCP Credentials Provider Service",
-          "sensitive" : false
-        },
-        "gcp-pubsub-publish-batch-size" : {
-          "displayName" : "Batch Size Threshold",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "gcp-pubsub-publish-batch-size",
-          "sensitive" : false
-        },
-        "api-endpoint" : {
-          "displayName" : "API Endpoint",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "api-endpoint",
-          "sensitive" : false
-        },
-        "gcp-pubsub-subscription" : {
-          "displayName" : "Subscription",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "gcp-pubsub-subscription",
-          "sensitive" : false
-        },
-        "Message Demarcator" : {
-          "displayName" : "Message Demarcator",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Message Demarcator",
-          "sensitive" : false
-        },
-        "proxy-configuration-service" : {
-          "displayName" : "Proxy Configuration Service",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "proxy-configuration-service",
-          "sensitive" : false
-        },
-        "Processing Strategy" : {
-          "displayName" : "Processing Strategy",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Processing Strategy",
-          "sensitive" : false
-        },
-        "Record Writer" : {
-          "displayName" : "Record Writer",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "Record Writer",
-          "sensitive" : false
-        },
-        "Record Reader" : {
-          "displayName" : "Record Reader",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "Record Reader",
-          "sensitive" : false
-        },
-        "Output Strategy" : {
-          "displayName" : "Output Strategy",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Output Strategy",
-          "sensitive" : false
-        },
-        "gcp-project-id" : {
-          "displayName" : "Project ID",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "gcp-project-id",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 0,
-      "scheduledState" : "DISABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.gcp.pubsub.ConsumeGCPubSub",
-      "yieldDuration" : "1 sec"
-    }, {
       "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -1091,8 +817,8 @@
       "name" : "ConsumeKafka",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1360.0,
-        "y" : 128.0
+        "x" : -1248.0,
+        "y" : 240.0
       },
       "properties" : {
         "Topics" : "cargos-async_scan_to-npu",
@@ -1269,10 +995,10 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "79ee8da9-98b6-3749-a090-4b70ed941e75",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "PublishGCPubSub",
+      "name" : "PublishGCPubSub-prod",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1368.0,
+        "x" : -1896.0,
         "y" : 1072.0
       },
       "properties" : {
@@ -1424,8 +1150,8 @@
       "name" : "UpdateAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -720.0,
-        "y" : 1072.0
+        "x" : -2152.0,
+        "y" : 1312.0
       },
       "properties" : {
         "Store State" : "Do not store state",
@@ -1489,8 +1215,8 @@
       "name" : "UpdateAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -720.0,
-        "y" : 1280.0
+        "x" : -1640.0,
+        "y" : 1312.0
       },
       "properties" : {
         "Store State" : "Do not store state",
@@ -1551,7 +1277,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "b59504f3-019a-1000-c1c9-718218ea65c3",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "PublishGCPubSub",
+      "name" : "PublishGCPubSub-stage",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -2408.0,
@@ -1831,183 +1557,6 @@
       "concurrentlySchedulableTaskCount" : 1,
       "executionNode" : "ALL",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "bad1d9cc-019a-1000-53af-7941e54a6fac",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "JoltTransformJSON",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -2408.0,
-        "y" : 864.0
-      },
-      "properties" : {
-        "JSON Source" : "FLOW_FILE",
-        "Jolt Transform" : "jolt-transform-chain",
-        "Max String Length" : "20 MB",
-        "Transform Cache Size" : "1",
-        "Pretty Print" : "false",
-        "Jolt Specification" : "[\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"status_date\": \"${createdAt:escapeJson()}\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"#51747310791730\": \"number\",\n      \"partner_event\": \"status\",\n      \"status_date\": \"createdAt\",\n      \"statement_number\":\"docFixationNumber\",      \n      \"status_country\": \"countryCode\",\n      \"location\": {\n        \"address\": \"divisionAddress\",\n        \"reference\": \"divisionRef\",\n        \"longitude\": \"divisionLongitude\",\n        \"latitude\": \"divisionLatitude\"\n      }\n    }\n  }\n]\n"
-      },
-      "propertyDescriptors" : {
-        "JSON Source" : {
-          "displayName" : "JSON Source",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "JSON Source",
-          "sensitive" : false
-        },
-        "Jolt Transform" : {
-          "displayName" : "Jolt Transform",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Jolt Transform",
-          "sensitive" : false
-        },
-        "JSON Source Attribute" : {
-          "displayName" : "JSON Source Attribute",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "JSON Source Attribute",
-          "sensitive" : false
-        },
-        "Max String Length" : {
-          "displayName" : "Max String Length",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Max String Length",
-          "sensitive" : false
-        },
-        "Transform Cache Size" : {
-          "displayName" : "Transform Cache Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Transform Cache Size",
-          "sensitive" : false
-        },
-        "Custom Transformation Class Name" : {
-          "displayName" : "Custom Transformation Class Name",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Custom Transformation Class Name",
-          "sensitive" : false
-        },
-        "Custom Module Directory" : {
-          "displayName" : "Custom Module Directory",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Custom Module Directory",
-          "resourceDefinition" : {
-            "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "DIRECTORY", "FILE" ]
-          },
-          "sensitive" : false
-        },
-        "Pretty Print" : {
-          "displayName" : "Pretty Print",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Pretty Print",
-          "sensitive" : false
-        },
-        "Jolt Specification" : {
-          "displayName" : "Jolt Specification",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Jolt Specification",
-          "resourceDefinition" : {
-            "cardinality" : "SINGLE",
-            "resourceTypes" : [ "FILE", "TEXT" ]
-          },
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ "success" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-update-attribute-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.5.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "bad34d94-019a-1000-7cee-6d6a8f40873f",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "UpdateAttribute",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -3064.0,
-        "y" : 864.0
-      },
-      "properties" : {
-        "Store State" : "Do not store state",
-        "canonical-value-lookup-cache-size" : "100"
-      },
-      "propertyDescriptors" : {
-        "Delete Attributes Expression" : {
-          "displayName" : "Delete Attributes Expression",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Delete Attributes Expression",
-          "sensitive" : false
-        },
-        "Store State" : {
-          "displayName" : "Store State",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Store State",
-          "sensitive" : false
-        },
-        "canonical-value-lookup-cache-size" : {
-          "displayName" : "Cache Value Lookup Cache Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "canonical-value-lookup-cache-size",
-          "sensitive" : false
-        },
-        "Stateful Variables Initial Value" : {
-          "displayName" : "Stateful Variables Initial Value",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Stateful Variables Initial Value",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-jolt-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.5.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
       "identifier" : "c82a053d-0199-1000-0241-d70c038c929f",
       "maxBackoffPeriod" : "10 mins",
       "name" : "JoltTransformJSON",
@@ -2022,7 +1571,7 @@
         "Max String Length" : "20 MB",
         "Transform Cache Size" : "1",
         "Pretty Print" : "false",
-        "Jolt Specification" : "[\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"status_date\": \"${createdAt:escapeJson()}\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"partner_number\": \"number\",\n      \"partner_event\": \"status\",\n      \"status_date\": \"createdAt\",\n      \"statement_number\":\"docFixationNumber\",      \n      \"status_country\": \"countryCode\",\n      \"location\": {\n        \"address\": \"divisionAddress\",\n        \"reference\": \"divisionRef\",\n        \"longitude\": \"divisionLongitude\",\n        \"latitude\": \"divisionLatitude\"\n      }\n    }\n  }\n]\n"
+        "Jolt Specification" : "[\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"status_date\": \"${createdAt:escapeJson()}\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"barcode\": \"number\",\n      \"partner_event\": \"status\",\n      \"status_date\": \"createdAt\",\n      \"statement_number\":\"docFixationNumber\",      \n      \"status_country\": \"countryCode\",\n      \"location\": {\n        \"address\": \"divisionAddress\",\n        \"reference\": \"divisionRef\",\n        \"longitude\": \"divisionLongitude\",\n        \"latitude\": \"divisionLatitude\"\n      }\n    }\n  }\n]\n"
       },
       "propertyDescriptors" : {
         "JSON Source" : {
@@ -2819,15 +2368,17 @@
       "name" : "PublishGCPubSub",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1896.0,
-        "y" : 1168.0
+        "x" : -776.0,
+        "y" : 1592.0
       },
       "properties" : {
         "Maximum Message Size" : "1 MB",
         "api-endpoint" : "pubsub.googleapis.com:443",
+        "countries" : "UA",
         "Input Batch Size" : "100",
         "gcp-pubsub-publish-batch-delay" : "100 millis",
         "gcp-project-id" : "api-project-303640486264",
+        "objectType" : "movementFact",
         "GCP Credentials Provider Service" : "3dfb2429-defe-3dc8-86eb-668cef3dd039",
         "Message Derivation Strategy" : "FLOWFILE_ORIENTED",
         "gcp-pubsub-publish-batch-size" : "15",
@@ -2863,6 +2414,13 @@
           "name" : "Record Reader",
           "sensitive" : false
         },
+        "countries" : {
+          "displayName" : "countries",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "countries",
+          "sensitive" : false
+        },
         "Input Batch Size" : {
           "displayName" : "Input Batch Size",
           "dynamic" : false,
@@ -2882,6 +2440,13 @@
           "dynamic" : false,
           "identifiesControllerService" : false,
           "name" : "gcp-project-id",
+          "sensitive" : false
+        },
+        "objectType" : {
+          "displayName" : "objectType",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "objectType",
           "sensitive" : false
         },
         "GCP Credentials Provider Service" : {
@@ -2955,8 +2520,8 @@
       "name" : "UpdateAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -2144.0,
-        "y" : 1576.0
+        "x" : -992.0,
+        "y" : 1832.0
       },
       "properties" : {
         "Store State" : "Do not store state",
@@ -3020,8 +2585,8 @@
       "name" : "UpdateAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1472.0,
-        "y" : 1584.0
+        "x" : -440.0,
+        "y" : 1832.0
       },
       "properties" : {
         "Store State" : "Do not store state",
@@ -3077,6 +2642,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "ex-cagos-pubsub-scan",
-    "timestamp" : 1767911652312
+    "timestamp" : 1768816135036
   }
 }
