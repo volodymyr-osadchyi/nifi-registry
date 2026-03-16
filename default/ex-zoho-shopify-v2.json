@@ -205,6 +205,36 @@
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+        "identifier" : "3e251cc5-d5e5-32ea-8dc8-ba94f4d2c718",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure", "unmatched" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "f630cd20-019c-1000-997f-0f1f7f89ca35",
+          "name" : "EvaluateJsonPath",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 31
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "c5360c50-7ff3-3292-80ff-60f86ca91900",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
         "identifier" : "3ec429b6-b2c3-3a6b-bcff-6f1722dae4b7",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -340,6 +370,36 @@
           "type" : "PROCESSOR"
         },
         "zIndex" : 22
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "c5360c50-7ff3-3292-80ff-60f86ca91900",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+        "identifier" : "67cd6d3d-d8db-3ec7-a890-98f1aa2f4b61",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "Failure", "No Retry", "Retry" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "f630cd1f-019c-1000-4e28-7f342db2b8db",
+          "name" : "InvokeHTTP",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 29
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
@@ -528,6 +588,36 @@
         "destination" : {
           "comments" : "",
           "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "5b267a78-b02a-3057-a2c8-3cf5f794d6f0",
+          "name" : "InvokeHTTP",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+        "identifier" : "926f1784-9bd5-329c-997f-1a4bce7c989c",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "matched" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "f630cd20-019c-1000-997f-0f1f7f89ca35",
+          "name" : "EvaluateJsonPath",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 30
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
           "id" : "c5360c50-7ff3-3292-80ff-60f86ca91900",
           "name" : "UpdateAttribute",
           "type" : "PROCESSOR"
@@ -558,7 +648,7 @@
         "destination" : {
           "comments" : "",
           "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
-          "id" : "5b267a78-b02a-3057-a2c8-3cf5f794d6f0",
+          "id" : "f630cd1f-019c-1000-4e28-7f342db2b8db",
           "name" : "InvokeHTTP",
           "type" : "PROCESSOR"
         },
@@ -699,6 +789,36 @@
           "type" : "PROCESSOR"
         },
         "zIndex" : 19
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "f630cd20-019c-1000-997f-0f1f7f89ca35",
+          "name" : "EvaluateJsonPath",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+        "identifier" : "bd76f8dd-36be-35cb-84f2-0db7864e9ad9",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "Response" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+          "id" : "f630cd1f-019c-1000-4e28-7f342db2b8db",
+          "name" : "InvokeHTTP",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 28
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
@@ -1107,7 +1227,7 @@
         } ],
         "position" : {
           "x" : -192.0,
-          "y" : 256.0
+          "y" : -208.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -2436,8 +2556,8 @@
         "name" : "GenerateFlowFile",
         "penaltyDuration" : "30 sec",
         "position" : {
-          "x" : -782.5,
-          "y" : -52.166656494140625
+          "x" : -800.0,
+          "y" : -232.0
         },
         "properties" : {
           "character-set" : "UTF-8",
@@ -3049,21 +3169,24 @@
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : -176.0,
-          "y" : 36.0
+          "y" : -432.0
         },
         "properties" : {
           "income" : "$",
           "Destination" : "flowfile-attribute",
-          "income.account.id" : "$.Account_Name.id",
-          "income.transaction_id" : "$.Shopify_Customer_id",
           "Max String Length" : "20 MB",
+          "income.contact.id" : "$.Contact_Name.id",
           "income.own_account.id" : "$.Our_Account.id",
           "Return Type" : "json",
-          "income.stage_description" : "$.Rejection_reason",
-          "income.docusign_link" : "$.Customer_Signing_Link_DocuSign",
+          "income.agreement_number" : "$.Agreement_number",
           "Null Value Representation" : "empty string",
           "income.stage" : "$.Stage",
-          "Path Not Found Behavior" : "ignore"
+          "Path Not Found Behavior" : "ignore",
+          "income.contact.name" : "$.Contact_Name.name",
+          "income.account.id" : "$.Account_Name.id",
+          "income.transaction_id" : "$.Shopify_Customer_id",
+          "income.stage_description" : "$.Rejection_reason",
+          "income.docusign_link" : "$.Customer_Signing_Link_DocuSign"
         },
         "propertyDescriptors" : {
           "income" : {
@@ -3080,25 +3203,18 @@
             "name" : "Destination",
             "sensitive" : false
           },
-          "income.account.id" : {
-            "displayName" : "income.account.id",
-            "dynamic" : true,
-            "identifiesControllerService" : false,
-            "name" : "income.account.id",
-            "sensitive" : false
-          },
-          "income.transaction_id" : {
-            "displayName" : "income.transaction_id",
-            "dynamic" : true,
-            "identifiesControllerService" : false,
-            "name" : "income.transaction_id",
-            "sensitive" : false
-          },
           "Max String Length" : {
             "displayName" : "Max String Length",
             "dynamic" : false,
             "identifiesControllerService" : false,
             "name" : "Max String Length",
+            "sensitive" : false
+          },
+          "income.contact.id" : {
+            "displayName" : "income.contact.id",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "income.contact.id",
             "sensitive" : false
           },
           "income.own_account.id" : {
@@ -3115,18 +3231,11 @@
             "name" : "Return Type",
             "sensitive" : false
           },
-          "income.stage_description" : {
-            "displayName" : "income.stage_description",
+          "income.agreement_number" : {
+            "displayName" : "income.agreement_number",
             "dynamic" : true,
             "identifiesControllerService" : false,
-            "name" : "income.stage_description",
-            "sensitive" : false
-          },
-          "income.docusign_link" : {
-            "displayName" : "income.docusign_link",
-            "dynamic" : true,
-            "identifiesControllerService" : false,
-            "name" : "income.docusign_link",
+            "name" : "income.agreement_number",
             "sensitive" : false
           },
           "Null Value Representation" : {
@@ -3148,6 +3257,41 @@
             "dynamic" : false,
             "identifiesControllerService" : false,
             "name" : "Path Not Found Behavior",
+            "sensitive" : false
+          },
+          "income.contact.name" : {
+            "displayName" : "income.contact.name",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "income.contact.name",
+            "sensitive" : false
+          },
+          "income.account.id" : {
+            "displayName" : "income.account.id",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "income.account.id",
+            "sensitive" : false
+          },
+          "income.transaction_id" : {
+            "displayName" : "income.transaction_id",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "income.transaction_id",
+            "sensitive" : false
+          },
+          "income.stage_description" : {
+            "displayName" : "income.stage_description",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "income.stage_description",
+            "sensitive" : false
+          },
+          "income.docusign_link" : {
+            "displayName" : "income.docusign_link",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "income.docusign_link",
             "sensitive" : false
           }
         },
@@ -3180,7 +3324,7 @@
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : -176.0,
-          "y" : -164.0
+          "y" : -632.0
         },
         "properties" : {
           "Topics" : "zoho-async_deals_updated",
@@ -3893,7 +4037,7 @@
           "Max String Length" : "20 MB",
           "Transform Cache Size" : "1",
           "Pretty Print" : "false",
-          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"Our_Account\": {\n        \"id\": \"data[0].Our_Account.id\"\n      },\n      \"Account_Name\": {\n        \"name\": \"data[0].Name\",\n        \"id\": \"data[0].Account.id\"\n      },\n      \"transaction_id\": \"data[0].Agreemnt\",\n      \"id\": \"data[0].Deal.id\",\n      \"Contact_Name\": {\n        \"id\": \"data[0].Receiving_original_documents.id\"\n      },\n      \"Signatory\": {\n        \"id\": \"data[0].Signer.id\"\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"Department\": \"E-com\",\n          \"Requester_Department\": \"E-com\",\n          \"Stage\": \"Approval\",\n          \"Purpose_of_Agreement\": \"Shopify\",\n          \"Agreement_with\": \"Client\",\n          \"Contract_Modification_Type\": \"Our template\",\n          \"Agreement_Template\": {\n            \"id\": \"805789000009312775\"\n          }\n        }\n      },\n      \"trigger\": [\"workflow\", \"blueprint\"]\n    }\n  }\n]\n"
+          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"Our_Account\": {\n        \"id\": \"data[0].Our_Account.id\"\n      },\n      \"Account_Name\": {\n        \"name\": \"data[0].Name\",\n        \"id\": \"data[0].Account.id\"\n      },\n      \"transaction_id\": \"data[0].Agreemnt\",\n      \"id\": \"data[0].Deal.id\",\n      \"Contact_Name\": {\n        \"id\": \"data[0].Receiving_original_documents.id\"\n      },\n      \"Signatory\": {\n        \"id\": \"data[0].Signer.id\"\n      },\n      \"Email_address_for_Signing_App\": {\n        \"id\": \"data[0].Email_address_for_Signing_App\"\n      }\n\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"Department\": \"E-com\",\n          \"Requester_Department\": \"E-com\",\n          \"Stage\": \"Approval\",\n          \"Purpose_of_Agreement\": \"Shopify\",\n          \"Agreement_with\": \"Client\",\n          \"Contract_Modification_Type\": \"Our template\",\n          \"Agreement_Template\": {\n            \"id\": \"805789000009312775\"\n          }\n        }\n      },\n      \"trigger\": [\"workflow\", \"blueprint\"]\n    }\n  }\n]\n"
         },
         "propertyDescriptors" : {
           "JSON Source" : {
@@ -4278,6 +4422,418 @@
         "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
         "yieldDuration" : "1 sec"
       }, {
+        "autoTerminatedRelationships" : [ "Original" ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+        "identifier" : "f630cd1f-019c-1000-4e28-7f342db2b8db",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "InvokeHTTP",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -176.0,
+          "y" : 80.0
+        },
+        "properties" : {
+          "Request Content-Encoding" : "DISABLED",
+          "Request Multipart Form-Data Filename Enabled" : "true",
+          "Request Chunked Transfer-Encoding Enabled" : "false",
+          "orgId" : "20106019965",
+          "HTTP/2 Disabled" : "False",
+          "Connection Timeout" : "5 secs",
+          "Response Cookie Strategy" : "DISABLED",
+          "Authorization" : "Zoho-oauthtoken ${access.token}",
+          "Socket Read Timeout" : "15 secs",
+          "Socket Idle Connections" : "5",
+          "Request Body Enabled" : "true",
+          "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
+          "HTTP URL" : "https://www.zohoapis.eu/crm/v8/Contacts/${income.contact.id}",
+          "Socket Idle Timeout" : "5 mins",
+          "Response Redirects Enabled" : "True",
+          "Socket Write Timeout" : "15 secs",
+          "Response FlowFile Naming Strategy" : "RANDOM",
+          "Response Cache Enabled" : "false",
+          "Request Date Header Enabled" : "True",
+          "Request Failure Penalization Enabled" : "false",
+          "Response Body Attribute Size" : "256",
+          "Response Generation Required" : "false",
+          "Response Header Request Attributes Enabled" : "false",
+          "HTTP Method" : "GET",
+          "Request Content-Type" : "${mime.type}",
+          "Request Digest Authentication Enabled" : "false",
+          "Response Cache Size" : "10MB",
+          "Response Body Ignored" : "false"
+        },
+        "propertyDescriptors" : {
+          "Request Content-Encoding" : {
+            "displayName" : "Request Content-Encoding",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Content-Encoding",
+            "sensitive" : false
+          },
+          "proxy-configuration-service" : {
+            "displayName" : "Proxy Configuration Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "proxy-configuration-service",
+            "sensitive" : false
+          },
+          "Request Multipart Form-Data Filename Enabled" : {
+            "displayName" : "Request Multipart Form-Data Filename Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Multipart Form-Data Filename Enabled",
+            "sensitive" : false
+          },
+          "Request Chunked Transfer-Encoding Enabled" : {
+            "displayName" : "Request Chunked Transfer-Encoding Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Chunked Transfer-Encoding Enabled",
+            "sensitive" : false
+          },
+          "Response Header Request Attributes Prefix" : {
+            "displayName" : "Response Header Request Attributes Prefix",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Header Request Attributes Prefix",
+            "sensitive" : false
+          },
+          "orgId" : {
+            "displayName" : "orgId",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "orgId",
+            "sensitive" : false
+          },
+          "HTTP/2 Disabled" : {
+            "displayName" : "HTTP/2 Disabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "HTTP/2 Disabled",
+            "sensitive" : false
+          },
+          "Connection Timeout" : {
+            "displayName" : "Connection Timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Connection Timeout",
+            "sensitive" : false
+          },
+          "Response Cookie Strategy" : {
+            "displayName" : "Response Cookie Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Cookie Strategy",
+            "sensitive" : false
+          },
+          "Authorization" : {
+            "displayName" : "Authorization",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "Authorization",
+            "sensitive" : false
+          },
+          "Request Password" : {
+            "displayName" : "Request Password",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Password",
+            "sensitive" : true
+          },
+          "Socket Read Timeout" : {
+            "displayName" : "Socket Read Timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Socket Read Timeout",
+            "sensitive" : false
+          },
+          "Socket Idle Connections" : {
+            "displayName" : "Socket Idle Connections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Socket Idle Connections",
+            "sensitive" : false
+          },
+          "Request Body Enabled" : {
+            "displayName" : "Request Body Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Body Enabled",
+            "sensitive" : false
+          },
+          "OAuth2 Access Token Refresh Strategy" : {
+            "displayName" : "OAuth2 Access Token Refresh Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "OAuth2 Access Token Refresh Strategy",
+            "sensitive" : false
+          },
+          "HTTP URL" : {
+            "displayName" : "HTTP URL",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "HTTP URL",
+            "sensitive" : false
+          },
+          "Request OAuth2 Access Token Provider" : {
+            "displayName" : "Request OAuth2 Access Token Provider",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Request OAuth2 Access Token Provider",
+            "sensitive" : false
+          },
+          "Socket Idle Timeout" : {
+            "displayName" : "Socket Idle Timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Socket Idle Timeout",
+            "sensitive" : false
+          },
+          "Response Redirects Enabled" : {
+            "displayName" : "Response Redirects Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Redirects Enabled",
+            "sensitive" : false
+          },
+          "Socket Write Timeout" : {
+            "displayName" : "Socket Write Timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Socket Write Timeout",
+            "sensitive" : false
+          },
+          "Request Header Attributes Pattern" : {
+            "displayName" : "Request Header Attributes Pattern",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Header Attributes Pattern",
+            "sensitive" : false
+          },
+          "Response FlowFile Naming Strategy" : {
+            "displayName" : "Response FlowFile Naming Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response FlowFile Naming Strategy",
+            "sensitive" : false
+          },
+          "Response Cache Enabled" : {
+            "displayName" : "Response Cache Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Cache Enabled",
+            "sensitive" : false
+          },
+          "Request Date Header Enabled" : {
+            "displayName" : "Request Date Header Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Date Header Enabled",
+            "sensitive" : false
+          },
+          "Request Failure Penalization Enabled" : {
+            "displayName" : "Request Failure Penalization Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Failure Penalization Enabled",
+            "sensitive" : false
+          },
+          "Response Body Attribute Size" : {
+            "displayName" : "Response Body Attribute Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Body Attribute Size",
+            "sensitive" : false
+          },
+          "SSL Context Service" : {
+            "displayName" : "SSL Context Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "SSL Context Service",
+            "sensitive" : false
+          },
+          "Response Generation Required" : {
+            "displayName" : "Response Generation Required",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Generation Required",
+            "sensitive" : false
+          },
+          "Request User-Agent" : {
+            "displayName" : "Request User-Agent",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request User-Agent",
+            "sensitive" : false
+          },
+          "Response Header Request Attributes Enabled" : {
+            "displayName" : "Response Header Request Attributes Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Header Request Attributes Enabled",
+            "sensitive" : false
+          },
+          "HTTP Method" : {
+            "displayName" : "HTTP Method",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "HTTP Method",
+            "sensitive" : false
+          },
+          "Request Username" : {
+            "displayName" : "Request Username",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Username",
+            "sensitive" : false
+          },
+          "Request Content-Type" : {
+            "displayName" : "Request Content-Type",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Content-Type",
+            "sensitive" : false
+          },
+          "Response Body Attribute Name" : {
+            "displayName" : "Response Body Attribute Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Body Attribute Name",
+            "sensitive" : false
+          },
+          "Request Digest Authentication Enabled" : {
+            "displayName" : "Request Digest Authentication Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Digest Authentication Enabled",
+            "sensitive" : false
+          },
+          "Request Multipart Form-Data Name" : {
+            "displayName" : "Request Multipart Form-Data Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Request Multipart Form-Data Name",
+            "sensitive" : false
+          },
+          "Response Cache Size" : {
+            "displayName" : "Response Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Cache Size",
+            "sensitive" : false
+          },
+          "Response Body Ignored" : {
+            "displayName" : "Response Body Ignored",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Response Body Ignored",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "38ce467f-ff59-31ac-aae7-4cc806c9ac8b",
+        "identifier" : "f630cd20-019c-1000-997f-0f1f7f89ca35",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "EvaluateJsonPath",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -176.0,
+          "y" : 304.0
+        },
+        "properties" : {
+          "Destination" : "flowfile-attribute",
+          "Max String Length" : "20 MB",
+          "Return Type" : "auto-detect",
+          "Null Value Representation" : "empty string",
+          "contact.phone" : "$.data[0].Phone",
+          "Path Not Found Behavior" : "ignore"
+        },
+        "propertyDescriptors" : {
+          "Destination" : {
+            "displayName" : "Destination",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Destination",
+            "sensitive" : false
+          },
+          "Max String Length" : {
+            "displayName" : "Max String Length",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Max String Length",
+            "sensitive" : false
+          },
+          "Return Type" : {
+            "displayName" : "Return Type",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Return Type",
+            "sensitive" : false
+          },
+          "Null Value Representation" : {
+            "displayName" : "Null Value Representation",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Null Value Representation",
+            "sensitive" : false
+          },
+          "contact.phone" : {
+            "displayName" : "contact.phone",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "contact.phone",
+            "sensitive" : false
+          },
+          "Path Not Found Behavior" : {
+            "displayName" : "Path Not Found Behavior",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Path Not Found Behavior",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
+        "yieldDuration" : "1 sec"
+      }, {
         "autoTerminatedRelationships" : [ ],
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "WARN",
@@ -4305,7 +4861,7 @@
           "Max String Length" : "20 MB",
           "Transform Cache Size" : "1",
           "Pretty Print" : "false",
-          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Shopify_Customer_id\": \"shop_id\",\n          \"Account_Name\": [\"contract.account_name\", \"contract.contact_name\"],\n          \"Account_Number\": \"contract.account_number\",\n          \"Billing_Country\": \"contract.country_alpha2\",\n          \"Tax_number\": \"contract.tax_number\",\n          \"Email\": \"contract.email\",\n          \"Phone\": \"contract.phone\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"status\": \"${income.stage}\",\n      \"status_details\": \"${income.docusign_link}${income.stage_description}\",\n      \"transaction_id\": \"${income.transaction_id}\",\n      \"own_account\": \"805789000000736734\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"status\": {\n        \"Form Submitted/Screening\": { \"#3\": \"status\" },\n        \"Approved\": { \"#4\": \"status\" },\n        \"Contract signed\": { \"#8\": \"status\" },\n        \"Contract signing\": { \"#5\": \"status\" },\n        \"Rejected\": { \"#2\": \"status\" },\n        \"Closed Lost\": { \"#2\": \"status\" }\n      },\n      \"own_account\": {\n        \"805789000000736761\": {\n          \"#12\": \"contract.contractor\"\n        },\n        \"805789000018182001\": {\n          \"#237\": \"contract.contractor\"\n        },\n        \"805789000000736734\": {\n          \"#238\": \"contract.contractor\"\n        },\n        \"805789000000736753\": {\n          \"#240\": \"contract.contractor\"\n        }\n      },\n      \"*\": {\n        \"@\": \"&\"\n      }\n    }\n  },\n  {\n    \"operation\": \"default\",\n    \"spec\": {\n      \"contract\": {\n        \"account_name\": \"0\",\n        \"agreement_number\": 0,\n        \"cid\": \"0\",\n        \"pid\": \"0\",\n        \"tax_number\": \"0\",\n        \"country_alpha2\": \"0\",\n        \"contact_name\": \"0\",\n        \"email\": \"0\",\n        \"phone\": \"0\",\n        \"contractor\": 0\n      }\n    }\n  }\n]\n"
+          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Shopify_Customer_id\": \"shop_id\",\n          \"Account_Name\": \"contract.account_name\",\n          \"Account_Number\": \"contract.account_number\",\n          \"Billing_Country\": {\n            \"Afghanistan\": {\n              \"#AF\": \"contract.country_alpha2\"\n            },\n            \"Albania\": {\n              \"#AL\": \"contract.country_alpha2\"\n            },\n            \"Algeria\": {\n              \"#DZ\": \"contract.country_alpha2\"\n            },\n            \"American Samoa\": {\n              \"#AS\": \"contract.country_alpha2\"\n            },\n            \"Andorra\": {\n              \"#AD\": \"contract.country_alpha2\"\n            },\n            \"Angola\": {\n              \"#AO\": \"contract.country_alpha2\"\n            },\n            \"Anguilla\": {\n              \"#AI\": \"contract.country_alpha2\"\n            },\n            \"Antarctica\": {\n              \"#AQ\": \"contract.country_alpha2\"\n            },\n            \"Antigua and Barbuda\": {\n              \"#AG\": \"contract.country_alpha2\"\n            },\n            \"Argentina\": {\n              \"#AR\": \"contract.country_alpha2\"\n            },\n            \"Armenia\": {\n              \"#AM\": \"contract.country_alpha2\"\n            },\n            \"Aruba\": {\n              \"#AW\": \"contract.country_alpha2\"\n            },\n            \"Australia\": {\n              \"#AU\": \"contract.country_alpha2\"\n            },\n            \"Austria\": {\n              \"#AT\": \"contract.country_alpha2\"\n            },\n            \"Azerbaijan\": {\n              \"#AZ\": \"contract.country_alpha2\"\n            },\n            \"Bahamas\": {\n              \"#BS\": \"contract.country_alpha2\"\n            },\n            \"Bahrain\": {\n              \"#BH\": \"contract.country_alpha2\"\n            },\n            \"Bangladesh\": {\n              \"#BD\": \"contract.country_alpha2\"\n            },\n            \"Barbados\": {\n              \"#BB\": \"contract.country_alpha2\"\n            },\n            \"Belarus\": {\n              \"#BY\": \"contract.country_alpha2\"\n            },\n            \"Belgium(French)\": {\n              \"#BE\": \"contract.country_alpha2\"\n            },\n            \"Belize\": {\n              \"#BZ\": \"contract.country_alpha2\"\n            },\n            \"Benin\": {\n              \"#BJ\": \"contract.country_alpha2\"\n            },\n            \"Bermuda\": {\n              \"#BM\": \"contract.country_alpha2\"\n            },\n            \"Bhutan\": {\n              \"#BT\": \"contract.country_alpha2\"\n            },\n            \"Bolivia\": {\n              \"#BO\": \"contract.country_alpha2\"\n            },\n            \"Bosnia and Herzegovina\": {\n              \"#BA\": \"contract.country_alpha2\"\n            },\n            \"Botswana\": {\n              \"#BW\": \"contract.country_alpha2\"\n            },\n            \"Bouvet Island\": {\n              \"#BV\": \"contract.country_alpha2\"\n            },\n            \"Brazil\": {\n              \"#BR\": \"contract.country_alpha2\"\n            },\n            \"British Indian Ocean Territory\": {\n              \"#IO\": \"contract.country_alpha2\"\n            },\n            \"British Virgin Islands\": {\n              \"#VG\": \"contract.country_alpha2\"\n            },\n            \"Brunei\": {\n              \"#BN\": \"contract.country_alpha2\"\n            },\n            \"Bulgaria\": {\n              \"#BG\": \"contract.country_alpha2\"\n            },\n            \"Burkina Faso\": {\n              \"#BF\": \"contract.country_alpha2\"\n            },\n            \"Burundi\": {\n              \"#BI\": \"contract.country_alpha2\"\n            },\n            \"Cambodia\": {\n              \"#KH\": \"contract.country_alpha2\"\n            },\n            \"Cameroon\": {\n              \"#CM\": \"contract.country_alpha2\"\n            },\n            \"Canada(French)\": {\n              \"#CA\": \"contract.country_alpha2\"\n            },\n            \"Cape Verde\": {\n              \"#CV\": \"contract.country_alpha2\"\n            },\n            \"Cayman Islands\": {\n              \"#KY\": \"contract.country_alpha2\"\n            },\n            \"Central African Republic\": {\n              \"#CF\": \"contract.country_alpha2\"\n            },\n            \"Chad\": {\n              \"#TD\": \"contract.country_alpha2\"\n            },\n            \"Chile\": {\n              \"#CL\": \"contract.country_alpha2\"\n            },\n            \"China\": {\n              \"#CN\": \"contract.country_alpha2\"\n            },\n            \"Christmas Island\": {\n              \"#CX\": \"contract.country_alpha2\"\n            },\n            \"Cocos Islands\": {\n              \"#CC\": \"contract.country_alpha2\"\n            },\n            \"Colombia\": {\n              \"#CO\": \"contract.country_alpha2\"\n            },\n            \"Comoros\": {\n              \"#KM\": \"contract.country_alpha2\"\n            },\n            \"Congo\": {\n              \"#CG\": \"contract.country_alpha2\"\n            },\n            \"Cook Islands\": {\n              \"#CK\": \"contract.country_alpha2\"\n            },\n            \"Costa Rica\": {\n              \"#CR\": \"contract.country_alpha2\"\n            },\n            \"Croatia\": {\n              \"#HR\": \"contract.country_alpha2\"\n            },\n            \"Cuba\": {\n              \"#CU\": \"contract.country_alpha2\"\n            },\n            \"Cyprus\": {\n              \"#CY\": \"contract.country_alpha2\"\n            },\n            \"Czech Republic\": {\n              \"#CZ\": \"contract.country_alpha2\"\n            },\n            \"Cote dIvoire\": {\n              \"#CI\": \"contract.country_alpha2\"\n            },\n            \"Denmark\": {\n              \"#DK\": \"contract.country_alpha2\"\n            },\n            \"Djibouti\": {\n              \"#DJ\": \"contract.country_alpha2\"\n            },\n            \"Dominica\": {\n              \"#DM\": \"contract.country_alpha2\"\n            },\n            \"Dominican Republic\": {\n              \"#DO\": \"contract.country_alpha2\"\n            },\n            \"Ecuador\": {\n              \"#EC\": \"contract.country_alpha2\"\n            },\n            \"Egypt\": {\n              \"#EG\": \"contract.country_alpha2\"\n            },\n            \"El Salvador\": {\n              \"#SV\": \"contract.country_alpha2\"\n            },\n            \"Equatorial Guinea\": {\n              \"#GQ\": \"contract.country_alpha2\"\n            },\n            \"Eritrea\": {\n              \"#ER\": \"contract.country_alpha2\"\n            },\n            \"Estonia\": {\n              \"#EE\": \"contract.country_alpha2\"\n            },\n            \"Ethiopia\": {\n              \"#ET\": \"contract.country_alpha2\"\n            },\n            \"Falkland Islands\": {\n              \"#FK\": \"contract.country_alpha2\"\n            },\n            \"Faroe Islands\": {\n              \"#FO\": \"contract.country_alpha2\"\n            },\n            \"Fiji\": {\n              \"#FJ\": \"contract.country_alpha2\"\n            },\n            \"Finland\": {\n              \"#FI\": \"contract.country_alpha2\"\n            },\n            \"France\": {\n              \"#FR\": \"contract.country_alpha2\"\n            },\n            \"French Guiana\": {\n              \"#GF\": \"contract.country_alpha2\"\n            },\n            \"French Polynesia\": {\n              \"#PF\": \"contract.country_alpha2\"\n            },\n            \"French Southern Territories\": {\n              \"#TF\": \"contract.country_alpha2\"\n            },\n            \"Gabon\": {\n              \"#GA\": \"contract.country_alpha2\"\n            },\n            \"Gambia\": {\n              \"#GM\": \"contract.country_alpha2\"\n            },\n            \"Georgia\": {\n              \"#GE\": \"contract.country_alpha2\"\n            },\n            \"Germany\": {\n              \"#DE\": \"contract.country_alpha2\"\n            },\n            \"Ghana\": {\n              \"#GH\": \"contract.country_alpha2\"\n            },\n            \"Gibraltar\": {\n              \"#GI\": \"contract.country_alpha2\"\n            },\n            \"Greece\": {\n              \"#GR\": \"contract.country_alpha2\"\n            },\n            \"Greenland\": {\n              \"#GL\": \"contract.country_alpha2\"\n            },\n            \"Grenada\": {\n              \"#GD\": \"contract.country_alpha2\"\n            },\n            \"Guadeloupe\": {\n              \"#GP\": \"contract.country_alpha2\"\n            },\n            \"Guam\": {\n              \"#GU\": \"contract.country_alpha2\"\n            },\n            \"Guatemala\": {\n              \"#GT\": \"contract.country_alpha2\"\n            },\n            \"Guinea\": {\n              \"#GN\": \"contract.country_alpha2\"\n            },\n            \"Guinea-Bissau\": {\n              \"#GW\": \"contract.country_alpha2\"\n            },\n            \"Guyana\": {\n              \"#GY\": \"contract.country_alpha2\"\n            },\n            \"Haiti\": {\n              \"#HT\": \"contract.country_alpha2\"\n            },\n            \"Heard Island And McDonald Islands\": {\n              \"#HM\": \"contract.country_alpha2\"\n            },\n            \"Honduras\": {\n              \"#HN\": \"contract.country_alpha2\"\n            },\n            \"Hungary\": {\n              \"#HU\": \"contract.country_alpha2\"\n            },\n            \"Iceland\": {\n              \"#IS\": \"contract.country_alpha2\"\n            },\n            \"India\": {\n              \"#IN\": \"contract.country_alpha2\"\n            },\n            \"Indonesia\": {\n              \"#ID\": \"contract.country_alpha2\"\n            },\n            \"Iran\": {\n              \"#IR\": \"contract.country_alpha2\"\n            },\n            \"Iraq\": {\n              \"#IQ\": \"contract.country_alpha2\"\n            },\n            \"Ireland\": {\n              \"#IE\": \"contract.country_alpha2\"\n            },\n            \"Israel\": {\n              \"#IL\": \"contract.country_alpha2\"\n            },\n            \"Italy\": {\n              \"#IT\": \"contract.country_alpha2\"\n            },\n            \"Jamaica\": {\n              \"#JM\": \"contract.country_alpha2\"\n            },\n            \"Japan\": {\n              \"#JP\": \"contract.country_alpha2\"\n            },\n            \"Jordan\": {\n              \"#JO\": \"contract.country_alpha2\"\n            },\n            \"Kazakhstan\": {\n              \"#KZ\": \"contract.country_alpha2\"\n            },\n            \"Kenya\": {\n              \"#KE\": \"contract.country_alpha2\"\n            },\n            \"Kiribati\": {\n              \"#KI\": \"contract.country_alpha2\"\n            },\n            \"Kuwait\": {\n              \"#KW\": \"contract.country_alpha2\"\n            },\n            \"Kyrgyzstan\": {\n              \"#KG\": \"contract.country_alpha2\"\n            },\n            \"Laos\": {\n              \"#LA\": \"contract.country_alpha2\"\n            },\n            \"Latvia\": {\n              \"#LV\": \"contract.country_alpha2\"\n            },\n            \"Lebanon\": {\n              \"#LB\": \"contract.country_alpha2\"\n            },\n            \"Lesotho\": {\n              \"#LS\": \"contract.country_alpha2\"\n            },\n            \"Liberia\": {\n              \"#LR\": \"contract.country_alpha2\"\n            },\n            \"Libya\": {\n              \"#LY\": \"contract.country_alpha2\"\n            },\n            \"Liechtenstein\": {\n              \"#LI\": \"contract.country_alpha2\"\n            },\n            \"Lithuania\": {\n              \"#LT\": \"contract.country_alpha2\"\n            },\n            \"Luxembourg(German)\": {\n              \"#LU\": \"contract.country_alpha2\"\n            },\n            \"Macao\": {\n              \"#MO\": \"contract.country_alpha2\"\n            },\n            \"Macedonia\": {\n              \"#MK\": \"contract.country_alpha2\"\n            },\n            \"Madagascar\": {\n              \"#MG\": \"contract.country_alpha2\"\n            },\n            \"Malawi\": {\n              \"#MW\": \"contract.country_alpha2\"\n            },\n            \"Malaysia\": {\n              \"#MY\": \"contract.country_alpha2\"\n            },\n            \"Maldives\": {\n              \"#MV\": \"contract.country_alpha2\"\n            },\n            \"Mali\": {\n              \"#ML\": \"contract.country_alpha2\"\n            },\n            \"Malta\": {\n              \"#MT\": \"contract.country_alpha2\"\n            },\n            \"Marshall Islands\": {\n              \"#MH\": \"contract.country_alpha2\"\n            },\n            \"Martinique\": {\n              \"#MQ\": \"contract.country_alpha2\"\n            },\n            \"Mauritania\": {\n              \"#MR\": \"contract.country_alpha2\"\n            },\n            \"Mauritius\": {\n              \"#MU\": \"contract.country_alpha2\"\n            },\n            \"Mayotte\": {\n              \"#YT\": \"contract.country_alpha2\"\n            },\n            \"Mexico\": {\n              \"#MX\": \"contract.country_alpha2\"\n            },\n            \"Micronesia\": {\n              \"#FM\": \"contract.country_alpha2\"\n            },\n            \"Moldova\": {\n              \"#MD\": \"contract.country_alpha2\"\n            },\n            \"Monaco\": {\n              \"#MC\": \"contract.country_alpha2\"\n            },\n            \"Mongolia\": {\n              \"#MN\": \"contract.country_alpha2\"\n            },\n            \"Montserrat\": {\n              \"#MS\": \"contract.country_alpha2\"\n            },\n            \"Morocco\": {\n              \"#MA\": \"contract.country_alpha2\"\n            },\n            \"Mozambique\": {\n              \"#MZ\": \"contract.country_alpha2\"\n            },\n            \"Myanmar\": {\n              \"#MM\": \"contract.country_alpha2\"\n            },\n            \"Namibia\": {\n              \"#NA\": \"contract.country_alpha2\"\n            },\n            \"Nauru\": {\n              \"#NR\": \"contract.country_alpha2\"\n            },\n            \"Nepal\": {\n              \"#NP\": \"contract.country_alpha2\"\n            },\n            \"Netherlands\": {\n              \"#NL\": \"contract.country_alpha2\"\n            },\n            \"Netherlands Antilles\": {\n              \"#AN\": \"contract.country_alpha2\"\n            },\n            \"New Caledonia\": {\n              \"#NC\": \"contract.country_alpha2\"\n            },\n            \"New Zealand\": {\n              \"#NZ\": \"contract.country_alpha2\"\n            },\n            \"Nicaragua\": {\n              \"#NI\": \"contract.country_alpha2\"\n            },\n            \"Niger\": {\n              \"#NE\": \"contract.country_alpha2\"\n            },\n            \"Nigeria\": {\n              \"#NG\": \"contract.country_alpha2\"\n            },\n            \"Niue\": {\n              \"#NU\": \"contract.country_alpha2\"\n            },\n            \"Norfolk Island\": {\n              \"#NF\": \"contract.country_alpha2\"\n            },\n            \"North Korea\": {\n              \"#KP\": \"contract.country_alpha2\"\n            },\n            \"Northern Mariana Islands\": {\n              \"#MP\": \"contract.country_alpha2\"\n            },\n            \"Norway\": {\n              \"#NO\": \"contract.country_alpha2\"\n            },\n            \"Oman\": {\n              \"#OM\": \"contract.country_alpha2\"\n            },\n            \"Pakistan\": {\n              \"#PK\": \"contract.country_alpha2\"\n            },\n            \"Palau\": {\n              \"#PW\": \"contract.country_alpha2\"\n            },\n            \"Palestine\": {\n              \"#PS\": \"contract.country_alpha2\"\n            },\n            \"Panama\": {\n              \"#PA\": \"contract.country_alpha2\"\n            },\n            \"Papua New Guinea\": {\n              \"#PG\": \"contract.country_alpha2\"\n            },\n            \"Paraguay\": {\n              \"#PY\": \"contract.country_alpha2\"\n            },\n            \"Peru\": {\n              \"#PE\": \"contract.country_alpha2\"\n            },\n            \"Philippines\": {\n              \"#PH\": \"contract.country_alpha2\"\n            },\n            \"Pitcairn\": {\n              \"#PN\": \"contract.country_alpha2\"\n            },\n            \"Poland\": {\n              \"#PL\": \"contract.country_alpha2\"\n            },\n            \"Portugal\": {\n              \"#PT\": \"contract.country_alpha2\"\n            },\n            \"Puerto Rico\": {\n              \"#PR\": \"contract.country_alpha2\"\n            },\n            \"Qatar\": {\n              \"#QA\": \"contract.country_alpha2\"\n            },\n            \"Reunion\": {\n              \"#RE\": \"contract.country_alpha2\"\n            },\n            \"Romania\": {\n              \"#RO\": \"contract.country_alpha2\"\n            },\n            \"Russia\": {\n              \"#RU\": \"contract.country_alpha2\"\n            },\n            \"Rwanda\": {\n              \"#RW\": \"contract.country_alpha2\"\n            },\n            \"Saint Helena\": {\n              \"#SH\": \"contract.country_alpha2\"\n            },\n            \"Saint Kitts And Nevis\": {\n              \"#KN\": \"contract.country_alpha2\"\n            },\n            \"Saint Lucia\": {\n              \"#LC\": \"contract.country_alpha2\"\n            },\n            \"Saint Pierre And Miquelon\": {\n              \"#PM\": \"contract.country_alpha2\"\n            },\n            \"Saint Vincent And The Grenadines\": {\n              \"#VC\": \"contract.country_alpha2\"\n            },\n            \"Samoa\": {\n              \"#WS\": \"contract.country_alpha2\"\n            },\n            \"San Marino\": {\n              \"#SM\": \"contract.country_alpha2\"\n            },\n            \"Sao Tome And Principe\": {\n              \"#ST\": \"contract.country_alpha2\"\n            },\n            \"Saudi Arabia\": {\n              \"#SA\": \"contract.country_alpha2\"\n            },\n            \"Senegal\": {\n              \"#SN\": \"contract.country_alpha2\"\n            },\n            \"Serbia and Montenegro\": {\n              \"#CS\": \"contract.country_alpha2\"\n            },\n            \"Seychelles\": {\n              \"#SC\": \"contract.country_alpha2\"\n            },\n            \"Sierra Leone\": {\n              \"#SL\": \"contract.country_alpha2\"\n            },\n            \"Singapore\": {\n              \"#SG\": \"contract.country_alpha2\"\n            },\n            \"Slovakia\": {\n              \"#SK\": \"contract.country_alpha2\"\n            },\n            \"Slovenia\": {\n              \"#SI\": \"contract.country_alpha2\"\n            },\n            \"Solomon Islands\": {\n              \"#SB\": \"contract.country_alpha2\"\n            },\n            \"Somalia\": {\n              \"#SO\": \"contract.country_alpha2\"\n            },\n            \"South Africa\": {\n              \"#ZA\": \"contract.country_alpha2\"\n            },\n            \"South Georgia And The South Sandwich Islands\": {\n              \"#GS\": \"contract.country_alpha2\"\n            },\n            \"South Korea\": {\n              \"#KR\": \"contract.country_alpha2\"\n            },\n            \"Spain(Spanish)\": {\n              \"#ES\": \"contract.country_alpha2\"\n            },\n            \"Sri Lanka\": {\n              \"#LK\": \"contract.country_alpha2\"\n            },\n            \"Sudan\": {\n              \"#SD\": \"contract.country_alpha2\"\n            },\n            \"Suriname\": {\n              \"#SR\": \"contract.country_alpha2\"\n            },\n            \"Svalbard And Jan Mayen\": {\n              \"#SJ\": \"contract.country_alpha2\"\n            },\n            \"Swaziland\": {\n              \"#SZ\": \"contract.country_alpha2\"\n            },\n            \"Sweden\": {\n              \"#SE\": \"contract.country_alpha2\"\n            },\n            \"Switzerland(Italian)\": {\n              \"#CH\": \"contract.country_alpha2\"\n            },\n            \"Syria\": {\n              \"#SY\": \"contract.country_alpha2\"\n            },\n            \"Taiwan\": {\n              \"#TW\": \"contract.country_alpha2\"\n            },\n            \"Tajikistan\": {\n              \"#TJ\": \"contract.country_alpha2\"\n            },\n            \"Tanzania\": {\n              \"#TZ\": \"contract.country_alpha2\"\n            },\n            \"Thailand\": {\n              \"#TH\": \"contract.country_alpha2\"\n            },\n            \"The Democratic Republic Of Congo\": {\n              \"#CD\": \"contract.country_alpha2\"\n            },\n            \"Timor-Leste\": {\n              \"#TL\": \"contract.country_alpha2\"\n            },\n            \"Togo\": {\n              \"#TG\": \"contract.country_alpha2\"\n            },\n            \"Tokelau\": {\n              \"#TK\": \"contract.country_alpha2\"\n            },\n            \"Tonga\": {\n              \"#TO\": \"contract.country_alpha2\"\n            },\n            \"Trinidad and Tobago\": {\n              \"#TT\": \"contract.country_alpha2\"\n            },\n            \"Tunisia\": {\n              \"#TN\": \"contract.country_alpha2\"\n            },\n            \"Turkey\": {\n              \"#TR\": \"contract.country_alpha2\"\n            },\n            \"Turkmenistan\": {\n              \"#TM\": \"contract.country_alpha2\"\n            },\n            \"Turks And Caicos Islands\": {\n              \"#TC\": \"contract.country_alpha2\"\n            },\n            \"Tuvalu\": {\n              \"#TV\": \"contract.country_alpha2\"\n            },\n            \"U.S. Virgin Islands\": {\n              \"#VI\": \"contract.country_alpha2\"\n            },\n            \"Uganda\": {\n              \"#UG\": \"contract.country_alpha2\"\n            },\n            \"Ukraine\": {\n              \"#UA\": \"contract.country_alpha2\"\n            },\n            \"United Arab Emirates\": {\n              \"#AE\": \"contract.country_alpha2\"\n            },\n            \"United Kingdom\": {\n              \"#GB\": \"contract.country_alpha2\"\n            },\n            \"United States\": {\n              \"#US\": \"contract.country_alpha2\"\n            },\n            \"United States Minor Outlying Islands\": {\n              \"#UM\": \"contract.country_alpha2\"\n            },\n            \"Uruguay\": {\n              \"#UY\": \"contract.country_alpha2\"\n            },\n            \"Uzbekistan\": {\n              \"#UZ\": \"contract.country_alpha2\"\n            },\n            \"Vanuatu\": {\n              \"#VU\": \"contract.country_alpha2\"\n            },\n            \"Venezuela\": {\n              \"#VE\": \"contract.country_alpha2\"\n            },\n            \"Vietnam\": {\n              \"#VN\": \"contract.country_alpha2\"\n            },\n            \"Wallis And Futuna\": {\n              \"#WF\": \"contract.country_alpha2\"\n            },\n            \"Western Sahara\": {\n              \"#EH\": \"contract.country_alpha2\"\n            },\n            \"Yemen\": {\n              \"#YE\": \"contract.country_alpha2\"\n            },\n            \"Zambia\": {\n              \"#ZM\": \"contract.country_alpha2\"\n            },\n            \"Zimbabwe\": {\n              \"#ZW\": \"contract.country_alpha2\"\n            }\n          },\n          \"Tax_number\": \"contract.tax_number\",\n          \"Email\": \"contract.email\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"status\": \"${income.stage}\",\n      \"status_details\": \"${income.docusign_link}${income.stage_description}\",\n      \"transaction_id\": \"${income.transaction_id}\",\n      \"contract\": {\n        \"contact_name\": \"${income.contact.name}\",\n        \"phone\": \"${contact.phone}\",\n        \"agreement_number\":\"${income.agreement_number}\"\n      },\n      \"own_account\": \"${income.our_account_id}\"\n    }\n  },\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"status\": {\n        \"Form Submitted/Screening\": { \"#3\": \"status\" },\n        \"Approved\": { \"#4\": \"status\" },\n        \"Contract signed\": { \"#8\": \"status\" },\n        \"Contract signing\": { \"#5\": \"status\" },\n        \"Rejected\": { \"#2\": \"status\" },\n        \"Closed Lost\": { \"#2\": \"status\" }\n      },\n      \"own_account\": {\n        \"805789000000736761\": {\n          \"#12\": \"contract.contractor\"\n        },\n        \"805789000018182001\": {\n          \"#237\": \"contract.contractor\"\n        },\n        \"805789000000736734\": {\n          \"#238\": \"contract.contractor\"\n        },\n        \"805789000000736753\": {\n          \"#240\": \"contract.contractor\"\n        }\n      },\n      \"*\": {\n        \"@\": \"&\"\n      }\n    }\n  },\n  {\n    \"operation\": \"default\",\n    \"spec\": {\n      \"contract\": {\n        \"account_name\": \"0\",\n        \"agreement_number\": 0,\n        \"cid\": \"0\",\n        \"pid\": \"0\",\n        \"tax_number\": \"0\",\n        \"country_alpha2\": \"0\",\n        \"contact_name\": \"0\",\n        \"email\": \"0\",\n        \"phone\": \"0\",\n        \"contractor\": 0\n      }\n    }\n  }\n]"
         },
         "propertyDescriptors" : {
           "JSON Source" : {
@@ -13532,6 +14088,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "ex-zoho-shopify-v2",
-    "timestamp" : 1773653651376
+    "timestamp" : 1773667943483
   }
 }
