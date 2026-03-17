@@ -2562,7 +2562,7 @@
         "properties" : {
           "character-set" : "UTF-8",
           "File Size" : "0B",
-          "generate-ff-custom-text" : "{\n  \"Customer_Signing_Link_DocuSign\": \"https://docusign-20106329405.development.catalystserverless.eu/server/docu_sign_function/sign/e3036dab-f95a-4350-b31a-46cab9e171c4?email\\u003ddmytro.mazur%40novaposhtaglobal.ua\\u0026account_id\\u003de43cb43f-6386-4516-a9cb-cbc318f3626e\",\n  \"Owner\": {\n    \"name\": \"Admin Zoho\",\n    \"id\": \"805789000000484001\",\n    \"email\": \"zohonpg@novaposhtaglobal.ua\"\n  },\n  \"Mass_Deal_Created\": false,\n  \"Amount_Total\": null,\n  \"$field_states\": null,\n  \"Difficulty_level\": null,\n  \"Form_of_Ownership\": null,\n  \"Department\": \"E-com\",\n  \"Order_number\": null,\n  \"Bank_Account\": {\n    \"name\": \"Test Bank name\",\n    \"id\": \"805789000038900957\"\n  },\n  \"$state\": \"save\",\n  \"$process_flow\": true,\n  \"Individual_Tax_Number\": null,\n  \"Full_name_of_the_individual_entrepreneur_IE\": null,\n  \"Our_Response\": null,\n  \"Currency\": \"UAH\",\n  \"Stage\": \"Approved\",\n  \"id\": \"805789000052607485\",\n  \"Name_of_the_document_of_which_the_signatory_acts\": \"Test Document name\",\n  \"$approval\": {\n    \"delegate\": false,\n    \"takeover\": false,\n    \"approve\": false,\n    \"reject\": false,\n    \"resubmit\": false\n  },\n  \"Related_Main_Request\": null,\n  \"Created_Time\": \"2026-03-03T10:36:33+02:00\",\n  \"Form_submited_time\": null,\n  \"Tracking_Number\": null,\n  \"Delegate_approval_to\": null,\n  \"Minimum_Royalty_Fee_Amount\": null,\n  \"Country_Language\": null,\n  \"Form_link\": null,\n  \"Approved_by_Security_Department\": true,\n  \"Approved_by_Legal_Department\": true,\n  \"Created_By\": {\n    \"name\": \"Admin Zoho\",\n    \"id\": \"805789000000484001\",\n    \"email\": \"zohonpg@novaposhtaglobal.ua\"\n  },\n  \"Rejection_reason\": null,\n  \"Google_Sheet_link\": null,\n  \"Request_Type\": null,\n  \"Description\": null,\n  \"OLD_CRM_ID\": null,\n  \"Taxpayer_Identification_Number\": null,\n  \"Campaign_Source\": null,\n  \"Stage_description\": null,\n  \"$review_process\": {\n    \"approve\": false,\n    \"reject\": false,\n    \"resubmit\": false\n  },\n  \"Signatory\": {\n    \"name\": \"Дмитро 3 Мазур 3\",\n    \"id\": \"805789000038904585\"\n  },\n  \"Request_By\": null,\n  \"No_Action_Needed\": false,\n  \"Agreement_number\": null,\n  \"Lead_Conversion_Time\": null,\n  \"Provide_details_3\": null,\n  \"Overall_Sales_Duration\": null,\n  \"Account_Name\": {\n    \"name\": \"«ТФ «АК КОСМЕТІКС» ФОП - 20\",\n    \"id\": \"805789000052612502\"\n  },\n  \"leadchain0__Social_Lead_ID\": null,\n  \"Provide_details_2\": null,\n  \"Current_Time_Log\": null,\n  \"Provide_details_1\": null,\n  \"Surname_of_the_individual_entrepreneur_IE\": null,\n  \"Amount\": null,\n  \"$orchestration\": false,\n  \"Contact_Name\": {\n    \"name\": \"Дмитро 2 Мазур 2\",\n    \"id\": \"805789000038904584\"\n  },\n  \"Does_the_company_operate_in_sanctioned_countries\": \"No\",\n  \"Type\": null,\n  \"Next_contact_date\": null,\n  \"Full_name_of_the_legal_entity_according_to_the_Ch\": null,\n  \"Guests\": null,\n  \"Layout\": {\n    \"display_label\": \"Standard\",\n    \"name\": \"Standard\",\n    \"id\": \"805789000000032043\"\n  },\n  \"Jira_Task_ID\": null,\n  \"Deals_Potential\": [],\n  \"Meeting_Title\": null,\n  \"Locked__s\": false,\n  \"Lead_Source\": \"Shopify\",\n  \"Agreement_date\": null,\n  \"GES_Manager\": null,\n  \"Event\": null,\n  \"Tag\": [],\n  \"Request_Category\": null,\n  \"Meeting_Result\": null,\n  \"Email\": null,\n  \"$currency_symbol\": \"грн.\",\n  \"utm_medium\": null,\n  \"Web_site_if_available\": null,\n  \"Tech_Stage\": null,\n  \"Warning_Security_Department\": null,\n  \"Last_Activity_Time\": \"2026-03-03T10:41:23+02:00\",\n  \"Number_of_waybills\": null,\n  \"Deal_Name\": \"«ТФ «АК КОСМЕТІКС» ФОП - 20_77420\",\n  \"Exchange_Rate\": 1,\n  \"Shopify_Customer_id\": \"2ca022fe-c7c0-4b49-8109-2c3184b4bc8c\",\n  \"$locked_for_me\": false,\n  \"Form_submitted\": false,\n  \"Reason_for_loss_details\": null,\n  \"Short_name_of_the_legal_entity_according_to_the_C\": null,\n  \"$approved\": true,\n  \"Territory\": null,\n  \"utm_campaign\": null,\n  \"Counterparty_approval_due_date\": null,\n  \"Priority\": null,\n  \"Sanctions_applicable_to_company\": \"No\",\n  \"Tech_status\": null,\n  \"Ticket_Link\": null,\n  \"$editable\": true,\n  \"Receiving_original_documents\": null,\n  \"Auto_Number\": \"77420\",\n  \"Sanctions_applicable_to_the_founders\": \"No\",\n  \"Meeting_Link\": null,\n  \"Sub_cause_of_loss\": null,\n  \"workdrive_folder_url\": \"https://workdrive.zoho.eu/folder/5bmewfdb486aa7aea4db2b37cf03a8c4d1417\",\n  \"Region\": \"EMEA\",\n  \"$zia_owner_assignment\": \"owner_recommendation_unavailable\",\n  \"Company_registration_number_or_equivalent_Number\": null,\n  \"File\": null,\n  \"utm_source\": null,\n  \"CRM_ID\": null,\n  \"Meeting_Description\": null,\n  \"Our_Account\": {\n    \"name\": \"Nova Global US Inc\",\n    \"id\": \"805789000000736734\"\n  },\n  \"Signing_link\": null,\n  \"Contract_Renewable\": false,\n  \"$layout_id\": {\n    \"display_label\": \"Standard\",\n    \"name\": \"Standard\",\n    \"id\": \"805789000000032043\"\n  },\n  \"Meeting_Platform\": null,\n  \"Reason_For_Loss__s\": null,\n  \"Modified_By\": {\n    \"name\": \"Admin Zoho\",\n    \"id\": \"805789000000484001\",\n    \"email\": \"zohonpg@novaposhtaglobal.ua\"\n  },\n  \"$review\": null,\n  \"Date_of_the_document_of_which_the_signatory_acts\": \"2026-01-13\",\n  \"Down_Payment_Amount\": null,\n  \"Account_Number\": \"0\",\n  \"utm_content\": null,\n  \"Number_of_the_document_of_which_the_signatory_acts\": \"Test Document number\",\n  \"Total_time_spent\": null,\n  \"Contract_End_Date\": null,\n  \"Modified_Time\": \"2026-03-03T10:41:23+02:00\",\n  \"Time_spent_on_creating_request_min\": null,\n  \"Delegate_approval_to_security\": null,\n  \"Delivery_Countries\": [],\n  \"Agenda\": null,\n  \"Mass_Upd\": false,\n  \"Email_address_for_Signing_App\": \"dmytro.mazur@novaposhtaglobal.ua\",\n  \"Sales_Cycle_Duration\": null,\n  \"utm_term\": null,\n  \"workdrive_folder_id\": \"5bmewfdb486aa7aea4db2b37cf03a8c4d1417\",\n  \"$in_merge\": false,\n  \"Residency\": null,\n  \"$approval_state\": \"approved\",\n  \"transaction_id\": \"c7725ce0-7e2d-4ad9-a184-1ed011cb8e64\"\n}",
+          "generate-ff-custom-text" : "{\n  \"Customer_Signing_Link_DocuSign\": null,\n  \"Owner\": {\n    \"name\": \"Admin Zoho\",\n    \"id\": \"805789000000484001\",\n    \"email\": \"zohonpg@novaposhtaglobal.ua\"\n  },\n  \"Mass_Deal_Created\": false,\n  \"Amount_Total\": null,\n  \"$field_states\": null,\n  \"Difficulty_level\": null,\n  \"Form_of_Ownership\": null,\n  \"Department\": \"E-com\",\n  \"Order_number\": null,\n  \"Bank_Account\": {\n    \"name\": \"Test Bank name\",\n    \"id\": \"805789000038900957\"\n  },\n  \"$state\": \"save\",\n  \"$process_flow\": true,\n  \"Individual_Tax_Number\": null,\n  \"Full_name_of_the_individual_entrepreneur_IE\": null,\n  \"Our_Response\": null,\n  \"Currency\": \"UAH\",\n  \"Stage\": \"Approved\",\n  \"id\": \"805789000058164816\",\n  \"Name_of_the_document_of_which_the_signatory_acts\": \"Test Document name\",\n  \"$approval\": {\n    \"delegate\": false,\n    \"takeover\": false,\n    \"approve\": false,\n    \"reject\": false,\n    \"resubmit\": false\n  },\n  \"Related_Main_Request\": null,\n  \"Created_Time\": \"2026-03-17T11:18:45+02:00\",\n  \"Form_submited_time\": null,\n  \"Tracking_Number\": null,\n  \"Delegate_approval_to\": null,\n  \"Claim_type\": null,\n  \"Minimum_Royalty_Fee_Amount\": null,\n  \"Country_Language\": null,\n  \"Form_link\": null,\n  \"Approved_by_Security_Department\": true,\n  \"Approved_by_Legal_Department\": true,\n  \"Created_By\": {\n    \"name\": \"Admin Zoho\",\n    \"id\": \"805789000000484001\",\n    \"email\": \"zohonpg@novaposhtaglobal.ua\"\n  },\n  \"Related_Screening_Record_ID\": null,\n  \"Rejection_reason\": null,\n  \"Google_Sheet_link\": null,\n  \"Request_Type\": null,\n  \"Description\": null,\n  \"OLD_CRM_ID\": null,\n  \"Taxpayer_Identification_Number\": null,\n  \"Campaign_Source\": null,\n  \"Stage_description\": null,\n  \"$review_process\": {\n    \"approve\": false,\n    \"reject\": false,\n    \"resubmit\": false\n  },\n  \"Signatory\": {\n    \"name\": \"Дмитро 3 Мазур 3\",\n    \"id\": \"805789000058180680\"\n  },\n  \"Request_By\": null,\n  \"No_Action_Needed\": false,\n  \"Agreement_number\": null,\n  \"Lead_Conversion_Time\": null,\n  \"Provide_details_3\": null,\n  \"Overall_Sales_Duration\": null,\n  \"Account_Name\": {\n    \"name\": \"«ТФ «АК КОСМЕТІКС» ФОП - 25\",\n    \"id\": \"805789000058163659\"\n  },\n  \"leadchain0__Social_Lead_ID\": null,\n  \"Provide_details_2\": null,\n  \"Current_Time_Log\": null,\n  \"Provide_details_1\": null,\n  \"Surname_of_the_individual_entrepreneur_IE\": null,\n  \"Amount\": null,\n  \"$orchestration\": false,\n  \"Contact_Name\": {\n    \"name\": \"Дмитро 2 Мазур 2\",\n    \"id\": \"805789000058180679\"\n  },\n  \"Does_the_company_operate_in_sanctioned_countries\": \"No\",\n  \"Type\": null,\n  \"Next_contact_date\": null,\n  \"Full_name_of_the_legal_entity_according_to_the_Ch\": null,\n  \"Guests\": null,\n  \"Layout\": {\n    \"display_label\": \"Standard\",\n    \"name\": \"Standard\",\n    \"id\": \"805789000000032043\"\n  },\n  \"Jira_Task_ID\": null,\n  \"Deals_Potential\": [],\n  \"Meeting_Title\": null,\n  \"Locked__s\": false,\n  \"Lead_Source\": \"Shopify\",\n  \"Agreement_date\": null,\n  \"GES_Manager\": null,\n  \"Event\": null,\n  \"Tag\": [],\n  \"Request_Category\": null,\n  \"Meeting_Result\": null,\n  \"Email\": null,\n  \"$currency_symbol\": \"грн.\",\n  \"utm_medium\": null,\n  \"Web_site_if_available\": null,\n  \"Converted_by\": null,\n  \"Tech_Stage\": null,\n  \"Warning_Security_Department\": null,\n  \"Last_Activity_Time\": \"2026-03-17T11:20:17+02:00\",\n  \"Number_of_waybills\": null,\n  \"Deal_Name\": \"«ТФ «АК КОСМЕТІКС» ФОП - 25_85562\",\n  \"Exchange_Rate\": 1,\n  \"Shopify_Customer_id\": \"316e2473-883f-43af-a8f1-98b70b5f7f1c\",\n  \"$locked_for_me\": false,\n  \"Form_submitted\": false,\n  \"Reason_for_loss_details\": null,\n  \"Short_name_of_the_legal_entity_according_to_the_C\": null,\n  \"$approved\": true,\n  \"Territory\": null,\n  \"utm_campaign\": null,\n  \"Counterparty_approval_due_date\": null,\n  \"Priority\": null,\n  \"Sanctions_applicable_to_company\": \"No\",\n  \"Tech_status\": null,\n  \"Ticket_Link\": null,\n  \"$editable\": true,\n  \"Receiving_original_documents\": null,\n  \"Auto_Number\": \"85562\",\n  \"Sanctions_applicable_to_the_founders\": \"No\",\n  \"Meeting_Link\": null,\n  \"Sub_cause_of_loss\": null,\n  \"Document_signing_service\": \"Docusign\",\n  \"workdrive_folder_url\": \"https://workdrive.zoho.eu/folder/74u3mee7dd487508440038c8f6759005d4210\",\n  \"Region\": null,\n  \"$zia_owner_assignment\": \"owner_recommendation_unavailable\",\n  \"Company_registration_number_or_equivalent_Number\": null,\n  \"File\": null,\n  \"utm_source\": null,\n  \"CRM_ID\": null,\n  \"Meeting_Description\": null,\n  \"Our_Account\": {\n    \"name\": \"NP GLOBAL LLC\",\n    \"id\": \"805789000000736761\"\n  },\n  \"Signing_link\": null,\n  \"Contract_Renewable\": false,\n  \"$layout_id\": {\n    \"display_label\": \"Standard\",\n    \"name\": \"Standard\",\n    \"id\": \"805789000000032043\"\n  },\n  \"Meeting_Platform\": null,\n  \"Reason_For_Loss__s\": null,\n  \"Modified_By\": {\n    \"name\": \"Admin Zoho\",\n    \"id\": \"805789000000484001\",\n    \"email\": \"zohonpg@novaposhtaglobal.ua\"\n  },\n  \"$review\": null,\n  \"Date_of_the_document_of_which_the_signatory_acts\": \"2026-01-13\",\n  \"Down_Payment_Amount\": null,\n  \"Account_Number\": \"0\",\n  \"utm_content\": null,\n  \"Number_of_the_document_of_which_the_signatory_acts\": \"Test Document number\",\n  \"Total_time_spent\": null,\n  \"Legal_WorkDrive_Folder\": null,\n  \"Contract_End_Date\": null,\n  \"Modified_Time\": \"2026-03-17T11:20:17+02:00\",\n  \"Time_spent_on_creating_request_min\": null,\n  \"Warning_Legal_Department\": null,\n  \"Delegate_approval_to_security\": null,\n  \"Delivery_Countries\": [],\n  \"Agenda\": null,\n  \"Mass_Upd\": false,\n  \"Email_address_for_Signing_App\": \"dmytro.mazur@novaposhtaglobal.ua\",\n  \"Sales_Cycle_Duration\": null,\n  \"utm_term\": null,\n  \"workdrive_folder_id\": \"74u3mee7dd487508440038c8f6759005d4210\",\n  \"$in_merge\": false,\n  \"Residency\": null,\n  \"$approval_state\": \"approved\",\n  \"transaction_id\": \"aee3b95b-f29e-4927-a683-1cbf58acb104\"\n}",
           "Batch Size" : "1",
           "Unique FlowFiles" : "false",
           "Data Format" : "Text"
@@ -3181,6 +3181,7 @@
           "income.agreement_number" : "$.Agreement_number",
           "Null Value Representation" : "empty string",
           "income.stage" : "$.Stage",
+          "income.Email_address_for_Signing_App" : "$.Email_address_for_Signing_App",
           "Path Not Found Behavior" : "ignore",
           "income.contact.name" : "$.Contact_Name.name",
           "income.account.id" : "$.Account_Name.id",
@@ -3250,6 +3251,13 @@
             "dynamic" : true,
             "identifiesControllerService" : false,
             "name" : "income.stage",
+            "sensitive" : false
+          },
+          "income.Email_address_for_Signing_App" : {
+            "displayName" : "income.Email_address_for_Signing_App",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "income.Email_address_for_Signing_App",
             "sensitive" : false
           },
           "Path Not Found Behavior" : {
@@ -4037,7 +4045,7 @@
           "Max String Length" : "20 MB",
           "Transform Cache Size" : "1",
           "Pretty Print" : "false",
-          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"Our_Account\": {\n        \"id\": \"data[0].Our_Account.id\"\n      },\n      \"Account_Name\": {\n        \"name\": \"data[0].Name\",\n        \"id\": \"data[0].Account.id\"\n      },\n      \"transaction_id\": \"data[0].Agreemnt\",\n      \"id\": \"data[0].Deal.id\",\n      \"Contact_Name\": {\n        \"id\": \"data[0].Receiving_original_documents.id\"\n      },\n      \"Signatory\": {\n        \"id\": \"data[0].Signer.id\"\n      },\n      \"Email_address_for_Signing_App\": {\n        \"id\": \"data[0].Email_address_for_Signing_App\"\n      }\n\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"Department\": \"E-com\",\n          \"Requester_Department\": \"E-com\",\n          \"Stage\": \"Approval\",\n          \"Purpose_of_Agreement\": \"Shopify\",\n          \"Agreement_with\": \"Client\",\n          \"Contract_Modification_Type\": \"Our template\",\n          \"Agreement_Template\": {\n            \"id\": \"805789000009312775\"\n          }\n        }\n      },\n      \"trigger\": [\"workflow\", \"blueprint\"]\n    }\n  }\n]\n"
+          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"Our_Account\": {\n        \"id\": \"data[0].Our_Account.id\"\n      },\n      \"Account_Name\": {\n        \"name\": \"data[0].Name\",\n        \"id\": \"data[0].Account.id\"\n      },\n      \"transaction_id\": \"data[0].Agreemnt\",\n      \"id\": \"data[0].Deal.id\",\n      \"Contact_Name\": {\n        \"id\": \"data[0].Receiving_original_documents.id\"\n      },\n      \"Signatory\": {\n        \"id\": \"data[0].Signer.id\"\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"Department\": \"E-com\",\n          \"Email_address_for_Signing_App\": \"${income.Email_address_for_Signing_App}\",\n          \"Requester_Department\": \"E-com\",\n          \"Stage\": \"Approved\",\n          \"Purpose_of_Agreement\": \"Shopify\",\n          \"Agreement_with\": \"Client\",\n          \"Contract_Modification_Type\": \"Our template\",\n          \"Agreement_Template\": {\n            \"id\": \"805789000009312775\"\n          }\n        }\n      },\n      \"trigger\": [\"workflow\", \"blueprint\"]\n    }\n  }\n]"
         },
         "propertyDescriptors" : {
           "JSON Source" : {
@@ -5070,6 +5078,36 @@
           "type" : "PROCESSOR"
         },
         "zIndex" : 46
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+          "id" : "46c4ddc6-85cb-3c68-a902-e71536ee1488",
+          "name" : "EvaluateJsonPath",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+        "identifier" : "3687a7a9-9f4d-3d6e-aa72-39728f18a6d5",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+          "id" : "600302d5-2358-3829-8541-ab3f2e4c36c8",
+          "name" : "GenerateFlowFile",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 48
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
@@ -12473,6 +12511,96 @@
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "WARN",
         "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "38e30617-0199-1000-2955-2f9f7f2a44fa",
+        "identifier" : "600302d5-2358-3829-8541-ab3f2e4c36c8",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "GenerateFlowFile",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -1312.0,
+          "y" : -408.0
+        },
+        "properties" : {
+          "character-set" : "UTF-8",
+          "File Size" : "0B",
+          "generate-ff-custom-text" : "{\"uuid\":\"npg-test-store-1.myshopify.com\",\"shop_id\":6,\"data\":{\"counterparty\":{\"ownership\":\"legal\",\"fullname\":\"Test Dmytro\",\"shortname\":\"«ТФ «АК КОСМЕТІКС» ФОП - 25\",\"edrpo\":13456713,\"tax_number\":38095672641,\"lastname\":\"\",\"firstname\":\"\",\"middlename\":\"\",\"tin\":\"\",\"email\":\"dmytro.mazur@novaposhtaglobal.ua\",\"operating_in\":{\"restricted\":\"no\",\"restricted_details\":\"\"},\"sanctions_applicable\":{\"company\":\"no\",\"company_details\":\"\",\"beneficials\":\"no\",\"beneficials_details\":\"\"}},\"directors\":[{\"lastname\":\"Мазур 1\",\"firstname\":\"Дмитро 1\",\"middlename\":\"Вячеславович 1\",\"position\":\"Директор 1\",\"country_alpha2\":\"US\"}],\"website\":\"https://novaposhtaglobal.ua/\",\"billing_address\":{\"province\":\"Kievskyaya\",\"city\":\"Kiev \",\"address\":\"103 Stolichne Highway\",\"zipcode\":\"03131\",\"country_alpha2\":\"UA\"},\"shipping_address\":{\"province\":\"Kievskyaya\",\"city\":\"Kiev\",\"address\":\"103 Stolichne Highway\",\"zipcode\":\"03131\",\"country_alpha2\":\"UA\"},\"contacts\":{\"receiving_original\":{\"lastname\":\"Мазур 2\",\"firstname\":\"Дмитро 2\",\"phone\":\"+380630000000\",\"email\":\"dmytro.mazur.test1.1@novaposhtaglobal.ua\"},\"signatory\":{\"lastname\":\"Мазур 3\",\"firstname\":\"Дмитро 3\",\"middlename\":\"Вячеславович 3\",\"email\":\"dmytro.mazur.test1.2@novaposhtaglobal.ua\",\"doc\":{\"name\":\"Test Document name\",\"number\":\"Test Document number\",\"date\":\"2026-01-13\"}},\"conclude\":{\"lastname\":\"Мазур 4\",\"firstname\":\"Дмитро 4\",\"middlename\":\"Вячеславович 4\",\"position\":\"Директор 4\"}},\"bank_details\":{\"name\":\"Test Bank name\",\"account_number\":\"Test Account number\",\"swift\":25252525},\"beneficials\":[{\"lastname\":\"Мазур 5\",\"firstname\":\"Дмитро 5\",\"middlename\":\"Вячеславович 5\",\"country_alpha2\":\"UA\"}],\"significant\":[{\"lastname\":\"Мазур 6\",\"firstname\":\"Дмитро 6\",\"middlename\":\"Вячеславович 6\",\"country_alpha2\":\"GB\"}],\"holding\":{\"company\":\"NP TEST\",\"number\":123456789,\"country_alpha2\":\"UA\"},\"contractor\":12},\"request_id\":\"102331b1-3c5c-5b87-8a00-6d6612c282f1\",\"transaction_id\":\"316e2473-883f-43af-a8f1-98b70b5f7f1c\"}",
+          "Batch Size" : "1",
+          "Unique FlowFiles" : "false",
+          "Data Format" : "Text"
+        },
+        "propertyDescriptors" : {
+          "character-set" : {
+            "displayName" : "Character Set",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "character-set",
+            "sensitive" : false
+          },
+          "File Size" : {
+            "displayName" : "File Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "File Size",
+            "sensitive" : false
+          },
+          "mime-type" : {
+            "displayName" : "Mime Type",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "mime-type",
+            "sensitive" : false
+          },
+          "generate-ff-custom-text" : {
+            "displayName" : "Custom Text",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "generate-ff-custom-text",
+            "sensitive" : false
+          },
+          "Batch Size" : {
+            "displayName" : "Batch Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Batch Size",
+            "sensitive" : false
+          },
+          "Unique FlowFiles" : {
+            "displayName" : "Unique FlowFiles",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Unique FlowFiles",
+            "sensitive" : false
+          },
+          "Data Format" : {
+            "displayName" : "Data Format",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Data Format",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "1000000 min",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
           "artifact" : "nifi-update-attribute-nar",
           "group" : "org.apache.nifi",
           "version" : "2.5.0"
@@ -13342,7 +13470,7 @@
           "Max String Length" : "20 MB",
           "Transform Cache Size" : "1",
           "Pretty Print" : "false",
-          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Account_Name\": \"data[0].Deal_Name\",\n          \"Operation_details\": \"data[0].Does_the_company_operate_in_sanctioned_countries\",\n          \"Sanctions_applicable_to_company\": \"data[0].Sanctions_applicable_to_company\",\n          \"Sanctions_applicable_to_founders_owners\": \"data[0].Sanctions_applicable_to_the_founders\",\n          \"Our_Accounts\": {\n            \"*\": {\n              \"Our_Accounts1\": \"data[0].Our_Accounts\"\n            }\n          },\n          \"Signatory\": {\n            \"*\": {\n              \"@\": \"data[0].&\"\n            }\n          },\n          \"Sanctions\": {\n            \"*\": {\n              \"@\": \"data[0].&\"\n            }\n          },\n          \"Email\": \"data[0].Email_address_for_Signing_App\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"Lead_Source\": \"Shopify\",\n          \"Department\": \"E-com\",\n          \"Stage\": \"Form Submitted/Screening\",\n          \"Shopify_Customer_id\": \"${income.transaction_id}\",\n          \"Account_Name\": {\n            \"id\": \"${zoho.accounts.id}\"\n          },\n          \"Contact_Name\": {\n            \"id\": \"${zoho.contacts.id}\"\n          },\n          \"Bank_Account\": {\n            \"id\": \"${zoho.bank_details.id}\"\n          },\n          \"Signatory\": {\n            \"id\": \"${zoho.contacts.signatory}\"\n          }\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"default\",\n    \"spec\": {\n      \"trigger\": [\n         \"workflow\",\n         \"blueprint\"\n    ]\n    }\n  }\n]"
+          "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"0\": {\n          \"Account_Name\": \"data[0].Deal_Name\",\n          \"Operation_details\": \"data[0].Does_the_company_operate_in_sanctioned_countries\",\n          \"Sanctions_applicable_to_company\": \"data[0].Sanctions_applicable_to_company\",\n          \"Sanctions_applicable_to_founders_owners\": \"data[0].Sanctions_applicable_to_the_founders\",\n          \"Our_Accounts\": {\n            \"*\": {\n              \"Our_Accounts1\": \"data[0].Our_Account\"\n            }\n          },\n          \"Signatory\": {\n            \"*\": {\n              \"@\": \"data[0].&\"\n            }\n          },\n          \"Sanctions\": {\n            \"*\": {\n              \"@\": \"data[0].&\"\n            }\n          },\n          \"Email\": \"data[0].Email_address_for_Signing_App\"\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"modify-default-beta\",\n    \"spec\": {\n      \"data\": {\n        \"*\": {\n          \"Lead_Source\": \"Shopify\",\n          \"Department\": \"E-com\",\n          \"Stage\": \"Form Submitted/Screening\",\n          \"Shopify_Customer_id\": \"${income.transaction_id}\",\n          \"Document_signing_service\": \"Docusign\",\n          \"Account_Name\": {\n            \"id\": \"${zoho.accounts.id}\"\n          },\n          \"Contact_Name\": {\n            \"id\": \"${zoho.contacts.id}\"\n          },\n          \"Bank_Account\": {\n            \"id\": \"${zoho.bank_details.id}\"\n          },\n          \"Signatory\": {\n            \"id\": \"${zoho.contacts.signatory}\"\n          }\n        }\n      }\n    }\n  },\n  {\n    \"operation\": \"default\",\n    \"spec\": {\n      \"trigger\": [\n         \"workflow\",\n         \"blueprint\"\n    ]\n    }\n  }\n]\n"
         },
         "propertyDescriptors" : {
           "JSON Source" : {
@@ -14088,6 +14216,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "ex-zoho-shopify-v2",
-    "timestamp" : 1773667943483
+    "timestamp" : 1773739505978
   }
 }
